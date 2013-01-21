@@ -1,6 +1,6 @@
-## Concepts
+# Concepts
 
-### 2.1 Components
+## 2.1 Components
 
 Whilst components aren’t the most important concept, they are pivotal to understanding how Nooku works. Think of Nooku as providing the architecture to build an SKD for the web, a component being akin to a package. Components play a very important role in how Nooku is built now, and how it will develop in the future. Components currently fall into two categories
 
@@ -24,7 +24,7 @@ Non-dispatchable components are components that are used to make other component
 Components are typically built up of controllers,models and views, but can contain a wide array of parts.
 
 Using the HMVC (more later on the **H**) concepts of Nooku, components can easily be built up from other components, to allow for a great amount of code reuse, and speed up your development lifecycle.
-###2.2 Service Location
+##2.2 Service Location
 
 This is probably the most important development concept that you may not be familiar with:
 
@@ -103,19 +103,19 @@ The KLoader class in turn deals with locating these classes on the filesystem, i
 Thus, so long as the class exists within the Koowa framework, you can create an object off the identifier, and Nooku will do the legwork (all cached in APC for performance :)
 
 And thats pretty much it. There is plenty more you can do with service identifiers that I will cover later on, like setting aliases or config information, but for now, I’ll leave it at that.
-###2.3 HMVC
+##2.3 HMVC
 
 So you’ve heard of MVC I’m sure, if you haven’t, I feel for your code, now go google it and don’t come back until you know it :) There are plenty of descriptions and tutorials around the MVC pattern on the web, I don’t need to cover this.
 
 HMVC however is a slightly newer concept and one that I’ve touched on already, composition. The H of HMVC stands for hierarchical, and is key to the concept of HMVC. The principle is that software applications can be built up hierarchically, through the use of composition of other self contained MVC triads. Each MVC triad is only aware of a single incoming request, to a controller, and the request is dispatched as appropriate. The following diagram should help solidify the concept:
 
 The power of this concept lies in the simplicity of its implementation, small reusable blocks that make up a larger more complex system. By developing stand alone, self contained MVC triads  and components one can build up a system out of predefined parts, in much the same way as you built a house out of lego as a child! It also makes testing a great deal easier, and components can be developed independently and concurrently, thus speeding up development again. 
-###2.4 Naming Conventions
+##2.4 Naming Conventions
 
 
 There are some specific naming conventions that Nooku uses, understand these is imperative to getting things working, as due to the “magic” if you get the names wrong, you will end up scratching your head saying “why isn’t this class being included?”
 
-####2.4.1 Koowa
+###2.4.1 Koowa
 
 First things first, the Nooku framework library itself. The Nooku framework library is called Koowa (I don’t know why, hopefully Johan will clarify and I will update this).
 As a result of this, all of the core Nooku classes are prefixed with the letter “K”. 
@@ -133,7 +133,7 @@ There is one exception, classes contain just 1 stub, like KConfig, or KObject re
 	KConfig -> koowa/config/config.php
 	KObject -> koowa/object/object.php
 
-####2.4.2 Components
+###2.4.2 Components
 
 Components are currently located in two places:
 
@@ -158,15 +158,15 @@ and the same in reverse.
 
 There are some other specific naming conventions depending upon the resource being requested.
 
-#####Controllers
+####Controllers
 
 Controllers are always singular, this is due in part to the fact that the BREAD actions (more on that later) refer to a single resource, eg, an article, or a post.
 
-#####Models
+####Models
 
 Models are always plural, and map directly to an associated database table by default.
 
-#####Views
+####Views
 
 Views are singular or plural depending upon the view being requested. Views generally map to a database table and either return multiple rows or a single row.
 Views a further sub divided by response type (HTML/JSON/CSV/RSS). 
@@ -200,7 +200,7 @@ index.php?option=com_foo&view=bars&layout=list&limit=10
 
 This will cause the list layout to be rendered with the first 10 rows fetched by the view from the model. Views also implement a “fluent interface” for setting model states (again, more on that later) that allows you to chain method calls together, in much the same way as well written javascript frameworks. (see http://martinfowler.com/bliki/FluentInterface.html)
 
-####Databases
+###Databases
 
 Database tables have a few naming conventions, that make a lot of sense when you think about them. Some of you may use these concepts already, others may not.
 
@@ -228,9 +228,9 @@ If you think about it, these names make a lot of sense. The table always contain
 
 When data is requested by the model from the database, data will be returned as one of two object, a KDatabaseRow or a KDatabaseRowset
 
-######KDatabaseRow
+#####KDatabaseRow
 This is a single object that represents an instance of a row from the database. Rows are saveable and deleteable and hold the data from the DB internally. Columns are accessible as if they were public variables. The name of the row within the view will be the name of the singular view by default.
-######KDatabaseRowset
+#####KDatabaseRowset
 
 This is a collection of KDatabaseRows from the database. The object is iterable and specific rows can be requested from the set using 
 
