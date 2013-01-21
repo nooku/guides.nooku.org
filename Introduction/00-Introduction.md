@@ -8,7 +8,7 @@ So how does Nooku fit into this? Merely by the simple fact that Nooku is based u
 
 So, first things first, forget most of what you know about writing code (I’m serious), and take a step back to think about why you are writing what you are writing, the bigger picture, the concepts, the design patterns, etc. Are you writing something to “just get it done”? Thinking it will save you time in the short term and you will “refactor that later”. Then come back 2 months later to find the comment:
 
-`//I know this is hacky, but I’m doing it now because my boss is on my back, it’s 5.15 on a friday evening and I want to go to the pub!`
+	//I know this is hacky, but I’m doing it now because my boss is on my back, it’s 5.15 on a friday evening and I want to go to the pub!
 
 Using nooku, should, through great code itself, force you to write better code and subsequent applications.
 
