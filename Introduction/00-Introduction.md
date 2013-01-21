@@ -2,15 +2,6 @@
 
 ##Introduction
 
-I am making a few core assumptions throughout these documents,
-
-* you know php to a competent level, this includes OOP
-* you know what an abstract class and interface is
-* you know what MVC is
-* you are at least aware of the HTTP verbs.
-
-If you don’t know what these things are, it’s too early for you to start to start using Nooku, trust me, have a look at another framework, sorry :(
-
 Believe it or not, there is a lot of bad code out there on the big scary interweb. We’ve all seen it, we’ve all blasphemed at our computer screens as we’ve encountered countless instances of vulnerabilities; 10+ nested if statements, 10’000 line classes, stupid variable names, stupid class names, etc etc.
 
 So how does Nooku fit into this? Merely by the simple fact that Nooku is based upon some fairly fundamental concepts that will end up making your life a whole lot easier.
