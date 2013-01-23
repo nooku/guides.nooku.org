@@ -39,6 +39,8 @@ Above is an example of a URI. As you can see, each part of the URI has a meaning
 
 You might be asking by now how this works in practice, so its time to get techy!
 
+![Smaller icon](http://smallerapp.com/favicon.ico)
+
 In Nooku, we use scheme://authority/path - we don’t need query or fragment. A typical identifier may look like this:
 
 	com://site/foo.controller.bar
