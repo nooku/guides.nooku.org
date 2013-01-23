@@ -39,7 +39,7 @@ Above is an example of a URI. As you can see, each part of the URI has a meaning
 
 You might be asking by now how this works in practice, so its time to get techy!
 
-![Smaller icon](https://github.com/oligriffiths/nooku-docs/blob/resources/images/uri.jpg?raw=true)
+![URI](https://github.com/oligriffiths/nooku-docs/blob/resources/images/uri.jpg?raw=true)
 
 In Nooku, we use scheme://authority/path - we don’t need query or fragment. A typical identifier may look like this:
 
@@ -111,7 +111,7 @@ So you’ve heard of MVC I’m sure, if you haven’t, I feel for your code, now
 
 HMVC however is a slightly newer concept and one that I’ve touched on already, composition. The H of HMVC stands for hierarchical, and is key to the concept of HMVC. The principle is that software applications can be built up hierarchically, through the use of composition of other self contained MVC triads. Each MVC triad is only aware of a single incoming request, to a controller, and the request is dispatched as appropriate. The following diagram should help solidify the concept:
 
-![Smaller icon](https://github.com/oligriffiths/nooku-docs/blob/resources/images/hmvc.png?raw=true)
+![HMVC Triads](https://github.com/oligriffiths/nooku-docs/blob/resources/images/hmvc.png?raw=true)
 
 The power of this concept lies in the simplicity of its implementation, small reusable blocks that make up a larger more complex system. By developing stand alone, self contained MVC triads  and components one can build up a system out of predefined parts, in much the same way as you built a house out of lego as a child! It also makes testing a great deal easier, and components can be developed independently and concurrently, thus speeding up development again. 
 ##2.4 Naming Conventions
