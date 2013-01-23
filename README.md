@@ -13,7 +13,8 @@ A few assumptions are being made throught these documents:
 * you know PHP 5 to a competent level, this includes OOP
 * you know what an abstract class and interface is
 * you know what MVC is
-* you are at least aware of the HTTP verbs.
+* you understand the HTTP verbs
+* you understand the principles of REST
 
 If you don’t know what these things are, it’s too early for you to start to start using Nooku, trust me, have a look at another framework, sorry :(
 
