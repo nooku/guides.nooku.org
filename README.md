@@ -16,6 +16,6 @@ A few assumptions are being made throught these documents:
 * you understand the HTTP verbs
 * you understand the principles of REST
 
-If you don’t know what these things are, it’s too early for you to start to start using Nooku, trust me, have a look at another framework, sorry :(
+If you don’t know what these things are, start googling :)
 
 Happy coding! :)
