@@ -1,6 +1,18 @@
 #Introduction
 
-Believe it or not, there is a lot of bad code out there on the big scary interweb. We’ve all seen it, we’ve all blasphemed at our computer screens as we’ve encountered countless instances of vulnerabilities; 10+ nested if statements, 10’000 line classes, stupid variable names, stupid class names, etc etc.
+##What is Nooku?
+
+In short, the big difference between Nooku and any other PHP framework to day, be it Lavarel, Symfony, Zend, etc, it that Nooku is more of a web development kit then just a framework. 
+
+Nooku includes not only PHP code it also includes a UI which is bootstrap based to allow you to very quickly build and prototype web applications. The big drawback from other frameworks is that they are 'just frameworks'. You get a lot of PHP code and from there you still need to do most of the work yourself.
+
+Nooku is component based, a component is a re-usable building block that offers a PHP API, a REST API and a user interface. Components can be connected together using an HMVC approach to create a complete web application. 
+
+Nooku is built to allow using other PHP libraries, like Zend or Symfony when needed. You can look at Nooku as the higher level glue to hold everything together. Out of the box Nooku will do 80% of the work for you, if you need specialised libraries you can of course always do so.
+
+##Why Nooku?
+
+Believe it or not, there is a lot of bad code out there on the internet. We’ve all seen it, we’ve all blasphemed at our computer screens as we’ve encountered countless instances of vulnerabilities; 10+ nested if statements, 10’000 line classes, stupid variable names, stupid class names, etc etc.
 
 So how does Nooku fit into this? Merely by the simple fact that Nooku is based upon some fairly fundamental concepts that will end up making your life a whole lot easier.
 
@@ -8,9 +20,7 @@ So, first things first, forget most of what you know about writing code (I’m s
 
 	//I know this is hacky, but I’m doing it now because my boss is on my back, it’s 5.15 on a friday evening and I want to go to the pub!`
 
-Using nooku, should, through great code itself, force you to write better code and subsequent applications.
-
-I digress, back to Nooku. Nooku is like no other development framework that you will have encountered, certainly not in the PHP context (feel free to correct me on this). Why? Several reasons:
+Using nooku, should, through well structured code itself, force you to write better code and subsequent applications.
 
 ##1 - Composition over inheritance
 Nooku focuses on composition over inheritance, a fairly new concept to PHP. This one point is more important than perhaps any other concept in Nooku. The reason for this is that most other frameworks out there are based on inheritance to extend functionality, causing bloated classes that often end up containing way more inherited methods than they actually need, and poor code reuse due to PHP’s lack of multiple inheritance (prior to 5.4) that leads to copy/paste programming. The end result is code that is hard to manage, poor resource usage, higher memory footprint, little to no code reuse and general miserability amongst developers.
