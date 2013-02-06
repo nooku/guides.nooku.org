@@ -18,4 +18,6 @@ A few assumptions are being made throught these documents:
 
 If you don’t know what these things are, start googling :)
 
+To get started, the git repo is at `git@git.assembla.com:nooku-framework.git`
+
 Happy coding! :)
