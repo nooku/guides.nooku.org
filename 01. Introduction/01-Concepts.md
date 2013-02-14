@@ -121,7 +121,7 @@ There are some specific naming conventions that Nooku uses, understand these is 
 
 ###2.4.1 Koowa
 
-First things first, the Nooku framework library itself. The Nooku framework library is called Koowa (I don’t know why, hopefully Johan will clarify and I will update this).
+First things first, the Nooku framework library itself. The Nooku framework library is called Koowa which is the Swahili for "growth" and was the name of the framework before the Nooku branding merge (This is shortly to be retired I believe).
 As a result of this, all of the core Nooku classes are prefixed with the letter “K”. 
 
 Classes in the Koowa library (located in /libraries/koowa) follow a very simple naming convention. They take the singular of the folder structure from the root of the koowa folder as the class name, e.g:
