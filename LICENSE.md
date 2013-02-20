@@ -1,4 +1,4 @@
-Appendix A - License
+License
 ====================
 
 Attribution-Share Alike 3.0 Unported License
