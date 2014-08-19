@@ -1,0 +1,5 @@
+{
+    "title": "Nooku Guides",
+    "output": "./build/",
+    "plugins": ["toc"]
+}
