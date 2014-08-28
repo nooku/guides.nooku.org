@@ -1,11 +1,6 @@
 # HMVC
 
-##H-what?
-
 We touched on HMVC earlier within the concepts document, however we will go into a little more detail here.
-
-When MVC became a concept that the PHP community started to embrace, OOP software development changed for the better. No more giant switch statements, decoupled code, separation of control, data and rendering, awesome. However, MVC on it's own doesn't really solve all our problems. 
-
 
 ###What's wrong with MVC?
 
@@ -53,14 +48,14 @@ One of the other major concerns of HMVC is the control aspect. In most MVC imple
 
 ###How?
 
-Hopefully now you can see the power of HMVC and want to start using it. Nooku implements HMVC out fo the box. Infact, it was designed to implement HMVC from the beginning, and uses it extensively throughout the admin interface.
+Hopefully now you can see the power of HMVC and want to start using it. Nooku implements HMVC out fo the box. In fact, it was designed to implement HMVC from the beginning, and uses it extensively throughout the admin interface.
 
-Loading in an HMVC request is really straight forward:
+Making an HMVC request is straightforward:
 
-	echo KServiceManager::get('com://admin/component.controller.name')->render();
+	echo KObjectManager::getInstance()->getObject('com://admin/component.controller.name')->render();
 
 And if you need to set specific state information:
 
-	echo KServiceManager::get('com://admin/component.controller.name')->render(array('id' => 5));
+	echo KObjectManager::getInstance()->getObject('com://admin/component.controller.name')->render(array('id' => 5));
 
 The above is essentially the same request that would happen as if it came directly from the browser via HTTP, as such, the controller is unaware it was requested internally. Pretty cool eh?

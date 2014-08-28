@@ -2,7 +2,7 @@
 
 ##What is Nooku?
 
-In short, the big difference between Nooku and any other PHP framework today, be it Symfony, Zend, Cake, Lithium, Laravel, etc, it that Nooku is more of a web development kit than just a framework. 
+In short, the big difference between Nooku and any other PHP framework today, be it Symfony, Zend, Cake, Lithium, Laravel, etc. is that Nooku is more of a web development kit than just a framework. 
 
 Nooku includes not only PHP code, it also includes a UI layer which uses Twitter Boostrap to allow you to very quickly build and prototype web applications. The big drawback from other frameworks is that they are 'just frameworks'. You get a lot of PHP code and from there you still need to do most of the work yourself.
 
@@ -16,11 +16,11 @@ Believe it or not, there is a lot of bad code out there on the internet. We’ve
 
 So how does Nooku fit into this? Merely by the simple fact that Nooku is based upon industry standard design patterns and concepts, it that will end up making your life a whole lot easier.
 
-So, first things first, put aside and pre-assumptions you may have about how to write code, and take a step back to think about why you are writing what you are writing, the bigger picture, the concepts, the design patterns, etc. Are you writing something to “just get it done”? Thinking it will save you time in the short term and you will “refactor that later”. Then come back 2 months later to find the comment:
+So, first things first, put aside any pre-assumptions you may have about how to write code, and take a step back to think about why you are writing what you are writing, the bigger picture, the concepts, the design patterns, etc. Are you writing something to “just get it done”? Thinking it will save you time in the short term and you will “refactor that later”. Then come back 2 months later to find the comment:
 
 	//I know this is hacky, but I’m doing it now because my boss is on my back, it’s 5.15 on a friday evening and I want to go to the pub!`
 
-Using Nooku, should, through well structured, well written and design pattern driven code itself, encourage you to write better code and subsequent applications.
+Using Nooku should, through well structured, well written and design pattern driven code itself, encourage you to write better code and subsequent applications.
 
 ##1 - Composition over inheritance
 
