@@ -1,6 +1,6 @@
 # Request and Response
 
-The entire request and response cycle in Nooku is pretty straight forward, but there are many parts to the puzzle and it is important to understand how all of the bits fit together.
+The entire request and response cycle in Nooku is pretty straightforward, but there are many parts to the puzzle and it is important to understand how all of the bits fit together.
 
 Think about the request/response cycle within HTTP:
 
@@ -10,7 +10,7 @@ Think about the request/response cycle within HTTP:
 4. Handler returns a response to the web server
 5. Web server returns a response to the browser
 
-We can think about the above in terms of MVC
+We can think about the above in terms of MVC:
 
 1. Request
 2. Controller
@@ -20,13 +20,13 @@ We can think about the above in terms of MVC
 
 ![request / response cycle](http://motda.be/nooku/mvc2.jpg)
 
-Nooku is build to model this same process flow through the entire framework.
+Nooku is built to model this same process flow through the entire framework.
 
-Now think about how in Apache you can load in modules. Modules allow you to extend the existing functionality of Apache, without modifying it's core underlying code. Modules can do all sorts of things, from handling routing (mod_rewrite) to compressing the output sent to the browser (mod_deflate). Nooku employs the same techniques by using an entity known as a behavior. 
+Now think about how in Apache you can load in modules. Modules allow you to extend the existing functionality of Apache, without modifying its core underlying code. Modules can do all sorts of things, from handling routing (mod_rewrite) to compressing the output sent to the browser (mod_deflate). Nooku employs the same techniques by using behaviors. 
 
-Behaviors can be used to modify the input and output of the controller and the data layer without having to modify the underlying code. This becomes incredibly powerful, as one can affect the way a system operates just by wiring in some behaviors, behaviors that can be re-used amongst lots of different projects too.
+Behaviors can be used to modify the input and output of the controller, model or the data layer without having to modify the underlying code. This becomes incredibly powerful, as one can affect the way a system operates just by wiring in some behaviors, behaviors that can be re-used amongst lots of different projects too.
 
-Nooku uses behaviors for all sorts of tasks, from auto slug creation, to caching, to activity moitoring.
+Nooku uses behaviors for all sorts of tasks, from automatic alias creation, to caching and activity moitoring.
 
 ## How it works
 
@@ -36,9 +36,6 @@ A dispatcher is responsible for:
 
 * Deconstructing the request into an internal route
 * Handling authentication & authorization
-* Dispatching the request to the approprate component (and subsequent controller)
-* Processing the response and pushing it into the template
+* Dispatching the request to the appropriate controller
 * Handling exceptions
 * Returning the response, including the body and the appropriate headers, to the browser
-
-Each component also has a dispatcher. The component's dispatcher is responsible for handling which controller within the component is to be dispatched, authorizes the request, dispatches the request, and returns the response to the caller (the application dispatcher above).
