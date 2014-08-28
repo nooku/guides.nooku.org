@@ -7,7 +7,7 @@ We touched on HMVC earlier within the concepts document, however we will go into
 The problem with MVC (in stateless applications) on its own is that it is often considered a very much one shot execution type deal. You make a request to the web server, some handler intercepts the request, works out what controller to load, executes some action on the controller that gets data from the model, sends model data object the view, renders the view and returns the response to the browser.
 
 
-![MVC](http://motda.be/nooku/mvc1.jpg)
+![MVC](../resources/images/mvc.jpg)
 
 Though MVC comes in different flavours, control flow is generally as follows:
 
@@ -38,7 +38,7 @@ Imagine if each of those elements could be a self contained MVC triad, with its 
 
 HMVC focuses on the idea of modularising your MVC triads such that they can be re-used within any other MVC triad in a **"hierarchical"** fashion, hence HMVC.
 
-![HMVC Triads](https://github.com/oligriffiths/nooku-docs/blob/resources/images/hmvc.png?raw=true)
+![HMVC Triads](../resources/images/hmvc.png)
 
 The image on the left shows a single MVC triad, the image on the right shows a hierarchy of MVC triads, each dispatching a request to the controller of another triad.
 

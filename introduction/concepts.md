@@ -26,7 +26,7 @@ If you think about it, how important is the class name? It is not, it is only us
 
 So if you’re not using the class name for instantiating an object, what can you use? Well, Tim Berners Lee came up with a concept in the 80’s, and no I don’t mean the internet, the URI. So we take advantage of a well established principle that has worked well for over a quarter century.
 
-![URI](https://github.com/oligriffiths/nooku-docs/blob/resources/images/uri.jpg?raw=true)
+![URI](../resources/images/uri.jpg)
 
 Above is an example of a URI. As you can see, each part of the URI has a meaning, and we can use this meaning to our advantage, to dynamically create a class name, because at the end of the day, we still need a class name at some point to instantiate our object.
 
@@ -97,7 +97,7 @@ And that's pretty much it. There is plenty more you can do with service identifi
 
 The H of HMVC stands for hierarchical. The principle is that software applications can be built up hierarchically, through the use of composition of other self contained MVC triads. Each MVC triad is only aware of a single incoming request, to a controller, and the request is dispatched as appropriate. The following diagram should help solidify the concept:
 
-![HMVC Triads](https://github.com/oligriffiths/nooku-docs/blob/resources/images/hmvc.png?raw=true)
+![HMVC Triads](../resources/images/hmvc.png)
 
 The power of this concept lies in the simplicity of its implementation, small reusable blocks that make up a larger more complex system. By developing stand alone, self contained MVC triads and components one can build up a system out of predefined parts, in much the same way as you build a house out of lego. It also makes testing a great deal easier, and components can be developed independently and concurrently, thus speeding up development again.
 ## Naming Conventions
