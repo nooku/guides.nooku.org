@@ -1,9 +1,8 @@
 # SUMMARY
 
-* [Introduction](introduction/introduction.md)
-    * [Getting Started](introduction/getting-started.md)
-    * [Concepts](introduction/concepts.md)
-* [Request and Response](request-response/introduction.md)
+* [Overview](overview.md)
+    * [Concepts](overview/concepts.md)
+* [Request and Response](request-response.md)
     * [HMVC](request-response/HMVC.md)
     * [BREAD](request-response/BREAD.md)
-* [Data Layer](data-layer/data-layer.md)
+* [Data Layer](data-layer.md)

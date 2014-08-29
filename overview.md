@@ -2,11 +2,9 @@
 
 ##What is Nooku?
 
-In short, the big difference between Nooku and any other PHP framework today, be it Symfony, Zend, Cake, Lithium, Laravel, etc. is that Nooku is more of a web development kit than just a framework. 
+In short, Nooku is more of a web development kit than just a framework.
 
-Nooku includes not only PHP code, it also includes a UI layer which uses Twitter Boostrap to allow you to very quickly build and prototype web applications. The big drawback from other frameworks is that they are 'just frameworks'. You get a lot of PHP code and from there you still need to do most of the work yourself.
-
-Nooku is component based, a component is a re-usable building block that offers a PHP API, a REST API and perhaps a user interface. Components can be connected together using an HMVC approach to create a complete web application. 
+Nooku is component based, a component is a re-usable building block that offers a PHP API, a REST API and perhaps a user interface. Components can be connected together using an HMVC approach to create a complete web application.
 
 Nooku is built to allow using other PHP libraries, like Zend or Symfony when needed. You can look at Nooku as the higher level glue to hold everything together. Out of the box Nooku will do 80% of the work for you, if you need specialised libraries you can of course always do so.
 
