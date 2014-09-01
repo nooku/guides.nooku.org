@@ -17,6 +17,10 @@ body {
   z-index: 1;
 }
 
+.book .book-body {
+  padding-bottom: 40px;
+}
+
 .book .book-body,
 .book .book-body .body-inner {
   min-height: 100%;
@@ -29,6 +33,13 @@ body {
 .book.with-summary .book-body {
   overflow: auto !important;
   bottom: 0 !important;
+}
+
+@media screen and (min-width: 601px) {
+  .book.with-summary .book-body {
+    overflow: visible !important;
+    bottom: auto !important;
+  }
 }
 
 .book .book-summary {
