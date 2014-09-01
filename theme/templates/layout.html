@@ -17,7 +17,7 @@
         {% block head %}{% endblock %}
         {{ htmlSnippet("head:end")|default("") }}
     </head>
-    <body>
+    <body class="no-js">
         {{ htmlSnippet("body:start")|default("") }}
         {% block style %}{% endblock %}
         {% block content %}{% endblock %}

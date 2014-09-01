@@ -71,6 +71,7 @@
 {% endblock %}
 
 {% block javascript %}
+<script type="text/javascript">function hasClass(e,t){return e.className.match(new RegExp("(\\s|^)"+t+"(\\s|$)"))}var el=document.body;var cl="no-js";if(hasClass(el,cl)){var reg=new RegExp("(\\s|^)"+cl+"(\\s|$)");el.className=el.className.replace(reg," js-enabled")}</script>
 <script src="{{ staticBase }}/js/apollo.js"></script>
 <script src="{{ staticBase }}/js/vanilla.js.responsive.menu.js"></script>
 <script src="{{ staticBase }}/app.js"></script>
@@ -83,9 +84,9 @@
 {% endfor %}
 <script>
     responsivemenu.init({
-        wrapper: document.getElementsByClassName('header')[0],
-        before_element: document.getElementsByClassName('brand')[0],
-        absolute: 1
+        wrapper: document.querySelector('.header'),
+        toggleclass: 'button--hamburger',
+        togglecontent: 'menu <span class="lines"></span>'
     });
 </script>
 <script>
@@ -97,6 +98,7 @@ require(["gitbook"], function(gitbook) {
 {% endblock %}
 
 {% block style %}
+<link href='http://fonts.googleapis.com/css?family=Roboto:400,300,300italic,700,400italic' rel='stylesheet' type='text/css'>
 <link rel="stylesheet" href="{{ staticBase }}/style.css">
 <link rel="stylesheet" href="{{ staticBase }}/theme.css">
 {% for resource in plugins.resources.css %}

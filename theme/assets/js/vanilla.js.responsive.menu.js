@@ -29,10 +29,12 @@
     var exports = {}; // Object for public APIs
     var supports = !!document.querySelector && !!root.addEventListener; // Feature test
     var settings; // Plugin settings
+    var menu; // The actual menu item
 
     // Default settings
     var defaults = {
         wrapper: document.getElementsByTagName('nav')[0],
+        menu: '',
         initiated_class: 'initiated',
         before_element: '',
         toggletype: 'button',
@@ -43,7 +45,7 @@
         subtogglecontent: '+',
         sticky: 0,
         absolute: 0,
-        hideclass: 'accessible-hide',
+        hideclass: 'closed',
         width: 600
     };
 
@@ -122,8 +124,15 @@
     // Initialize
     function initialize(settings) {
 
+        // Define what the actual menu object is
+        if ( settings.menu == '' ) {
+            menu = settings.wrapper.getElementsByTagName('ul')[0];
+        } else {
+            menu = settings.menu;
+        }
+
         // Add a class when JS is initiated
-        apollo.addClass(settings.wrapper, settings.initiated_class);
+        apollo.addClass(menu, settings.initiated_class);
 
         // Creating the main toggle button
         var toggle_element = document.createElement(settings.toggletype);
@@ -134,19 +143,16 @@
         togglebutton.innerHTML = settings.togglecontent;
         togglebutton.setAttribute('aria-hidden', 'true');
         togglebutton.setAttribute('aria-pressed', 'false');
-        togglebutton.style.display = "none";
 
         // Creating subtoggles
-        var parents = settings.wrapper.getElementsByTagName('li');
+        var parents = menu.getElementsByTagName('li');
         forEach(parents, function(value, prop) {
             var child = parents[prop].getElementsByTagName('ul')[0];
             if ( child != undefined ) {
-                apollo.addClass(child, settings.hideclass);
                 var subtoggle_element = document.createElement(settings.subtoggletype);
                 apollo.addClass(subtoggle_element, [settings.subtoggleclass, settings.hideclass]);
                 var parent = child.parentNode;
                 parent.insertBefore(subtoggle_element, parent.firstChild);
-                subtoggle_element.style.display = 'block';
                 subtoggle_element.innerHTML = settings.subtogglecontent;
                 subtoggle_element.setAttribute('aria-hidden', 'true');
                 subtoggle_element.setAttribute('aria-pressed', 'false');
@@ -160,43 +166,41 @@
             var viewportwidth = Math.max(document.documentElement.clientWidth, window.innerWidth || 0);
 
             // If screen is small and if the menu is not already opened
-            if ( viewportwidth <= settings.width && !apollo.hasClass(settings.wrapper, 'opened') && !apollo.hasClass(settings.wrapper, 'closed') ) {
+            if ( viewportwidth < settings.width && !apollo.hasClass(menu, 'opened') ) {
 
                 // Show the toggle button(s)
-                apollo.removeClass(togglebutton, 'close');
-                togglebutton.style.display = "block";
+                apollo.removeClass(togglebutton, 'closed');
                 var subtoggles = document.getElementsByClassName(settings.subtoggleclass);
                 forEach(subtoggles, function(value, prop) {
                     apollo.addClass(subtoggles[prop].parentNode.getElementsByTagName('ul')[0], settings.hideclass);
-                    apollo.removeClass(subtoggles[prop], [settings.hideclass, 'close']);
+                    apollo.removeClass(subtoggles[prop], settings.hideclass);
                 });
 
                 // Hide the menu
-                apollo.removeClass(settings.wrapper, 'opened');
-                apollo.addClass(settings.wrapper, 'closed');
+                apollo.removeClass(menu, 'opened');
+                apollo.addClass(menu, 'closed');
 
                 // Make the menu absolute positioned
                 if ( settings.absolute == 1 ) {
-                    apollo.addClass(settings.wrapper, 'absolutemenu');
+                    apollo.addClass(menu, 'absolutemenu');
                 }
 
-            } else if ( viewportwidth > settings.width ) {
+            } else if ( viewportwidth >= settings.width ) {
 
                 // Hide the toggle button(s)
-                apollo.addClass(togglebutton, 'close');
-                togglebutton.style.display = "none";
+                apollo.addClass(togglebutton, 'closed');
                 var subtoggles = document.getElementsByClassName(settings.subtoggleclass);
                 forEach(subtoggles, function(value, prop) {
                     apollo.removeClass(subtoggles[prop].parentNode.getElementsByTagName('ul')[0], settings.hideclass);
-                    apollo.addClass(subtoggles[prop], [settings.hideclass, 'close']);
+                    apollo.addClass(subtoggles[prop], settings.hideclass);
                 });
 
                 // Show the menu and remove all classes
-                apollo.removeClass(settings.wrapper, ['opened', 'closed']);
+                apollo.removeClass(menu, ['opened', 'closed']);
 
                 // Undo absolute positioning
-                if ( settings.absolute == 1 && apollo.hasClass(settings.wrapper, 'absolutemenu') ) {
-                    apollo.removeClass(settings.wrapper, 'absolutemenu');
+                if ( settings.absolute == 1 && apollo.hasClass(menu, 'absolutemenu') ) {
+                    apollo.removeClass(menu, 'absolutemenu');
                 }
             }
         }
@@ -229,7 +233,7 @@
                     }
 
                     // Add padding only if menu is closed or when value is stored
-                    if ( !apollo.hasClass(settings.wrapper, 'opened') && !apollo.hasClass(document.body, 'sticky-initiated') ) {
+                    if ( !apollo.hasClass(menu, 'opened') && !apollo.hasClass(document.body, 'sticky-initiated') ) {
 
                         // Calculate the height
                         var paddingtop = menuheight.toString() + 'px';
@@ -255,14 +259,14 @@
         togglebutton.onclick = function() {
 
             // Add classes accordingly
-            if ( apollo.hasClass(settings.wrapper, 'closed') ) {
-                apollo.removeClass(settings.wrapper, 'closed');
-                apollo.addClass(settings.wrapper, 'opened');
-                apollo.addClass(togglebutton, 'close');
-            } else if ( apollo.hasClass(settings.wrapper, 'opened') ) {
-                apollo.removeClass(settings.wrapper, 'opened');
-                apollo.addClass(settings.wrapper, 'closed');
-                apollo.removeClass(togglebutton, 'close');
+            if ( apollo.hasClass(menu, 'closed') ) {
+                apollo.removeClass(menu, 'closed');
+                apollo.addClass(menu, 'opened');
+                apollo.addClass(togglebutton, 'togglebutton--closed');
+            } else if ( apollo.hasClass(menu, 'opened') ) {
+                apollo.removeClass(menu, 'opened');
+                apollo.addClass(menu, 'closed');
+                apollo.removeClass(togglebutton, 'togglebutton--closed');
             }
 
             // Check if the menu still fits
@@ -284,10 +288,10 @@
                 // Add classes accordingly
                 if ( apollo.hasClass(submenu, settings.hideclass) ) {
                     apollo.removeClass(submenu, settings.hideclass);
-                    apollo.addClass(subtoggle, 'close');
+                    apollo.addClass(subtoggle, 'subtogglebutton--closed');
                 } else if ( !apollo.hasClass(submenu, settings.hideclass) ) {
                     apollo.addClass(submenu, settings.hideclass);
-                    apollo.removeClass(subtoggle, 'close');
+                    apollo.removeClass(subtoggle, 'subtogglebutton--closed');
                 }
 
                 // Check if the menu still fits
