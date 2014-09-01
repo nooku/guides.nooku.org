@@ -1,101 +1,19 @@
 /* Restyling the book classes for our top menu */
-body {
-  width: 100%;
-  max-width: 100%;
-  height: auto;
-}
-
 .book {
   position: absolute;
   top: 81px;
   left: 0;
   right: 0;
-  overflow: visible;
-  min-height: 100%;
-  height: auto !important;
-  bottom: auto !important;
+  bottom: 0;
+  height: auto;
   z-index: 1;
 }
-
-.book .book-body {
-  padding-bottom: 40px;
-}
-
-.book .book-body,
-.book .book-body .body-inner {
-  min-height: 100%;
-  height: auto !important;
-  bottom: auto !important;
-  overflow: visible !important;
-  z-index: 1;
-}
-
-.book.with-summary .book-body {
-  overflow: auto !important;
-  bottom: 0 !important;
-}
-
-@media screen and (min-width: 601px) {
-  .book.with-summary .book-body {
-    overflow: visible !important;
-    bottom: auto !important;
-  }
-}
-
-.book .book-summary {
-  z-index: 3;
-  overflow: hidden;
-}
-
-.book .book-summary ul.summary {
-  bottom: auto !important;
-  overflow: visible !important;
-}
-
-.book .book-body .body-inner {
-  position: relative !important;
-}
-
-.book .body-inner:after {
-  display: table;
-  content: " ";
-  clear: both;
-}
-
-.book .book-body:before {
-  display: block;
-  content: " ";
-  position: absolute;
-  width: 599px;
-  height: 100%;
-  background: #fafafa;
-  border-right: 1px solid rgba(0,0,0,0.07);
-  margin-left: -600px;
-  z-index: 2;
-}
-
-.book .book-body .navigation {
-  position: static !important;
-  top: auto !important;
-  max-width: 50% !important;
-  width: 50% !important;
-  display: inline-block !important;
-  float: left !important;
-  bottom: auto !important;
-  margin: 0 auto !important;
-  min-width: 0 !important;
-  align-content: flex-end;
-}
-
-.book .book-body .navigation-next {
-  float: right !important;
-}
-
-
 
 /* extra classes for menu */
 .header {
-  position: relative;
+  max-height: 81px;
+  overflow: visible;
+  position: absolute;
   z-index: 5 !important;
 }
 
