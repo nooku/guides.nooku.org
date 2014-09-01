@@ -1,5 +1,6 @@
 {
     "title": "Nooku Guides",
     "output": "./build/",
+    "theme": "theme",
     "plugins": ["toc"]
 }
