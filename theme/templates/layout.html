@@ -3,17 +3,21 @@
     {{ htmlSnippet("html:start")|default("") }}
     <head>
         {{ htmlSnippet("head:start")|default("") }}
-        <meta charset="UTF-8">
         <title>{% block title %}{% endblock %}</title>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
         <meta name="description" content="{% block description %}{% endblock %}">
         <meta name="generator" content="GitBook {{ gitbook.version }}">
         <meta name="HandheldFriendly" content="true"/>
-        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta name="apple-mobile-web-app-capable" content="yes">
-        <meta name="apple-mobile-web-app-status-bar-style" content="black">
-        <link rel="apple-touch-icon-precomposed" sizes="152x152" href="http://staging.nooku.org/images/apple-touch-icon-precomposed-152.png">
-        <link rel="shortcut icon" href="http://staging.nooku.org/images/favicon.ico" type="image/x-icon">
+        <meta name=”mobile-web-app-capable” content=”yes” />
+        <meta name="apple-mobile-web-app-status-bar-style" content="#e2e2e2">
+        <meta name="apple-mobile-web-app-title" content="Nooku">
+        <link rel="shortcut icon" type="image/ico" href="http://staging.nooku.org/images/favicon.ico" />
+        <link rel="shortcut icon" type="image/png" href="http://staging.nooku.org/images/xtouch-icon.png" />
+        <link rel="apple-touch-icon" type="image/png" href="http://staging.nooku.org/images/xtouch-icon.png"/>
         {% block head %}{% endblock %}
         {{ htmlSnippet("head:end")|default("") }}
     </head>
