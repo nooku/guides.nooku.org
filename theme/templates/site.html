@@ -20,7 +20,7 @@
     <div class="header">
         <div class="container">
             <div class="group">
-                <div class="header__brand brand"><a href="/"><img src="http://www.nooku.org/images/layout/logo.png" alt="Nooku Logo"></a></div>
+                <div class="header__brand brand"><a href="/"><img src="http://staging.nooku.org/images/layout/logo.png" alt="Nooku Logo"></a></div>
                 <div class="header__navigation">
                     <div class="navigation_container" role="navigation">
                         <ul class="navbar initiated">
@@ -100,7 +100,8 @@ require(["gitbook"], function(gitbook) {
 {% block style %}
 <link href='http://fonts.googleapis.com/css?family=Roboto:400,300,300italic,700,400italic' rel='stylesheet' type='text/css'>
 <link rel="stylesheet" href="{{ staticBase }}/style.css">
-<link rel="stylesheet" href="{{ staticBase }}/theme.css">
+<link rel="stylesheet" href="{{ staticBase }}/nooku.css">
+<link rel="stylesheet" href="http://staging.nooku.org/css/header.css">
 {% for resource in plugins.resources.css %}
     {% if resource.url %}
     <link rel="stylesheet" href="{{ resource.url }}">

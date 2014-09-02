@@ -1,0 +1,18 @@
+/* Restyling the book classes for our top menu */
+.book {
+  position: absolute;
+  top: 81px;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: auto;
+  z-index: 1;
+}
+
+/* extra classes for menu */
+.header {
+  max-height: 81px;
+  overflow: visible;
+  position: absolute;
+  z-index: 5 !important;
+}
