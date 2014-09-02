@@ -1,0 +1,29 @@
+/* Restyling the book classes for our top menu */
+.book {
+  position: absolute;
+  top: 81px;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: auto;
+  z-index: 1;
+}
+
+/* extra classes for menu */
+.header {
+  max-height: 81px;
+  overflow: visible;
+  position: absolute;
+  z-index: 5 !important;
+}
+
+.header .container {
+  max-width: 1024px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* @TODO: import style from nooku.org jekyll site github repo */
+
+.navigation_container:before,.navbar:before,.navigation_container:after,.navbar:after{display:table;content:" "}.navigation_container:after,.navbar:after{clear:both}*{-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box}.js-enabled .closed{position:absolute !important;overflow:hidden !important;clip:rect(0 0 0 0) !important;height:1px !important;width:1px !important;margin:-1px !important;padding:0 !important;border:0 !important}.sticky{position:fixed !important;top:0 !important;left:0 !important;right:0 !important}.bodyoverflowhidden{position:relative;overflow:hidden}.menuoverflowauto{max-height:100%;width:100%;overflow:auto}.absolutemenu{position:absolute !important;top:100% !important;left:0 !important;right:0 !important;z-index:99}.navigation_container li{position:relative}.navigation_container li ul{display:none}.navigation_container li.active>ul,.navigation_container li.current>ul{display:block}.navigation_container.initiated li ul{display:block}@media screen and (min-width: 600px){.navigation_container li.parent>a:after{content:" \25bc"}.navigation_container.initiated li ul,.navigation_container li ul,.navigation_container li.active ul{display:none;position:absolute;left:0;top:100%;z-index:9}.navigation_container li:hover>ul{display:block}}.button--hamburger{float:right;padding:7px 12px;color:#085DAD;text-decoration:none;text-align:center;border:1px solid #bbb;border-radius:8px;background-color:#fff;margin-top:3px;margin-right:10px;font-size:16px;font-family:"Roboto",Helvetica,Arial,sans-serif}.button--hamburger:after{display:inline-block;font-size:30px;content:'\2630';vertical-align:text-bottom;padding-left:6px}.button--hamburger.togglebutton--closed{border-color:#03294c;background:#085DAD;color:#fff;box-shadow:inset 0px 1px 0px 0px #000}.button--hamburger.togglebutton--closed .lines,.button--hamburger.togglebutton--closed .lines:before,.button--hamburger.togglebutton--closed .lines:after{background:#fff}@media screen and (orientation: landscape), screen and (orientation: portrait){.button--hamburger:hover{text-decoration:none}}@media (max-width: 37.5em){.button--hamburger:after{content:"";content:none}.button--hamburger{cursor:pointer;user-select:none}.button--hamburger:hover{opacity:1}.button--hamburger:active{transition:0}.button--hamburger .lines{position:relative;top:-4px;margin-left:8px}.button--hamburger .lines,.button--hamburger .lines:before,.button--hamburger .lines:after{display:inline-block;width:0.9375em;height:0.13393em;background:#085DAD;border-radius:0.06696em;transition:0.2s ease-in-out}.button--hamburger .lines:before,.button--hamburger .lines:after{position:absolute;left:0;content:'';-webkit-transform-origin:0.06696em center;transform-origin:0.06696em center}.button--hamburger .lines:before{top:0.26786em}.button--hamburger .lines:after{top:-0.26786em}.button--hamburger.togglebutton--closed .lines{background:transparent}.button--hamburger.togglebutton--closed .lines:before,.button--hamburger.togglebutton--closed .lines:after{-webkit-transform-origin:50% 50%;transform-origin:50% 50%;top:0;width:0.9375em}.button--hamburger.togglebutton--closed .lines:before{-webkit-transform:rotate3d(0, 0, 1, 45deg);transform:rotate3d(0, 0, 1, 45deg)}.button--hamburger.togglebutton--closed .lines:after{-webkit-transform:rotate3d(0, 0, 1, -45deg);transform:rotate3d(0, 0, 1, -45deg)}}@media screen and (min-width: 37.5em){.header__brand{width:22.22222%;float:left;margin-left:0}.header__navigation{width:74.07407%;float:left;margin-left:3.7037%}}.navigation_container{font-size:0;line-height:0;font-family:"Roboto",Helvetica,Arial,sans-serif;font-weight:300}@media screen and (min-width: 37.5em){.navigation_container{text-align:right}}.navbar{font-size:18px;line-height:24px;z-index:2;list-style:none;display:block;padding:4px 0 0;margin:20px 0 0}@media screen and (min-width: 37.5em){.navbar{display:inline-block;margin:0}}@media screen and (min-width: 320px){.navbar__item{float:left;width:50%}}@media screen and (min-width: 37.5em){.navbar__item{margin:0 8px;font-size:16px;width:auto}}@media screen and (min-width: 48em){.navbar__item{font-size:18px;margin:0 15px}}@media screen and (min-width: 64em){.navbar__item{margin:0 20px}}.navbar__item a{color:#333;display:inline-block;text-decoration:none;padding:6px 0 3px;border-bottom:1px solid transparent}@media screen and (min-width: 37.5em){.navbar__item a{border-bottom-width:3px}}.navbar__item a:visited{color:#333}.navbar__item a:hover{border-bottom-color:#b8dbfc}@media screen and (min-width: 37.5em){.navbar__item a{display:inline-block}}.navbar__item.active a{border-bottom-color:#085DAD}.header{position:relative;z-index:1;padding-top:20px;padding-bottom:20px;border-bottom:1px solid #e2e2e2;min-height:81px;background:#f6f6f6;font-family:"Roboto",Helvetica,Arial,sans-serif;font-weight:300}@media screen and (min-width: 37.5em){.header .brand{text-align:center}}.header .brand{text-align:left;font-size:0;line-height:0;max-height:40px;height:40px}.header .brand a{display:inline-block;width:auto;height:40px}.header .brand a img{display:block;height:40px;width:86px}
+/*# sourceMappingURL=header.css.map */
