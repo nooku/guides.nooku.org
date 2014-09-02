@@ -2,5 +2,10 @@
     "title": "Nooku Guides",
     "output": "./build/",
     "theme": "theme",
-    "plugins": ["toc"]
+    "plugins": ["toc", "ga"],
+    "pluginsConfig": {
+        "ga": {
+            "token": "UA-214238-5"
+        }
+    }
 }
