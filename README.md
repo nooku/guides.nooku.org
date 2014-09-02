@@ -1,4 +1,4 @@
-# Nooku
+# Nooku Guides
 
 Welcome to the wonderful world of Nooku.
 
