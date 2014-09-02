@@ -9,9 +9,9 @@
   z-index: 1;
 }
 
-/* extra classes for menu */
+/* extra classes for menu which can't be in header.css since we use a "sticky" menu here */
 .header {
-  max-height: 81px;
+  max-height: none;
   overflow: visible;
   position: absolute;
   z-index: 5 !important;
