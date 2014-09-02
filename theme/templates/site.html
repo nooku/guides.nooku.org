@@ -72,8 +72,7 @@
 
 {% block javascript %}
 <script type="text/javascript">function hasClass(e,t){return e.className.match(new RegExp("(\\s|^)"+t+"(\\s|$)"))}var el=document.body;var cl="no-js";if(hasClass(el,cl)){var reg=new RegExp("(\\s|^)"+cl+"(\\s|$)");el.className=el.className.replace(reg," js-enabled")}</script>
-<script src="{{ staticBase }}/js/apollo.js"></script>
-<script src="{{ staticBase }}/js/vanilla.js.responsive.menu.js"></script>
+<script type="text/javascript" src="http://staging.nooku.org/js/scripts.js"></script>
 <script src="{{ staticBase }}/app.js"></script>
 {% for resource in plugins.resources.js %}
     {% if resource.url %}
