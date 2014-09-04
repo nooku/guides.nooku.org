@@ -256,7 +256,7 @@ Sorting results with the Nooku API results is a snap. Like the “Indexable” b
 The *sort* variable gives us the column by which to sort our results.
 The "direction" is either the familiar *asc* for ascending (which is the default) and *desc* for descending. In combination, they get used in the Model to build the “ORDER BY” part of your query. A request in our example with &sort=category_id&direction=desc” will produce a query against database that has the following:
 
-    “ORDER BY tbl.category_id DESC”
+    ORDER BY tbl.category_id DESC
 
 
 ### <a name="pagination"></a>Pagination on Resource Collections
