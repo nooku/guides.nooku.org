@@ -37,9 +37,9 @@ In accordance with the specification Nooku defines a Top Level json object for e
 
 ##  <a name="top-level"></a> Top Level
 
-The top level properties of any given document gives you and your api consumers an idea of how they can query your resources.
+The top level properties of any given document give you and your api consumers an idea of how they can query your resources.
 
-We include 5 properties in this level and in accordance with the specification, no others are included: version, links, meta, entities and linked. We describe the major characteristics of each in the following sections.
+We include 5 properties in this level and in accordance with the specification, no others are included: **version, links, meta, entities** and **linked**. We describe the major characteristics of each in the following sections.
 
 ###  <a name="version"></a> “version”
 
@@ -53,7 +53,7 @@ The links property in general is used to specify resource relationships for reso
 
 
     "self": {
-        href: "http://joomla.dev/docman/component/tada?view=todos&format=json&limit=2",
+        href: "http://joomla.dev/testsite/component/tada?view=todos&format=json&limit=2",
         type: "application/json; version=1.0"
     }
 
@@ -63,7 +63,7 @@ When appropriate, we also include “next” and “previous” pagination links
 
     "next":
     {
-        href: "http://joomla.dev/docman/component/tada?view=todos&format=json&limit=2&offset=2",
+        href: "http://joomla.dev/testsite/component/tada?view=todos&format=json&limit=2&offset=2",
         type: "application/json; version=1.0"
     }
 
@@ -103,7 +103,7 @@ In Nooku’s default document structure, we’ve chosen to use the word “entit
             {
                 "self":
                 {
-                    "href": "http://joomla.dev/rest-site/component/tada/todo?slug=walk-the-dog&format=json",
+                    "href": "http://joomla.dev/testsite/component/tada/todo?slug=walk-the-dog&format=json",
                     "type": "application/json; version=1.0"
                 }
             }
@@ -133,7 +133,7 @@ Similarly, we send a Collection of Resources as json array of resource objects o
             {
                 "self":
                 {
-                    "href": "http://joomla.dev/docman/component/tada/todo?slug=walk-the-dog&format=json",
+                    "href": "http://joomla.dev/testsite/component/tada/todo?slug=walk-the-dog&format=json",
                     "type": "application/json; version=1.0"
                 }
             }
@@ -151,7 +151,7 @@ Similarly, we send a Collection of Resources as json array of resource objects o
             {
                 "self":
                 {
-                    "href": "http://joomla.dev/docman/component/tada/todo?slug=water-the-lawn&format=json",
+                    "href": "http://joomla.dev/testsite/component/tada/todo?slug=water-the-lawn&format=json",
                     "type": "application/json; version=1.0"
                 }
             }
@@ -184,7 +184,7 @@ If our Todo records were to include a category_id, we may wish to load a list of
 ### <a name="sparse-fieldset"></a> Sparse fieldset: limit the columns you want to return
 
 With Nooku you can ask for partial results with no extra work. Just add the fields request variable to your request with a comma separated list of fields that correspond to the columns you want to see in your entities.
-A request to http://joomla.dev/docman/component/tada?view=todo&format=json&id=1&fields=id,title,description yields only the columns we ask for in the returned entity:
+A request to http://joomla.dev/testsite/component/tada?view=todo&format=json&id=1&fields=id,title,description yields only the columns we ask for in the returned entity:
 
     {
         "id": "1",
@@ -194,7 +194,7 @@ A request to http://joomla.dev/docman/component/tada?view=todo&format=json&id=1&
         {
             "self":
             {
-                "href": "http://joomla.dev/docman/component/tada/todo/1?slug=walk-the-dog&format=json",
+                "href": "http://joomla.dev/testsite/component/tada/todo/1?slug=walk-the-dog&format=json",
                 "type": "application/json; version=1.0"
             }
         }
@@ -243,7 +243,7 @@ Now, a request to the API that has a category_id set will yield only those resul
         {
             "self":
             {
-                "href": "http://joomla.dev/docman/component/tada/todo?slug=water-the-lawn&format=json",
+                "href": "http://joomla.dev/testsite/component/tada/todo?slug=water-the-lawn&format=json",
                 "type": "application/json; version=1.0"
             }
         }
@@ -272,7 +272,5 @@ The **offset** is an integer multiple of the limit and represents the first reco
 
 The **total** is a count of all the records available in the data that fit the current request vars without the limit applied to them.
 
-> Suggesting Review: KModelDatabase (koowa:model.database).
-It would serve you well to review the default model implementation in detail, specifically the state variable interaction with the _buildQuery[PART] methods, and the behaviors in the _initialize and constructor methods (indexable, pageable and sortable)
 
 
