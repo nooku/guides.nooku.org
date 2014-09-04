@@ -259,7 +259,7 @@ The "direction" is either the familiar *asc* for ascending (which is the default
     ORDER BY tbl.category_id DESC
 
 
-### <a name="pagination"></a>Pagination on Resource Collections
+###<a name="pagination"></a>Pagination on Resource Collections
 
 In keeping with good API design, Nooku provides some additional pagination information for you as well. The limit, offset, & total are sent along with the response document as part of the meta property in the top level object.
 
