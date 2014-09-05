@@ -1,6 +1,6 @@
 # RESTful JSON API
 
-As always, Nooku gives you a lot out of the box. That includes JSON API (http://jsonapi.org) inspired json documents for all of your data. If you build a view in a Nooku powered component it will have a json version automatically, just tell the application that you want **format=json**.
+As always, Nooku gives you a lot out of the box. That includes JSON API (http://jsonapi.org) inspired json documents for all of your data. If you build a view in a Nooku powered component it will have a json version almost automatically.
 
 > As the specification matures we'll make more changes to achieve 100% compatibility.
 
