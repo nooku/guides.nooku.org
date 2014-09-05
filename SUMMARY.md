@@ -5,5 +5,5 @@
 * [Request and Response](request-response.md)
     * [HMVC](request-response/HMVC.md)
     * [BREAD](request-response/BREAD.md)
-    * [RESTful JSON API](request-response/JSON-Response-Documents.md)
+    * [RESTful JSON API](request-response/JSON.md)
 * [Data Layer](data-layer.md)
