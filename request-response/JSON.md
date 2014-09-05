@@ -37,7 +37,7 @@ We include 5 properties in this level and in accordance with the specification, 
 
 This lets you tell your users what version of your api you are serving up.
 
-Its pretty straight forward to change it from our default of “1.0”. Just define a JSON class in your component and set the “version” in your $config variable.
+Its pretty straight forward to change it from our default of “1.0”. Just define a JSON class in your component and set the `version` in your $config variable.
 
 ### Links
 
@@ -70,7 +70,7 @@ States are directly related to request variables and those variables are used to
 
 Nooku gives you [BREAD](./BREAD.html) out of the box. Since we’re talking about the structure of our JSON documents we are interested in the Browse and Read operations, which are both GET requests.
 
-Internally, the result of these actions are built into either Rowset or a singular Row object, respectively. In terms of the API and the document, a Row can be thought of as a Resource and a RowSet as a Collection of Resources.
+Internally, the result of these actions are built into either Rowset or a singular Row object, respectively. In terms of the API and the document, a Row can be thought of as a Resource and a Rowset as a Collection of Resources.
 
 The default JSON document response returns an array of entities, even if there is only one as a result of a Read operation.
 
@@ -104,7 +104,7 @@ In the default document structure, we’ve chosen to use the word “entities”
 Note the array in the "entities" property.
 
 Did you know that you can use a Table Behaviors to add the created_on and/or created_by to all of
-your records?  You just need the created_on or created_by column in the table and the array(‘behaviors’ => ‘createable’) in your
+your records?  You just need the created_on or created_by column in the table and the `array(‘behaviors’ => ‘createable’) in your
 table class’ \_initialize method.
 
 Similarly, we send a Collection of Resources as JSON array of resource objects on “entities” property of the response document:
@@ -175,7 +175,7 @@ If our Todo records were to include a category_id, we may wish to load a list of
 ### Sparse fieldset: limit the columns you want to return
 
 You can ask for partial results with no extra work. Just add the fields request variable to your request with a comma separated list of fields that correspond to the columns you want to see in your entities.
-A request to http://joomla.dev/testsite/component/tada?view=todo&format=json&id=1&fields=id,title,description yields only the columns we ask for in the returned entity:
+A request to `http://joomla.dev/testsite/component/tada?view=todo&format=json&id=1&fields=id,title,description` yields only the columns we ask for in the returned entity:
 
     {
         "id": "1",
@@ -244,8 +244,8 @@ Now, a request to the API that has a category_id set will yield only those resul
 
 Sorting results is a snap. Like the “Indexable” behavior above, each model derived from KModelDatabase gets a sortable behavior added to it. That means with no effort, two state variables get added to your models:
 
-The *sort* variable gives us the column by which to sort our results.
-The "direction" is either the familiar *asc* for ascending (which is the default) and *desc* for descending. In combination, they get used in the Model to build the “ORDER BY” part of your query. A request in our example with &sort=category_id&direction=desc” will produce a query against database that has the following:
+The `sort` variable gives us the column by which to sort our results.
+The `direction` is either the familiar `asc` for ascending (which is the default) and `desc` for descending. In combination, they get used in the Model to build the `order by` part of your query. A request in our example with `&sort=category_id&direction=desc` will produce a query against database that has the following:
 
     ORDER BY tbl.category_id DESC
 
