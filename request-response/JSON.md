@@ -103,7 +103,7 @@ In the default document structure, we’ve chosen to use the word “entities”
 
 Note the array in the "entities" property.
 
-Did you know that you can use a Table Behaviors to add the created_on and/or created_by to all of
+>Did you know that you can use a Table Behaviors to add the created_on and/or created_by to all of
 your records?  You just need the created_on or created_by column in the table and the `array(‘behaviors’ => ‘createable’) in your
 table class’ \_initialize method.
 
