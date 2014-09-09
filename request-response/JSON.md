@@ -45,7 +45,7 @@ The links property in general is used to specify resource relationships for reso
 
 
     "self": {
-        href: "http://joomla.dev/testsite/component/tada?view=todos&format=json&limit=2",
+        href: "http://joomla.dev/component/tada?view=todos&format=json&limit=2",
         type: "application/json; version=1.0"
     }
 
@@ -55,7 +55,7 @@ When appropriate, we also include “next” and “previous” pagination links
 
     "next":
     {
-        href: "http://joomla.dev/testsite/component/tada?view=todos&format=json&limit=2&offset=2",
+        href: "http://joomla.dev/component/tada?view=todos&format=json&limit=2&offset=2",
         type: "application/json; version=1.0"
     }
 
@@ -94,7 +94,7 @@ In the default document structure, we’ve chosen to use the word “entities”
             {
                 "self":
                 {
-                    "href": "http://joomla.dev/testsite/component/tada/todo?slug=walk-the-dog&format=json",
+                    "href": "http://joomla.dev/component/tada/todo?slug=walk-the-dog&format=json",
                     "type": "application/json; version=1.0"
                 }
             }
@@ -124,7 +124,7 @@ Similarly, we send a Collection of Resources as JSON array of resource objects o
             {
                 "self":
                 {
-                    "href": "http://joomla.dev/testsite/component/tada/todo?slug=walk-the-dog&format=json",
+                    "href": "http://joomla.dev/component/tada/todo?slug=walk-the-dog&format=json",
                     "type": "application/json; version=1.0"
                 }
             }
@@ -142,7 +142,7 @@ Similarly, we send a Collection of Resources as JSON array of resource objects o
             {
                 "self":
                 {
-                    "href": "http://joomla.dev/testsite/component/tada/todo?slug=water-the-lawn&format=json",
+                    "href": "http://joomla.dev/component/tada/todo?slug=water-the-lawn&format=json",
                     "type": "application/json; version=1.0"
                 }
             }
@@ -175,7 +175,7 @@ If our Todo records were to include a category_id, we may wish to load a list of
 ### Sparse fieldset: limit the columns you want to return
 
 You can ask for partial results with no extra work. Just add the fields request variable to your request with a comma separated list of fields that correspond to the columns you want to see in your entities.
-A request to `http://joomla.dev/testsite/component/tada?view=todo&format=json&id=1&fields=id,title,description` yields only the columns we ask for in the returned entity:
+A request to `http://joomla.dev/component/tada?view=todo&format=json&id=1&fields=id,title,description` yields only the columns we ask for in the returned entity:
 
     {
         "id": "1",
@@ -185,7 +185,7 @@ A request to `http://joomla.dev/testsite/component/tada?view=todo&format=json&id
         {
             "self":
             {
-                "href": "http://joomla.dev/testsite/component/tada/todo/1?slug=walk-the-dog&format=json",
+                "href": "http://joomla.dev/component/tada/todo/1?slug=walk-the-dog&format=json",
                 "type": "application/json; version=1.0"
             }
         }
@@ -234,7 +234,7 @@ Now, a request to the API that has a category_id set will yield only those resul
         {
             "self":
             {
-                "href": "http://joomla.dev/testsite/component/tada/todo?slug=water-the-lawn&format=json",
+                "href": "http://joomla.dev/component/tada/todo?slug=water-the-lawn&format=json",
                 "type": "application/json; version=1.0"
             }
         }
