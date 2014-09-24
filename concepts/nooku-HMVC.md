@@ -1,4 +1,4 @@
-# HMVC
+# Why HMVC?
 
 We touched on HMVC earlier within the concepts document, however we will go into a little more detail here.
 
