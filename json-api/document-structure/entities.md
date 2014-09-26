@@ -11,7 +11,7 @@ The default JSON document response returns an array of entities, even if there i
 When a client issues a GET request that has some identifying part that limits the result to one record, its considered a Read request in our BREAD paradigm.
 
 In the default document structure, we’ve chosen to use the word “entities” as our key to store a Resource representation in the document, i.e.
-
+```javascript
     "entities":
     [
         {
@@ -32,7 +32,7 @@ In the default document structure, we’ve chosen to use the word “entities”
             }
         }
     ]
-
+```
 Note the array in the "entities" property.
 
 >Did you know that you can use a Table Behaviors to add the created_on and/or created_by to all of
@@ -40,7 +40,7 @@ your records?  You just need the created_on or created_by column in the table an
 table class’ \_initialize method.
 
 Similarly, we send a Collection of Resources as JSON array of resource objects on “entities” property of the response document:
-
+```javascript
     "entities":
     [
         {
@@ -80,5 +80,5 @@ Similarly, we send a Collection of Resources as JSON array of resource objects o
             }
         }
     ]
-
+```
 You may also notice that each entity also has its own "links" property, with the “self” relationship.
