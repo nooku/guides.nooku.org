@@ -1,4 +1,4 @@
-# Concepts
+# Nooku Essentials
 
 ##1 - Composition over inheritance
 
