@@ -1,12 +1,12 @@
-# Service Location
+# Object Management
 
-Service location decouples an object’s class name from its identifier.
+By using a centralized Object Manager, Nooku decouples an object’s class name from its identifier.
 
 But hold on, an object’s class name is its identifier, it is what PHP uses to identify (and in cases locate) that object. Well that doesn’t have to be the case, and therein lies the power of service location. By separating the identification of an object from its class name, one can use a unique identifier to instantiate the object, and not know or care about what the class name is.
 
 If you think about it, how important is the class name? It is not, it is only used to infer its application within the system and perhaps for location and auto loading purposes. What you care about is the resulting object that you are actually going to use; not its class name.
 
-So if you’re not using the class name for instantiating an object, what can you use? Well, Tim Berners Lee came up with a concept in the 80’s, and no I don’t mean the internet, the URI. So we take advantage of a well established principle that has worked well for over a quarter century.
+So if you’re not using the class name for instantiating an object, what can you use? Well, Tim Berners Lee came up with a concept in the 80’s, and no we don’t mean the internet, the URI. So we take advantage of a well established principle that has worked well for over a quarter century.
 
 ![URI](../resources/images/uri.jpg)
 
@@ -74,4 +74,4 @@ The class loader in turn deals with locating these classes on the filesystem, if
 
 Thus, so long as the class exists within the framework, you can create an object off the identifier, and Nooku will do the legwork (and cache the result in APC for performance)
 
-And that's pretty much it. There is plenty more you can do with service identifiers that I will cover later on, like setting aliases or config information, but for now, I will leave it at that.
+And that's pretty much it. There is plenty more you can do with object identifiers that we will cover later on, like setting aliases or config information, but for now, we'll leave it at that.
