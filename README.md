@@ -9,3 +9,4 @@ Nooku is a framework like no other, and some of the concepts and design patterns
 To get started, check out our [Get Started guide](http://www.nooku.org/get-started)
 
 Happy coding! :)
+
