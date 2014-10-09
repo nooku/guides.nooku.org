@@ -2,7 +2,7 @@
 
 There are some specific naming conventions that Nooku uses.
 
-<pre><h3>understanding these is the key to getting things working</h3></pre>
+<pre><h3>Understanding these is the key to getting things working!</h3></pre>
 
 Because the Framework relies HEAVILY on the proper placement of class files, naming of class and naming of tables, if you
 get them wrong, you may end up scratching your head saying “why isn’t this class being included?”
