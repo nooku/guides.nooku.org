@@ -1,6 +1,6 @@
 # Entities
 
-Nooku gives you [BREAD](/concepts/BREAD.html) out of the box. Since we’re talking about the structure of our JSON documents we are interested in the Browse and Read operations, which are both GET requests.
+Nooku gives you [BREAD](/essentials/BREAD.md) out of the box. Since we’re talking about the structure of our JSON documents we are interested in the Browse and Read operations, which are both GET requests.
 
 Internally, the result of these actions are built into either Rowset or a singular Row object, respectively. In terms of the API and the document, a Row can be thought of as a Resource and a Rowset as a Collection of Resources.
 
