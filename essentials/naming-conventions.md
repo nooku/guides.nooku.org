@@ -7,7 +7,7 @@ There are some specific naming conventions that Nooku uses.
 Because the Framework relies HEAVILY on the proper placement of class files, naming of class and naming of tables, if you
 get them wrong, you may end up scratching your head saying “why isn’t this class being included?”
 
-### Classes
+### Library Classes
 
 Classes in the framework (located in koowa/libraries/) follow a very simple naming convention. They take the singular of the folder structure from the root of the koowa folder as the class name, e.g:
 
