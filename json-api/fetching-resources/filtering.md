@@ -6,7 +6,7 @@ If your database table has UNIQUE columns, they automatically get added to your 
 Checkout KModelBehaviorIndexable. This behavior gets added to every class that is an instance of KModelDatabase.
 This is why we can use id=1 without having to write a model at all.
 
-To illustrate filtering, let’s assume that we’ve created ComTadaModelTodos and added category_id as a state in our class, and account for it in our query building strategy (_buildQueryWhere)::
+To illustrate filtering, let’s assume that we’ve created ComTadaModelTodos and added category_id as a state in our class, and account for it in our query building strategy (_buildQueryWhere):
 
 ```php
     class ComTadaModelTodos extends KModelDatabase
