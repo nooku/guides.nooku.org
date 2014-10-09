@@ -6,7 +6,7 @@ _Maybe you've figured out something that you would like to share?_ ... Write a t
 
 _See something that's not quite complete in the sections of the Guides?_...Feel free to re-write it for the rest of the community.
 
-Simply fork this repository, and when you are done with your (carefully reviewed) edits make a Pull Request so we can review.
+Simply fork this Nooku Guides repository, and when you are done with your (carefully reviewed) edits make a Pull Request so we can review.
 <iframe src="http://ghbtns.com/github-btn.html?user=nooku&repo=guides.nooku.org&type=fork&size=large"
     height="30"
     width="100"
