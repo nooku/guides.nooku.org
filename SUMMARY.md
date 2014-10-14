@@ -1,6 +1,7 @@
 # SUMMARY
 
 * [Contribute](contribute.md)
+    *  [Write a Tutorial](contribute/write-a-tutorial.md)
 * [Overview](overview.md)
 * [Essentials](essentials.md)
     * [Composition](essentials/composition.md)

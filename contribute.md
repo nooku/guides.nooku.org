@@ -2,7 +2,7 @@
 
 We encourage our community to contribute to the Guides (in fact we encourage you to contribute to the Framework as well).
 
-_Maybe you've figured out something that you would like to share?_ ... Write a tutorial!
+_Maybe you've figured out something that you would like to share?_ ... [Write a Tutorial](contribute/write-a-tutorial.md)!
 
 _See something that's not quite complete in the sections of the Guides?_...Feel free to re-write it for the rest of the community.
 
