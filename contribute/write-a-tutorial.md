@@ -1,6 +1,6 @@
 # Write a Tutorial
 
-Writing a tutorial for the Framework guides is a great way to contribute to the community and solidify your own knowledge.
+Writing a tutorial for the Framework Guides is a great way to contribute to the community and solidify your own knowledge.
 We encourage you to share any accomplishments that you are proud of in Tutorial form. To help with that, we've provided the
 following formatting guide. It should help keep your submissions consistent with the rest of the tutorials and make sure
 your message gets across.
