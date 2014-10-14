@@ -21,9 +21,16 @@ comes with 15+ ready to use components out of the box, from basic article and ca
 
 Nooku uses a centralized Object Management architecture. That structure provides a type of inversion of control (IOC) and allows separation
 of object instances from their class names. The Object Management package allows the creation of objects to be handled consistently,
-in one place, and provides a mechanism for the Framework's use of fallback classes. Its this architecture that makes "Writing Less Code" possible (See #4 below).
+in one place, and provides a mechanism for the Framework's use of fallback classes. This part of the architecture is centrally important to
+making the "Writing Less Code" possible (See #5 below).
 
-##4 - Write Less Code
+##4 Convention Over Configuration
+
+As you will see in the coming chapters, the Framework relies heavily on a set of strict conventions to provide predictability for both you (the developer)
+and the other objects in the system. Get to know the rules _(the [Naming Conventions](essentials/naming-conventions.md) section gives an excellent overview)_...
+they are the "Key" to unlocking the power of Nooku.
+
+##5 - Write Less Code
 
 Nooku allows you to write less code, I mean a lot less code. What you do with that free time you gain is up to you :) .
 
