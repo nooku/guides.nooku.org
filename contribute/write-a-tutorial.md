@@ -20,8 +20,8 @@ You can provide your name, email and one url.
 
 ### Filename
 
-The guides and tutorials are written in markdown and published using Gitbook. The filename will therefore needs the '.md'
-file extension. It should be based on the Tutorial Title and be no more than four (4) words connected to each other with
+The guides and tutorials are written in Markdown and published using Gitbook. The filename will therefore needs the '.md'
+file extension. It should also be based on the Tutorial Title and be no more than four (4) words connected to each other with
 a hyphen '-'. Also,  the filename should not collide with any class names in the Framework, i.e. _kcontrollermodel.md_ .
 
 Here’s a good one based on our [Tutorial Title](#tutorial-title) from above: _building-permissable-behaviors.md_
