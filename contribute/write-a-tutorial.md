@@ -26,9 +26,9 @@ a hyphen '-'. Also,  the filename should not collide with any class names in the
 
 Here’s a good one based on our [Tutorial Title](#tutorial-title) from above: _building-permissable-behaviors.md_
 
-### Level
+### Skill Level
 
-These are beginner, intermediate, advanced (most will be intermediate, advanced).
+These are beginner, intermediate and advanced (most will be intermediate or advanced).
 
 ### Relevant Sections and Classes
 
