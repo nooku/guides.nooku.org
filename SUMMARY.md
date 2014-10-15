@@ -14,6 +14,7 @@
         * [Why HMVC?](essentials/nooku-HMVC.md)
     * [Object Management](essentials/object-management.md)
     * [Naming Conventions](essentials/naming-conventions.md)
+* [Tutorials](tutorials.md)
 * [JSON API](json.md)
     * [Document Structure](json-api/document-structure.md)
         * [Version](json-api/document-structure/version.md)
