@@ -27,7 +27,8 @@ a hyphen '-'. Also,  the file name should not collide with any class names in th
 Place your tutorial in the ./tutorials directory of this book, and add the appropriate entry in the SUMMARY.md file under:
     * [Tutorials](tutorials.md)
 
-Here’s a good example based on our [Tutorial Title](#tutorial-title) from above: _tutorials/building-permissable-behaviors.md_ .
+Here’s a good example based on our [Tutorial Title](#tutorial-title) from above:
+    _tutorials/building-permissable-behaviors.md_ .
 
 ### Skill Level
 

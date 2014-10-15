@@ -1,6 +1,6 @@
 # “How to do great stuff with Nooku”
 
-The whole point of Nooku is to help you get things done, quickly. The tutorials are designed to help you do just that.
+The whole point of Nooku is to help you get things done, quickly. The tutorials are in development and are designed to help you do just that.
 You should have already been through the [Get Started guide](http://www.nooku.org/get-started) and be ready to go.
 
 <!--That's why we put the tutorials all the way at the front of the book. -->
