@@ -30,5 +30,5 @@ detects a file change.
 
 **Markdown** http://daringfireball.net/projects/markdown/syntax
 
-**"Great Documentation"** by Jacob Kaplin-Moss http://jacobian.org/writing/great-documentation/
+**"Great Documentation"** by Jacob Kaplan-Moss http://jacobian.org/writing/great-documentation/
 
