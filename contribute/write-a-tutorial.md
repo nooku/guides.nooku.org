@@ -18,13 +18,13 @@ For example:
 
 You can provide your name, email and one url.
 
-### Filename
+### File Name
 
-The guides and tutorials are written in Markdown and published using Gitbook. The filename will therefore needs the '.md'
+The guides and tutorials are written in Markdown and published using Gitbook. The file name will therefore need the '.md'
 file extension. It should also be based on the Tutorial Title and be no more than four (4) words connected to each other with
-a hyphen '-'. Also,  the filename should not collide with any class names in the Framework, i.e. _kcontrollermodel.md_ .
+a hyphen '-'. Also,  the file name should not collide with any class names in the Framework, i.e. _kcontrollermodel.md_ .
 
-Here’s a good one based on our [Tutorial Title](#tutorial-title) from above: _building-permissable-behaviors.md_
+Here’s a good example based on our [Tutorial Title](#tutorial-title) from above: _building-permissable-behaviors.md_
 
 ### Skill Level
 
@@ -42,11 +42,12 @@ For example:
 
 ### Task
 
-State the objective of the tutorial here. Should not be more than one (1) or two (2) sentences. This statement should be reflective of the title.
+State the objective of the tutorial here. It should not be more than one (1) or two (2) sentences. This statement should be
+reflective of the title.
 
 ### Solution
 
-This is the meat of the entire tutorial. It should be a set of step by step instructions on how to get the task done.
+This is the meat of the entire tutorial. It should be a set of step by step instructions on how to get the task completed.
 All code examples should be triple backtick enclosed with the appropriate language label. For example:
 
     ```php
@@ -69,5 +70,5 @@ the need to do this, the benefits, and unintended consequences (the gotchas) of 
 
 ### References
 
-Give credit where credit is do and share the wealth when it comes to great resources.
+Give credit where credit is do and share the wealth when it comes to great resources!
 List any relevant references your reader may find useful.

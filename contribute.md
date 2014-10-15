@@ -26,5 +26,9 @@ A good way to work is to use:
 And look at your work at http://localhost:4000 . As you edit and save your pages, your book will refresh in a moment as Gitbook
 detects a file change.
 
+## Some Writing Resources
 
+**Markdown** http://daringfireball.net/projects/markdown/syntax
+
+**"Great Documentation"** by Jacob Kaplin-Moss http://jacobian.org/writing/great-documentation/
 
