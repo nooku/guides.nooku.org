@@ -21,7 +21,7 @@ And then add the following line of code to the file:
 
 ## Hello World Blog Post
 
-If you have read the [HMVC](essentials/hmvc.md) article, you will know that it's the view's responsibility to render things to the screen.
+If you have read the [HMVC](/essentials/hmvc.md) article, you will know that it's the view's responsibility to render things to the screen.
 So that's what we'll do next:  _Create a View_.
 
 The first view we will add, is the view that renders our list of recent blog posts. For this, create the following file and folder structure:
@@ -36,7 +36,7 @@ We don't have a list of blog posts to display just yet, so inside the newly crea
     ```php
     Hello World, and welcome to my blog!
    ```
-Also in the [HMVC](essentials/hmvc.md) article you learned that a controller loads a model. The default controller that Nooku
+Also in the [HMVC](/essentials/hmvc.md) article you learned that a controller loads a model. The default controller that Nooku
 would create for you expects a model which expects a database table by default. As we don't have a database yet, we will
 bypass this behavior by extending from ComKoowaControllerView instead. Please create the the following file and folder structure:
 
@@ -46,7 +46,8 @@ And then add the following line of code to the file:
 
     <? class ComBlogControllerPost extends ComKoowaControllerView {}
 
-Now, try opening [http://joomla.dev/tutorials/index.php?option=com_blog&view=post](http://joomla.dev/tutorials/index.php?option=com_blog&view=posts) in your browser and see if our message reaches your screen. Which it should, if you have set up everything correctly so far.
+Now, try opening [http://joomla.dev/tutorials/index.php?option=com_blog&view=post](http://joomla.dev/tutorials/index.php?option=com_blog&view=posts) in your browser
+and see if our message reaches your screen. Which it should, if you have set up everything correctly so far.
 
 ## What just happened?
 
