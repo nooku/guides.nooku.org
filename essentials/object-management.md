@@ -64,11 +64,14 @@ And you will always know that the resource that a particular identifier refers t
 
 There are 2 ways of creating an object using an identifier:
 
-`$object = KObjectManager::getInstance()->getObject('identifier')` - If the resource is being requested from outside a
-Nooku class (anything that doesn’t extend KObject)
-
-`$object = $this->getObject('identifier')` - If the resource is being requested from inside a Nooku class (anything
-that extends KObject)
+If the resource is being requested from outside a Nooku class (anything that doesn’t extend KObject):
+```php
+$object = KObjectManager::getInstance()->getObject('identifier')
+```
+If the resource is being requested from inside a Nooku class (anything that extends KObject):
+```php
+$object = $this->getObject('identifier')
+```
 
 You will almost always use the second method as you will be working within a Nooku object most of the time, for example:
 
