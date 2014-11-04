@@ -16,7 +16,9 @@ So, just create this file:
 
 And then add the following line of code to the file:
 
-```php<?php echo KObjectManager::getInstance()->getObject('com://site/blog.dispatcher')->dispatch();```
+```php
+<?php echo KObjectManager::getInstance()->getObject('com://site/blog.dispatcher')->dispatch();
+```
 
 
 ## Hello World Blog Post
@@ -44,7 +46,9 @@ bypass this behavior by extending from ComKoowaControllerView instead. Please cr
 
 And then add the following line of code to the file:
 
+```php
     <? class ComBlogControllerPost extends ComKoowaControllerView {}
+```
 
 Now, try opening [http://joomla.dev/tutorials/index.php?option=com_blog&view=post](http://joomla.dev/tutorials/index.php?option=com_blog&view=posts) in your browser
 and see if our message reaches your screen. Which it should, if you have set up everything correctly so far.
