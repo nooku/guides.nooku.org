@@ -33,9 +33,9 @@ The first view we will add, is the view that renders our list of recent blog pos
 
 We don't have a list of blog posts to display just yet, so inside the newly created default.html.php just add the following line for now:
 
-    ```php
+```php
     Hello World, and welcome to my blog!
-   ```
+```
 Also in the [HMVC](/essentials/hmvc.md) article you learned that a controller loads a model. The default controller that Nooku
 would create for you expects a model which expects a database table by default. As we don't have a database yet, we will
 bypass this behavior by extending from ComKoowaControllerView instead. Please create the the following file and folder structure:
