@@ -1,10 +1,7 @@
-{% extends "layout.html" %}
+{% extends "../layout.html" %}
 
 {% block head %}
     {% parent %}
-    {% if githubAuthor %}
-    <meta name="author" content="{{ githubAuthor }}">
-    {% endif %}
     {% if progress.current.next and progress.current.next.path %}
     <link rel="next" href="{{ basePath }}/{{ progress.current.next.path|mdLink }}" />
     {% endif %}
@@ -36,43 +33,49 @@
             </div>
         </div>
     </div>
-    <div class="book" {% if githubId %}data-github="{{ githubId }}"{% endif %} data-level="{{ progress.current.level }}" data-basepath="{{ basePath }}" data-revision="{{ revision }}">
-        {% include "includes/book/summary.html" %}
-        <div class="book-body">
-            <div class="body-inner">
-                {% include "includes/book/header.html" %}
-                <div class="page-wrapper" tabindex="-1">
-                    <div class="page-inner">
+    <div class="book" data-level="{{ progress.current.level }}" data-basepath="{{ basePath }}" data-revision="{{ revision }}">
+    {% include "includes/summary.html" %}
+    <div class="book-body">
+        <div class="body-inner">
+            {% include "includes/header.html" %}
+            <div class="page-wrapper" tabindex="-1">
+                <div class="page-inner">
                 {% block page_inner %}
-                    {% for section in content %}
-                        <section class="{{ section.type }}" id="section-{{ section.id }}">
-                        {% if section.type == "normal" %}
-                            {% autoescape false %}{{ section.content }}{% endautoescape %}
-                        {% elif section.type == "exercise" %}
-                            {% include "./includes/book/exercise.html" with {section: section} %}
-                        {% elif section.type == "quiz" %}
-                            {% include "./includes/book/quiz.html" with {section: section} %}
-                        {% endif %}
-                        </section>
-                    {% endfor %}
+                {% for section in content %}
+                    <section class="{{ section.type }}" id="section-{{ section.id }}">
+                    {% if section.type == "normal" %}
+                        {% autoescape false %}{{ section.content }}{% endautoescape %}
+                    {% elif section.type == "exercise" %}
+                        {% include "./includes/exercise.html" with {section: section} %}
+                    {% elif section.type == "quiz" %}
+                        {% include "./includes/quiz.html" with {section: section} %}
+                    {% endif %}
+                    </section>
+                {% endfor %}
                 {% endblock %}
-                    </div>
                 </div>
             </div>
-
-            {% if progress.current.prev and progress.current.prev.path %}
-            <a href="{{ basePath }}/{{ progress.current.prev.path|mdLink }}" class="navigation navigation-prev {% if !progress.current.next or !progress.current.next.path %}navigation-unique{% endif %}" aria-label="Previous page: {{ progress.current.prev.title }}"><i class="fa fa-angle-left"></i></a>
-            {% endif %}
-            {% if progress.current.next and progress.current.next.path %}
-            <a href="{{ basePath }}/{{ progress.current.next.path|mdLink }}" class="navigation navigation-next {% if !progress.current.prev or !progress.current.prev.path %}navigation-unique{% endif %}" aria-label="Next page: {{ progress.current.next.title }}"><i class="fa fa-angle-right"></i></a>
-            {% endif %}
         </div>
+
+        {% if progress.current.prev and progress.current.prev.path %}
+        <a href="{{ basePath }}/{{ progress.current.prev.path|mdLink }}" class="navigation navigation-prev {% if !progress.current.next or !progress.current.next.path %}navigation-unique{% endif %}" aria-label="Previous page: {{ progress.current.prev.title }}"><i class="fa fa-angle-left"></i></a>
+        {% endif %}
+        {% if progress.current.next and progress.current.next.path %}
+        <a href="{{ basePath }}/{{ progress.current.next.path|mdLink }}" class="navigation navigation-next {% if !progress.current.prev or !progress.current.prev.path %}navigation-unique{% endif %}" aria-label="Next page: {{ progress.current.next.title }}"><i class="fa fa-angle-right"></i></a>
+        {% endif %}
     </div>
+</div>
 {% endblock %}
 
 {% block javascript %}
-<script type="text/javascript">function hasClass(e,t){return e.className.match(new RegExp("(\\s|^)"+t+"(\\s|$)"))}var el=document.body;var cl="no-js";if(hasClass(el,cl)){var reg=new RegExp("(\\s|^)"+cl+"(\\s|$)");el.className=el.className.replace(reg," js-enabled")}</script>
 <script type="text/javascript" src="http://www.nooku.org/js/scripts.js"></script>
+<script>
+    responsivemenu.init({
+        wrapper: document.querySelector('.header'),
+        toggleclass: 'button--hamburger',
+        togglecontent: 'menu <span class="lines"></span>'
+    });
+</script>
 <script src="{{ staticBase }}/app.js"></script>
 {% for resource in plugins.resources.js %}
     {% if resource.url %}
@@ -81,13 +84,6 @@
     <script src="{{ staticBase }}/plugins/{{ resource.path }}"></script>
     {% endif %}
 {% endfor %}
-<script>
-    responsivemenu.init({
-        wrapper: document.querySelector('.header'),
-        toggleclass: 'button--hamburger',
-        togglecontent: 'menu <span class="lines"></span>'
-    });
-</script>
 <script>
 require(["gitbook"], function(gitbook) {
     var config = {% autoescape false %}{{ pluginsConfig }}{% endautoescape %};
@@ -99,7 +95,7 @@ require(["gitbook"], function(gitbook) {
 {% block style %}
 <link href='http://fonts.googleapis.com/css?family=Roboto:400,300,300italic,700,400italic' rel='stylesheet' type='text/css'>
 <link rel="stylesheet" href="{{ staticBase }}/style.css">
-<link rel="stylesheet" href="{{ staticBase }}/nooku.css">
+<link rel="stylesheet" href="{{ staticBase }}/custom.css">
 <link rel="stylesheet" href="http://www.nooku.org/css/header.css">
 {% for resource in plugins.resources.css %}
     {% if resource.url %}
