@@ -1,4 +1,4 @@
-# Your First Todo List Views
+# Your First Todo List View
 
 Your component Views are how you present your data to the world.
 
@@ -27,9 +27,10 @@ file:
     </ul>
 ```
 
-This code will render an unordered list and for each post in `$item` it will render a list item with the post id, title, and the text of the post.
+This code will render an unordered list and for each entity in `$items` object it will render a `<li>` element with the Todo Item's id, title, and its description.
 
 ![My Nooku Powered Todo List](/resources/images/todotutorial/front-end-view.png)
+
 Some important notes about our code:
 
 1. We are using PHP short tags:
@@ -43,21 +44,21 @@ Some important notes about our code:
 2. We are using the [PHP alternative syntax](http://php.net/manual/en/control-structures.alternative-syntax.php) for control
 structures such as the foreach statement, once again for readability.
 
-3. We can simply use `$items` in the above example instead of `$this->posts`. Nooku will by default assign posts data to the
-posts view if you don't tell it otherwise..._More Magic_
+3. We can simply use `$items` in the above example instead of `$this->items`. Nooku will by default assign items data to the
+`items view` if you don't tell it otherwise..._More Magic_
 
-4. Note that we have only added a template here; no View class. This is because Nooku will fallback on default classes
-whenever your component does not contain a specific class that it's looking for, in this case the posts HTML view. So
+4. Note that we have only added a template here; no `View` class. This is because Nooku will fallback on default classes
+whenever your component does not contain a specific class that it's looking for, in this case the `items` HTML view. So
 when `ComTodoViewItemsHtml` is not found, it will simply fall back on `ComKoowaViewHtml`, and assume that since you're requesting
-the posts view, that you want to view a list of posts.
+the `items view`, that you want to view a list of Todo items.
 
-<b>Tip:</b>You can also add a 'default' view class for your component, `ComTodoViewHtml`, if you want to use that as a fallback
+<b>Tip:</b> You can also add a 'default' view class for your component, `ComTodoViewHtml`, if you want to use that as a fallback
 instead of `ComKoowaViewHtml`. For HTML format requests your new class still needs to descend from `KViewHtml`.
 
-Again, take note of the following: "items" implies multiple items, while "item" implies a single post. Everywhere in Nooku, it's very
+Again, take note of the following: "item**s**" implies multiple items, while "item" implies a single post. Everywhere in Nooku, it's very
 important to use singular and plural forms correctly. Thanks to `KStringInflector`, Nooku translates back and forth between most English words.
 
-It even knows words like "person" is singular, where "people" is its plural form. Similarly, "index" is the singular form of the plural "indices".
+_It even knows words like "person" is singular, where "people" is its plural form. Similarly, "index" is the singular form of the plural "indices"._
 
 ## Using Template Shortcuts
 
@@ -88,12 +89,14 @@ Let try some in our example. Change the `ul` list in above example to:
     <? endforeach; ?>
     </ul>
 ```
-If we had some date information defined in our database for each item, i.e. $item->created_on we could use the `@date` short cut.
+If we had some date information defined in our database for each item, i.e. $item->created_on we could use the `helper` shortcut to load
+the date helper and make that information easier to read for us humans.
 
 ```php
-<?= date(array('date' => $item->created_on, 'format' => '%d %B %Y'));?> ```
+<?= helper('date.humanize', array('date' => $activity->created_on )); ?>
+```
 
-Also, when we have a singular Item view ready we could use the `route` shortcode to help us build our urls.
+Also, when we have a singular Item view ready we could use the `route` shortcut to help us build our urls.
 ```php
   <a href="<?= route('view=item&id='. $item->id ) ?>">
             <?= $item->title ?>

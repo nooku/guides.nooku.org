@@ -1,50 +1,4 @@
-# The Front End
-
-## Register the Component
-
-The first thing we need to do is make sure our component is registered in the database (however, this is done automatically when installing a new component
-with the normal Joomla! installer).
-
-We know that our component is going to be called `com_todo` so we can perform an insert with the following code in the database.
-
-> For those of you are using the Joomlatools vagrant box, you can use http://phpmyadmin.joomla.dev
-
-*Replace '#__' with your database prefix:*
-
-For Joomla 2.5.x and 3.x
-```mysql
-    INSERT INTO `sites_todo_tutorial`.`#__extensions`
-        (`extension_id`, `name`, `type`, `element`, `folder`, `client_id`,
-         `enabled`, `access`, `protected`, `manifest_cache`, `params`,
-         `custom_data`, `system_data`, `checked_out`, `checked_out_time`,
-         `ordering`, `state`
-         )
-    VALUES
-        (NULL, 'com_todo', 'component', 'com_todo', '', '0', '1', '1',
-        '1', '', '', '', '', '0', '0000-00-00 00:00:00', '0', '0');
-```
-With that done, we are free to dive into our component development.
-
-## Component Entry Point
-
-If you have ever developed a Joomla! component before you know about the _component entry point_, sometimes referred to as the _component loader_.
-The file in most cases in Joomla! loads a controller and fires the execute method on that controller. We're doing something different and loading
-and firing our own dispatcher to take care of all that.
-
-So, just create this file:
-
-    /components/com_todo/todo.php
-
-And then add the following line of code to the file:
-
-```php
-<?php echo KObjectManager::getInstance()                     // load the Object Manager
-            ->getObject('com://site/todo.dispatcher.http')  // Get an HTTP Dispatcher
-            ->dispatch();                                   // call the dispatch action
-```
-
-
-## The "Hello World!" Todo Items
+# The "Hello World!" Todo Items
 
 If you have read the [HMVC](/essentials/hmvc.md) article, you will know that it's the view's responsibility to render things to the screen.
 So that's what we'll do next:  _Create a View_.
@@ -64,7 +18,7 @@ We don't have a list of items to display just yet, so inside the newly created d
     Hello World, and welcome to my Todo Items!
 ```
 
-### Add a Model...For now
+## Add a Model...For now
 
 Also in the [HMVC](/essentials/hmvc.md) article you learned that a controller loads a model. The default controller that Nooku
 would create for you expects a model, which in turn expects a database table by default. As we don't have a database yet, we will
@@ -97,5 +51,3 @@ _This is part of what we call Nooku Magic:_
 **If you're not trying to accomplish anything out of the ordinary, Nooku Framework will often do the job for you.**
 
 In other words: Don't add code until you're sure you really need it. More on this in the following parts of this tutorial.
-
-## Up Next: Creating the Database
