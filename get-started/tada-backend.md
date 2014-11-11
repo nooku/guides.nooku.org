@@ -1,87 +1,104 @@
-# Tada Component Backend
+# Todo Component Backend
 
-Now we're going to create the back-end for our component, com_tada.
+Now we're going to create the back-end for our component, com_todo.
 In other words we will create the environment for an administrator to manage all the Todo Items in the system: create/modify/delete Items.
 
 ## The Entry-Point aka "The Component Loader"
 
 The entry-point contains the very first code that gets executed when you visit
 
-http://joomla.dev/tutorials/administrator/index.php?option=com_tada
+http://joomla.dev/todo_tutorial/administrator/index.php?option=com_todo
 
 To get going just like the Front End component create the following file
 
-    /administrator/components/com_tada/tada.php
+    /administrator/components/com_todo/todo.php
 
 Then place the following code in that file:
 
 ```php
-<?php echo KObjectManager::getInstance()->getObject('com://admin/tada.dispatcher')->dispatch();
+<?php echo KObjectManager::getInstance()
+          ->getObject('com://admin/todo.dispatcher.http')
+          ->dispatch();
 ```
 
-**Tip:** This file is the exact same as in the Front End version of the com_tada entry point except that the dispatcher
+**Tip:** This file is the exact same as in the Front End version of the com_todo entry point except that the dispatcher
 identifier is for `admin` instead of `site`.
 
-This line simply loads the dispatcher and calls the dispatch action.
+This line simply loads the dispatcher and calls the `dispatch` action.
 
 Now, try pointing your browser to
 
-http://joomla.dev/tutorials/administrator/index.php?option=com_tada.
+http://joomla.dev/todo_tutorial/administrator/index.php?option=com_todo.
 
-*You will get an error*.
+*You will get an error, something like*
+![No Todos Todos Table.](/resources/images/todotutorial/backend-todos-error.png)
 
-When there is no `view` parameter in the request Nooku tries to load the pluralized name of the component as its view, in our case 'tadas' and
-redirects your browser to http://joomla.dev/tutorials/administrator/index.php?option=com_tada&view=tadas. But this won't work because we haven't defined the view.
+When there is no `view` parameter in the request, Nooku tries to load the pluralized name of the component as its `view`, in our case **'todos'**.
+But this won't work because we haven't defined the view by that name, nor have we defined a table to match.
 
-The `view` is all important. It tells the component dispatcher which `Controller` to load, which loads the `Model`
- and the actual `View` object. The `view` in a Nooku Framework component is fundamental. This is why that at least the folder
- structure and the template of the view needs to be defined. The Framework needs to know how you want that information rendered.
+As you can see the `view` is very important. It tells the component dispatcher which `Controller` to load, which loads the `Model`
+ and the actual `View` object. The `view` in a Nooku Framework component is fundamental. This is why that at the very least the folder
+ structure and the template of the view needs to be defined.
+
+The Framework needs to know how you want that information rendered.
 
 ## Create a View
 
-Let's recreate (or _not create_ as the case may be) the Items View as we did in the Front End version. Just create the file
+Let's recreate (or _not create_ as the case may be) the Items View as we did in the Front End version, but this time use a table to display the data. Just create the file
 
-    /administrator/components/com_tada/views/items/tmpl/default.html.php
+    /administrator/components/com_todo/view/items/tmpl/default.html.php
 
-And add the same code we did before:
+And add the following did before
 
 ```php
-    <ul>
-    <? foreach($items as $item) : ?>
-        <li>
-            <?=$item->id?>
-            <?=$item->title?>
-            <?=$item->text?>
-        </li>
-    <? endforeach; ?>
-    </ul>
+    <table>
+        <thead>
+            <th><?=translate('ID') ?></th>
+            <th><?=translate('Title') ?></th>
+            <th><?=translate('Description') ?></th>
+        </thead>
+      <? foreach($items as $item) : ?>
+            <tr>
+                <td>
+                    <?= $item->id?>
+                </td>
+                <td>
+                    <a href="<?= route('view=item&id='. $item->id ) ?>">
+                                <?= $item->title ?>
+                       </a>
+                </td>
+                 <td>
+                    <?= $item->description?>
+                </td>
+             </tr>
+        <? endforeach; ?>
+    </table>
 ```
 
 With the this template file in place and point the browser to
 
-http://joomla.dev/tutorials/administrator/index.php?option=com_tada
+http://joomla.dev/todo_tutorial/administrator/index.php?option=com_todo
 
-_we still get an error "View: tadas not found"_
+_we still get an error "View: todos not found"_
 
 ### Don't get discouraged! All of this has a point!
 
-The Framework is still trying to load the same "tadas" view, because we haven't told it to do any different.
+The Framework is still trying to load the same "todos" view, because we haven't told it to do any different.
 
 ## The Dispatcher
 
-In our case we don't want this to happen since we don't want to have any view named "tadas", it simply doesn't make
-sense. Instead, we would like our default view to be a list of our Todo "items". We have to create a specialized
-dispatcher that will override the Framework's default.
+In our case we don't want to have a view named "todos", but would like our default view to be a list of the Todo "items" in the system.
+To get this done we have to create a specialized dispatcher that will override the Framework's default.
 
 First, create the file
 
-`/administrator/components/com_tada/dispatcher/http.php`
+`/administrator/components/com_todo/dispatcher/http.php`
 
 and insert the following code
 
 ```php
     <?php
-    class ComTadaDispatcher extends ComKoowaDispatcherHttp
+    class ComTodoDispatcherHttp extends ComKoowaDispatcherHttp
     {
         protected function _initialize(KObjectConfig $config)
         {
@@ -93,26 +110,27 @@ and insert the following code
     }
 ```
 
-Looking at the first line we can already notice that we're extending the `ComKoowaDispatcherHttp`. This is the class which gets loaded
-in response to an HTTP request if we don't have our own dispatcher class defined.
+Looking at the first line; notice that we're extending the `ComKoowaDispatcherHttp`. This is the class which gets loaded
+in response to an HTTP request if we don't make our own dispatcher class.
 
 >For reference, its located at `/libraries/koowa/components/com_koowa/dispatcher/http.php`.
 
-This way, we're telling our component to load the "item" controller as the default. Which is the same as saying:
+In our class, we're telling our component to load the "item" controller as the default. Which is the same as saying:
 
 >When there is now view param in the request, we want to see items
 
-If we point our browser to
+Now if we refresh our page
 
-http://joomla.dev/tutorials/administrator/index.php?option=com_tada
+http://joomla.dev/todo_tutorial/administrator/index.php?option=com_todo
 
-the Framework will redirect the request to
+The Framework will redirect the request to
 
-http://joomla.dev/tutorials/administrator/index.php?option=com_tada&view=items
+http://joomla.dev/todo_tutorial/administrator/index.php?option=com_todo&view=items
 
 _which is great!_
 
-We already defined our default layout for a list of our items.
+We already defined our default layout for a list of our items, so we get something like
+![Success, our first Todos Table.](/resources/images/todotutorial/backend-todos-first-list.png)
 
 #### Optional Exercise: Create a Dashboard
 
@@ -129,33 +147,34 @@ B) won't have a single table or model associated with it
 
 To implement this view and have it be our default screen we'll need to do a few things.
 
-1) As we did in the Front End we need to define a controller for the dashboard that extends `ComKoowaControllerView`
+1) We need a controller that doesn't expect a model. The fallback `ComKoowaControllerDefault` descends from `KControllerModel`,
+which expects an associated database table. We need to our dashboard controller to extend `ComKoowaControllerView` instead.
 
 We create the file
 
-`/administrator/components/com_tada/controllers/dashboard.php`
+`/administrator/components/com_todo/controllers/dashboard.php`
 
 And add the following code
 
 ```php
-<?php  class ComTadaControllerDashboard extends ComKoowaControllerView{}
+<?php  class ComTodoControllerDashboard extends ComKoowaControllerView{}
 ```
 
 2) Then create a template layout
 
-`/administrator/components/com_tada/views/dashboard/tmpl/default.html.php`
+`/administrator/components/com_todo/view/dashboard/tmpl/default.html.php`
 
 And add the following code
 
 ```php
-<h1>Tada Dashboard</h1>
+<h1>Todo Dashboard</h1>
 ```
 
-3) Update the `ComTadaDispatcher` and make `dashboard` the default controller instead
+3) Update the `ComTodoDispatcherHttp` and make `dashboard` the default controller instead
 
 ```php
     <?php
-    class ComTadaDispatcher extends ComKoowaDispatcherHttp
+    class ComTodoDispatcherHttp extends ComKoowaDispatcherHttp
     {
         protected function _initialize(KObjectConfig $config)
         {
@@ -167,58 +186,26 @@ And add the following code
     }
 ```
 
-That's it. Pointing your browser to http://joomla.dev/tutorials/administrator/index.php?option=com_tada will now load your new Dashboard.
+That's it. Pointing your browser to http://joomla.dev/todo_tutorial/administrator/index.php?option=com_todo will now redirect and load your new Dashboard.
+![Todos Default Dashboard.](/resources/images/todotutorial/backend-todos-dashboard.png)
 
-## 3. The Controller
+## 3. The Controller Package
 
-Lastly, a little bit about the Controller. Aside from the example for a Dashboard above there is no need for us to create
-a Controller for the Tada Items. The behavior provided by the `ComKoowaControllerModel` is robust and fulfills all of our needs,
+Lastly, a little bit about the Controller package. Aside from the example for a Dashboard above there is no need for us to create
+a Controller for the Todo Items. The behavior provided by the `ComKoowaControllerModel` is robust and fulfills all of our needs,
 and this is the class that the Framework falls back to.
 
-Because we have defined a database table that conforms to the naming conventions that the Framework expects, we don't need to define a class.
+**Because we have defined a database table that conforms to the naming conventions that the Framework expects, we don't need to define a class.**
 
-For the sake of illustration though, lets say that we wanted to load a different layout as the default instead of the default.html.php file
-we defined above. We could do this in the new `ComTadaControllerDashboard` by making sure to specify the layout in the request part of the config.
+### Controller Toolbars
 
-With all controllers extending the [`KControllerAbstract`](http://api.nooku.org/class-KControllerAbstract.html) class, we can define
-default `request` variables in the `_initialize` method.
+One of the more important pieces in the backend is the Toolbar. The administrator toolbar is the series of command buttons at the
+top of the screen that you are all familiar with. For our component to work properly and be user friendly, we need to
+be able to create, edit and delete Todo items. And guess what, if you don't need anything special, you don't have to create these either as Nooku
+give you a nice implementation out of the box.
 
-```php
-    <?php
+We touch on the Toolbars a little more in the next section.
 
-    class ComTadaControllerDashboard extends ComKoowaControllerView{
+## Up Next: Editing Your Data
 
-        protected function _initialize(KObjectConfig $config)
-        {
-            $config->append(array(
-                    'request'	=> array('layout' => 'custom')
-            ));
-            parent::_initialize($config);
-        }
 
-    }
-```
-
-As long as we have created that `custom` layout in the right place, it will get loaded if the layout parameter is not
-set in the url for this request.
-
-We can set other request variables in this manner that will have the potential to affect how and how much of our data
- gets represented. For example, if we wished to change the default maximum number of items returned in a collection, we
- would do so by creating `ComTadaControllerItem` and  setting the `limit` request variable in the `_initialize` method
-
-```php
-    <?php
-    # file: /administrator/components/com_tada/controllers/item.php
-    class ComTadaControllerItem extends ComKoowaControllerModel
-    {
-
-        protected function _initialize(KObjectConfig $config)
-        {
-            $config->append(array(
-                    'request'	=> array('limit' => '100')
-            ));
-            parent::_initialize($config);
-        }
-
-    }
-```
