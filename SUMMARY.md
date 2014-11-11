@@ -5,7 +5,7 @@
 * [Overview](overview.md)
 * [Getting Started](getting-started.md)
     * [Setup](get-started/joomlatools-set-up.md)
-    * [Frontend](get-started/com_todo-front-end.md)
+    * [Frontend](get-started/com_todo-frontend.md)
         * [Register the Component](get-started/register-the-component.md)
         * [Component Entry Point](get-started/component-entry-point.md)
         * [Hello World!](get-started/hello-world-todos.md)
