@@ -1,9 +1,9 @@
-# Using Vagrant, Joomla Console and Composer
+# Using JoomlaTools
 
 Before starting this tutorial, you should have already set up Joomla! with Nooku Framework installed or be working with Nooku Platform.
 
 For the sake of this tutorial, we will assume that you have used the Tools from [developer.joomlatools.com](http://developer.joomlatools.com)
-on your local machine, and can be reached at [http://joomla.dev/todo_tutorial/](http://joomla.dev/todo_tutorial/).
+on your local machine, and can be reached at [http://joomla.dev/todo/](http://joomla.dev/todo/).
 
 After you get your vagrant box set up and running, from the command prompt run
 

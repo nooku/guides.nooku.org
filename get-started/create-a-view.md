@@ -33,7 +33,7 @@ And add the following did before
 
 With the this template file in place and point the browser to
 
-http://joomla.dev/todo_tutorial/administrator/index.php?option=com_todo
+http://joomla.dev/todo/administrator/index.php?option=com_todo
 
 _we still get an error "View: todos not found"_
 

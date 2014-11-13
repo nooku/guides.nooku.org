@@ -45,7 +45,7 @@ folder and enclosed file in:
 
     DELETE     /components/com_todo/model/items.php
 
-If you go back to http://joomla.dev/todo_tutorial/index.php?option=com_todo&view=items, you will see that even though you
+If you go back to http://joomla.dev/todo/index.php?option=com_todo&view=items, you will see that even though you
 have deleted your model, the page still renders as it did before.
 
 **Remember, we only needed to create that file because we didn't have an associated table yet. Now we do!**

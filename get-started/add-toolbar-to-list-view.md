@@ -46,33 +46,30 @@ And in that file place the following class definition
 ```
 <?php
 class ComTodoControllerToolbarMenubar extends ComKoowaControllerToolbarMenubar{
-
     function getCommands()
     {
-
         $view = KStringInflector::singularize($this->getController()->getView()->getName());
-
         // add the dashboard view to the menu
         $this->addCommand('Dashboard', array(
             'href' => 'index.php?option=com_todo&view=dashboard',
             'active' => ($view == 'dashboard')
         ));
-
         // add the items view to the menu
         $this->addCommand('Items', array(
             'href' => 'index.php?option=com_todo&view=items',
             'active' => ($view == 'item')
         ));
-
         return parent::getCommands();
     }
 }
-```_Let's explore what's happening here._
+```
+
+_Let's explore what's happening here._
 
 When any toolbar is about to be rendered, the `getCommands` method is called. There are no commands registered in the `menubar`
 by default and so it is empty until we add them. If the `view` we are looking at matches a command we are adding, it gets
 an `'active' => true` and is highlighted as active on the page.
 
-Go ahead and refresh your browser at http://joomla.dev/tada_tutorial/administrator/index.php?option=com_todo&view=items
+Go ahead and refresh your browser at http://joomla.dev/todo/administrator/index.php?option=com_todo&view=items
 
 ![Todos List With Menubar](/resources/images/todotutorial/todo-list-with-menubar.png)

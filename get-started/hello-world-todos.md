@@ -34,7 +34,7 @@ And then add the following line of code to the file:
 
 **We're going to get rid of this later when we set up our database.**
 
-Now, try opening [http://joomla.dev/todo_tutorial/index.php?option=com_todo&view=items](http://joomla.dev/todo_tutorial/index.php?option=com_todo&view=items)
+Now, try opening [http://joomla.dev/todo/index.php?option=com_todo&view=items](http://joomla.dev/todo/index.php?option=com_todo&view=items)
  in your browser. If you set everything up correctly you should see something like
 
 ![Hello World, and welcome to my Todo Items](/resources/images/todotutorial/hello-world.png)

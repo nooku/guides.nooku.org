@@ -2,7 +2,7 @@
 
 The entry-point contains the very first code that gets executed when you visit
 
-http://joomla.dev/todo_tutorial/administrator/index.php?option=com_todo
+http://joomla.dev/todo/administrator/index.php?option=com_todo
 
 To get going just like the Front End component create the following file
 
@@ -23,7 +23,7 @@ This line simply loads the dispatcher and calls the `dispatch` action.
 
 Now, try pointing your browser to
 
-http://joomla.dev/todo_tutorial/administrator/index.php?option=com_todo.
+http://joomla.dev/todo/administrator/index.php?option=com_todo.
 
 *You will get an error, something like*
 ![No Todos Todos Table.](/resources/images/todotutorial/backend-todos-error.png)

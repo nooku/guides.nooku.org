@@ -8,7 +8,7 @@ We got you started off in the [Front End](front-end.md) part of the tutorial by 
 
 Open it up and lets get to work showing our todo items!
 
-> Remember, we're using http://joomla.dev/todo_tutorial/index.php?option=com_todo&view=items
+> Remember, we're using http://joomla.dev/todo/index.php?option=com_todo&view=items
 
 ## Display Data in the Template
 
@@ -65,16 +65,16 @@ _It even knows words like "person" is singular, where "people" is its plural for
 The Framework provides some handy shortcuts and syntactical sugar for use in our view templates. They
 help keep templates clean and function names a little more relevant to the designer. Here are some of them:
 
-* `object()` => `$this->getObject()`
-* `translate()` => `$this->getObject('translator')->translate()'`
-* `route()` => `$this->getRoute`
+* `object()` => `KObject::getObject()`
+* `translate()` => `KObject::getObject('translator')->translate()'`
+* `route()` => `KViewTemplate::getRoute()`
 * `json()` => `json_encode()`
 * `format()` => `sprintf()`
 * `replace()` => `strtr()`
-* `escape()` => `$this->escape()`
-* `helper()` => `$this->invoke()`
-* `import()` => `$this->_import()`
-* `parameters()` => `$this->getParameters()`
+* `escape()` => `KTemplate::escape()`
+* `helper()` => `KTemplate::invoke()`
+* `import()` => `KTemplateEngineKoowa::_import()`
+* `parameters()` => `KTemplate::getParameters()`
 
 Let try some in our example. Change the `ul` list in above example to:
 

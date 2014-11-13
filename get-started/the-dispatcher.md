@@ -34,11 +34,11 @@ In our class, we're telling our component to load the "item" controller as the d
 
 Now if we refresh our page
 
-http://joomla.dev/todo_tutorial/administrator/index.php?option=com_todo
+http://joomla.dev/todo/administrator/index.php?option=com_todo
 
 The Framework will redirect the request to
 
-http://joomla.dev/todo_tutorial/administrator/index.php?option=com_todo&view=items
+http://joomla.dev/todo/administrator/index.php?option=com_todo&view=items
 
 _which is great!_
 
@@ -99,6 +99,6 @@ And add the following code
     }
 ```
 
-That's it. Pointing your browser to http://joomla.dev/todo_tutorial/administrator/index.php?option=com_todo will now redirect and load your new Dashboard.
+That's it. Pointing your browser to http://joomla.dev/todo/administrator/index.php?option=com_todo will now redirect and load your new Dashboard.
 
 ![Todos Default Dashboard.](/resources/images/todotutorial/backend-todos-dashboard.png)

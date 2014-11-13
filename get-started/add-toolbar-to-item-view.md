@@ -25,7 +25,7 @@ If you were wondering about the `<ktml:style src="[url]" />` tag, that's a speci
 >"I want the stylesheet in the `src` attribute pushed into the `<head />` tag of this page".
 
 And if you happened to noticed `media://` in that url, well that also gets filtered to the URL of your `/media`
-folder, which in our case is `http://joomla.dev/todo_tutorial/media/` ... _**That is handy**_
+folder, which in our case is `http://joomla.dev/todo/media/` ... _**That is handy**_
 
 If you refresh your page you should see something similar to
 
