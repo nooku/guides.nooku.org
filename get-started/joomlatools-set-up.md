@@ -11,11 +11,11 @@ After you get your vagrant box set up and running, from the command prompt run
 
 When inside the box, use the `joomla` command line tool to create a new Joomla site
 
-    $ joomla site:create todo_tutorial
+    $ joomla site:create todo
 
 Create a composer file in your new todo_tutorial directory
 
-    $ cd /var/www/todo_tutorial;
+    $ cd /var/www/todo;
 
     $ vi composer.json
 
