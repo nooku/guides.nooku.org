@@ -6,4 +6,4 @@ how to:
 * Create a Component Entry Point
 * Register your Component with Joomla!
 * Get your first views to work with almost NO CODE
-* Build a database table for your Todos, which in turn, your model automatically, with NO CODE
+* Build a database table for your Todos, which in turn, builds your model automatically, with NO CODE
