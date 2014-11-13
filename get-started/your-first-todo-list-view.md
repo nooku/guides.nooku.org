@@ -2,7 +2,7 @@
 
 Your component Views are how you present your data to the world.
 
-We got you started off in the [Front End](front-end.md) part of the tutorial by creating a file called
+We got you started off in the [Frontend](front-end.md) part of the tutorial by creating a file called
 
     /components/com_todo/view/items/tmpl/default.html.php
 
@@ -27,7 +27,8 @@ file:
     </ul>
 ```
 
-This code will render an unordered list and for each entity in `$items` object it will render a `<li>` element with the Todo Item's id, title, and its description.
+This code will render an unordered list and for each entity in `$items` object it will render a `<li>` element with the
+Todo Item's id, title, and its description.
 
 ![My Nooku Powered Todo List](/resources/images/todotutorial/front-end-view.png)
 
@@ -49,14 +50,16 @@ structures such as the foreach statement, once again for readability.
 
 4. Note that we have only added a template here; no `View` class. This is because Nooku will fallback on default classes
 whenever your component does not contain a specific class that it's looking for, in this case the `items` HTML view. So
-when `ComTodoViewItemsHtml` is not found, it will simply fall back on `ComKoowaViewHtml`, and assume that since you're requesting
+when `ComTodoViewItemsHtml` is not found, it will simply fall back on [`ComKoowaViewHtml`](http://api.nooku.org/class-ComKoowaViewHtml.html), and assume that since you're requesting
 the `items view`, that you want to view a list of Todo items.
 
 <b>Tip:</b> You can also add a 'default' view class for your component, `ComTodoViewHtml`, if you want to use that as a fallback
-instead of `ComKoowaViewHtml`. For HTML format requests your new class still needs to descend from `KViewHtml`.
+instead of [`ComKoowaViewHtml`](http://api.nooku.org/class-ComKoowaViewHtml.html). For HTML format requests your new class
+still needs to descend from `KViewHtml`.
 
 Again, take note of the following: "item**s**" implies multiple items, while "item" implies a single post. Everywhere in Nooku, it's very
-important to use singular and plural forms correctly. Thanks to `KStringInflector`, Nooku translates back and forth between most English words.
+important to use singular and plural forms correctly. Thanks to [`KStringInflector`](http://api.nooku.org/class-KStringInflector.html),
+Nooku translates back and forth between most English words.
 
 _It even knows words like "person" is singular, where "people" is its plural form. Similarly, "index" is the singular form of the plural "indices"._
 
@@ -65,16 +68,16 @@ _It even knows words like "person" is singular, where "people" is its plural for
 The Framework provides some handy shortcuts and syntactical sugar for use in our view templates. They
 help keep templates clean and function names a little more relevant to the designer. Here are some of them:
 
-* `object()` => `KObject::getObject()`
-* `translate()` => `KObject::getObject('translator')->translate()'`
-* `route()` => `KViewTemplate::getRoute()`
+* `object()` => [`KObject::getObject()`](http://api.nooku.org/source-class-KObject.html#_getObject)
+* `translate()` => [`KObject::getObject('translator')->translate()'`](http://api.nooku.org/source-class-KTranslatorAbstract.html#_translate)
+* `route()` => [`KViewTemplate::getRoute()`](http://api.nooku.org/source-class-KViewTemplate.html#_getRoute)
 * `json()` => `json_encode()`
 * `format()` => `sprintf()`
 * `replace()` => `strtr()`
-* `escape()` => `KTemplate::escape()`
-* `helper()` => `KTemplate::invoke()`
-* `import()` => `KTemplateEngineKoowa::_import()`
-* `parameters()` => `KTemplate::getParameters()`
+* `escape()` => [`KTemplate::escape()`](http://api.nooku.org/source-class-KTemplate.html#_escape)
+* `helper()` => [`KTemplate::invoke()`](http://api.nooku.org/source-class-KTemplate.html#_invoke)
+* `import()` => [`KTemplateEngineKoowa::_import()`](http://api.nooku.org/source-class-KTemplateEngineKoowa.html#__import)
+* `parameters()` => [`KTemplate::getParameters()`](http://api.nooku.org/source-class-KTemplate.html#_getParameters)
 
 Let try some in our example. Change the `ul` list in above example to:
 
@@ -103,5 +106,6 @@ Also, when we have a singular Item view ready we could use the `route` shortcut 
    </a>
 ```
 
-All of the shortcuts are there to help you **"Write Less Code"**. Mastering them will help you produce templates faster that
+All of the shortcuts are there
+ to help you **"Write Less Code"**. Mastering them will help you produce templates faster that
 are ultimately easier to read.

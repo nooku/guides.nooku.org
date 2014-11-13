@@ -22,7 +22,7 @@ We don't have a list of items to display just yet, so inside the newly created d
 
 Also in the [HMVC](/essentials/hmvc.md) article you learned that a controller loads a model. The default controller that Nooku
 would create for you expects a model, which in turn expects a database table by default. As we don't have a database yet, we will
-bypass this behavior by extending our items model from `KModelAbstract` instead. Please create the the following file and folder structure:
+bypass this behavior by extending our items model from [`KModelAbstract`](http://api.nooku.org/class-KModelAbstract.html) instead. Please create the the following file and folder structure:
 
      /components/com_todo/model/items.php
 
@@ -46,7 +46,7 @@ the framework default. In the cases where the Framework can't find a class that 
 or a items view, it will iteratively [Fallback](/essentials/object-management.md) to classes through a hierarchy of classes provided by the
 framework and use them instead.
 
-_This is part of what we call Nooku Magic:_
+_This is part of what we call Nooku **Magic**:_
 
 **If you're not trying to accomplish anything out of the ordinary, Nooku Framework will often do the job for you.**
 

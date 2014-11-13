@@ -23,7 +23,7 @@ and insert the following code
     }
 ```
 
-Looking at the first line; notice that we're extending the `ComKoowaDispatcherHttp`. This is the class which gets loaded
+Looking at the first line; notice that we're extending the [`ComKoowaDispatcherHttp`](http://api.nooku.org/class-ComKoowaDispatcherHttp.html). This is the class which gets loaded
 in response to an HTTP request if we don't make our own dispatcher class.
 
 >For reference, its located at `/libraries/koowa/components/com_koowa/dispatcher/http.php`.
@@ -60,8 +60,10 @@ B) won't have a single table or model associated with it
 
 To implement this view and have it be our default screen we'll need to do a few things.
 
-1) We need a controller that doesn't expect a model. The fallback `ComKoowaControllerDefault` descends from `KControllerModel`,
-which expects an associated database table. We need to our dashboard controller to extend `ComKoowaControllerView` instead.
+1) We need a controller that doesn't expect a model. The fallback [`ComKoowaControllerDefault`](http://api.nooku.org/class-ComKoowaControllerDefault.html)
+descends from [`KControllerModel`](http://api.nooku.org/class-KControllerModel.html), which expects an associated database tabl
+e.
+We need to our dashboard controller to extend [`ComKoowaControllerView`](http://api.nooku.org/class-ComKoowaControllerView.html) instead.
 
 We create the file
 

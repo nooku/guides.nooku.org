@@ -1,7 +1,7 @@
 # The Controller Package
 
 Lastly, a little bit about the Controller package. Aside from the example for a Dashboard above there is no need for us to create
-a Controller for the Todo Items. The behavior provided by the `ComKoowaControllerModel` is robust and fulfills all of our needs,
+a Controller for the Todo Items. The behavior provided by the [`ComKoowaControllerModel`](http://api.nooku.org/class-ComKoowaControllerModel.html) is robust and fulfills all of our needs,
 and this is the class that the Framework falls back to.
 
 **Because we have defined a database table that conforms to the naming conventions that the Framework expects, we don't need to define a class.**

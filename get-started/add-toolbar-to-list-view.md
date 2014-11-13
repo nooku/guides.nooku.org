@@ -43,9 +43,10 @@ Let's create a file at
 
 And in that file place the following class definition
 
-```
+```php
 <?php
-class ComTodoControllerToolbarMenubar extends ComKoowaControllerToolbarMenubar{
+class ComTodoControllerToolbarMenubar extends ComKoowaControllerToolbarMenubar
+{
     function getCommands()
     {
         $view = KStringInflector::singularize($this->getController()->getView()->getName());
@@ -66,7 +67,7 @@ class ComTodoControllerToolbarMenubar extends ComKoowaControllerToolbarMenubar{
 
 _Let's explore what's happening here._
 
-When any toolbar is about to be rendered, the `getCommands` method is called. There are no commands registered in the `menubar`
+When any toolbar is about to be rendered, the [`getCommands`](http://api.nooku.org/source-class-ComKoowaControllerToolbarMenubar.html#_getCommands) method is called. There are no commands registered in the `menubar`
 by default and so it is empty until we add them. If the `view` we are looking at matches a command we are adding, it gets
 an `'active' => true` and is highlighted as active on the page.
 

@@ -54,6 +54,6 @@ have deleted your model, the page still renders as it did before.
 
 You have created your database table for your Todo items and registered your component as a Joomla! extension.
 
-## Up Next: Your Todo Item Views
+
 
 
