@@ -1,0 +1,7 @@
+Gemfile.lock
+Gemfile
+Rakefile
+/path/
+/rake-10.3.2/
+/vendor/
+.idea/
