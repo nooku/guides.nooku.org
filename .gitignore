@@ -1,3 +1,5 @@
 /build/*
 /_book/*
 /node_modules/*
+/path/*
+/rake-10.3.2/*
