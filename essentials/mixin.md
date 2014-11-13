@@ -37,7 +37,7 @@ to the KControllerAbstract base object's interface.
 By definition Abstract classes are meant to be extended and so by the magic of inheritance all objects that are children
 or instances of KControllerAbstract also gain the ability to add behaviors and commands to a command chain at runtime.
 
-<pre><h3>Great...But what does all that actually mean?</h3></pre>
+###Great...But what does all that actually mean?
 
 In short, Nooku provides componentized functionality; that is, Nooku allows you
 to modularize your functionality and compose functionalities across modules at runtime.
