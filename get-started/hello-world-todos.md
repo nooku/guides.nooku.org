@@ -5,7 +5,7 @@ So that's what we'll do next:  _Create a View_.
 
 The first view we will add, is the view that renders our list of todo items. For this, create the following file and folder structure:
 
-    /components/com_todo/view/item/tmpl/default.html.php
+    /components/com_todo/view/items/tmpl/default.html.php
 
 > Notice that the folder name "items" is plural, and not "item", which is singular.
 > This is part of the framework's [Naming Conventions](/essentials/naming-conventions.md): Since we're creating a view that's

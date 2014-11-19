@@ -40,8 +40,8 @@ Now we insert some sample data into the blog table. Again, replace #__ with your
         ('todo item three', 'This is the third Todo');
 
 
-Now we have a database defined let's delete the controller we created in the previous part. For this delete the controllers
-folder and enclosed file in:
+Now we have a database defined let's get rid of the `ComTodoModelItems` class we created in the previous part. For this
+delete the `/components/com_todo/model/` folder, or at least the enclosed file in
 
     DELETE     /components/com_todo/model/items.php
 

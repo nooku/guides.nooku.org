@@ -9,7 +9,7 @@ When you click the "Todo item one" link in the items view , a <span style="color
 
 >Note: If you put debugging on in Configuration a lot more info is available.
 
-This error should be _Expected_. Remember, the layout file is the only thing we absolutely need to explicitly write for a given `view`.
+This error should be _Expected_. Remember, the layout file is the only thing we absolutely need to explicitly write for a given html `view`.
 
 We can go ahead and create a new template file
 
@@ -18,6 +18,8 @@ We can go ahead and create a new template file
 And enter the following code
 
 ```html
+<?= helper('behavior.koowa'); ?>
+
 <form action="<?= route('id='.$item->id) ?>" method="post" class="-koowa-form">
     <div>
     	<div>
@@ -31,7 +33,8 @@ And enter the following code
                         'width' => '100%',
                         'height' => '300',
                         'cols' => '60',
-                        'rows' => '20'
+                        'rows' => '20',
+                        'value' => $item->description
 			    ))
 	?>
     </div>
@@ -42,4 +45,5 @@ We should end up with something which is similar to this
 
 ![Todos List With Toolbar](/resources/images/todotutorial/todo-form-no-toolbar.png)
 
-
+Awesome! We have a form, but no buttons to tell our application to save our Todos. Lets take care of that
+in the next section.

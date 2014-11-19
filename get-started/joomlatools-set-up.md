@@ -33,5 +33,5 @@ Lastly, run
 
     $ composer install
 
-With all that done you should be good to go to get started with doing your first Nooku Framework powered component.
+With all that done you should be good to go to get started with doing your first Nooku Framework powered extension.
 

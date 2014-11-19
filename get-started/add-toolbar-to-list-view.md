@@ -8,6 +8,7 @@ Open up
 And add the following code
 
 ```html
+<?= helper('behavior.koowa'); ?>
  <ktml:style src="media://koowa/com_koowa/css/koowa.css" />
  <ktml:module position="submenu">
      <ktml:toolbar type="menubar">

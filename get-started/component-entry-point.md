@@ -1,8 +1,8 @@
 # Component Entry Point
 
-If you have ever developed a Joomla! component before you know about the _component entry point_, sometimes referred to as the _component loader_.
-The file in most cases in Joomla! loads a controller and fires the execute method on that controller. We're doing something different and loading
-and firing our own dispatcher to take care of all that.
+If you have ever developed a Joomla component before you know about the _component entry point_, sometimes referred to as the _component loader_.
+The file in most cases in Joomla loads a controller and fires the execute method on that controller. We're doing something
+different; loading and firing our own dispatcher to take care of all that.
 
 So, just create this file:
 
