@@ -52,7 +52,7 @@ have deleted your model, the page still renders as it did before.
 
 ## Great!
 
-You have created your database table for your Todo items and registered your component as a Joomla! extension.
+You have created your database table for your Todo items and registered your component as a Joomla extension.
 
 
 

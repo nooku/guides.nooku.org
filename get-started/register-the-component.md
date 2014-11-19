@@ -1,6 +1,6 @@
 ## Register the Component
 
-The first thing we need to do is make sure our component is registered in the database. This is normaly done automatically when installing a new component with the normal Joomla! installer. In our case we need to do it manually.
+The first thing we need to do is make sure our component is registered in the database. This is normaly done automatically when installing a new component with the normal Joomla installer. In our case we need to do it manually.
 
 We know that our component is going to be called `com_todo` so we can perform an insert with the following code in the database.
 

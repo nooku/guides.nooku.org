@@ -15,7 +15,7 @@
     * [Object Management](essentials/object-management.md)
     * [Naming Conventions](essentials/naming-conventions.md)
 * [Getting Started](getting-started.md)
-    * [Setup](get-started/joomlatools-set-up.md)
+    * [Setup](get-started/set-up.md)
     * [Frontend](get-started/com_todo-frontend.md)
         * [Register the Component](get-started/register-the-component.md)
         * [Component Entry Point](get-started/component-entry-point.md)
