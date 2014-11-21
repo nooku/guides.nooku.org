@@ -48,20 +48,10 @@ For example:
 	site/components/com_foo/controller/bar.php -> ComFoo + Controller + Bar -> ComFooControllerBar
 	site/components/com_foo/model/bars.php -> ComFooModelBars
 
-the same in reverse.
+and the same in reverse.
 
 	ComFooControllerBar -> site/components/com_foo/controller/bar.php
 	ComFooModelBars -> site/components/com_foo/model/bars.php
-	
-Using underscores in the name:
-
-	site/components/com_foo/controller/baz_bar.php -> ComFoo + Controller + Baz_bar -> ComFooControllerBaz_bar
-	site/components/com_foo/model/baz_bars.php -> ComFooModelBaz_bars
-	
-the same in reverse.
-
-	ComFooControllerBaz_bar -> site/components/com_foo/controller/baz_bar.php
-	ComFooModelBaz_bars -> site/components/com_foo/model/baz_bars.php
 
 #### Controllers
 
@@ -71,10 +61,7 @@ single resource type, eg, an article, or a post.
 Your controller classes always go in the in the `./controller` directory of your component; NOT the plural <span style="color:red">./controllers</span>.
 
     ComFooControllerBar -> site/components/com_foo/controller/bar.php
-       
-Using an unserscore in the name:
 
-    ComFooControllerBaz_bar -> site/components/com_foo/controller/baz_bar.php
 #### Models
 
 Your Model classes go in the `./model` folder of your component's directory.
@@ -83,10 +70,6 @@ For the Magic to work Models names are always plural. The rationale being that t
 row.
 
 	com_foo/model/bars.php -> ComFoo + Model + Bars ->  ComFooModelBars
-
-Using an unserscore in the name:
-
-	com_foo/model/baz_bars.php -> ComFoo + Model + Baz_bars ->  ComFooModelBaz_bars
 
 #### Views
 
@@ -133,7 +116,6 @@ Following our Foo component example:
 	#__foo_bars
 	#__foo_documents
 	#__foo_cars
-	#__foo_baz_bars
 
 There is a related convention for the primary keys for your tables as well:
 
@@ -145,7 +127,6 @@ tables get the following primary keys:
 	foo_bar_id
 	foo_document_id
 	foo_car_id
-	foo_baz_bar_id
 
 > Note: Nooku will automatically translate the primary key into a property of the name ‘id’. So from your code point of
 view, you can just refer to it as $object->id;
