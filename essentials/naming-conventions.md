@@ -152,6 +152,14 @@ view, you can just refer to it as $object->id;
 
 When data is requested by the model from the database, data will be returned as an entity object.
 
+####Special Case: Underscores in File Names
+
+You can use underscores in the file name as well. In this context, Nooku treats them exactly the same as a lowercase letter.
+
+An example mapping could look like
+
+site/components/com_foo/model/baz_bars.php -> ComFoo + Model + Baz_bars -> ComFooModelBaz_bars
+
 ####KModelEntityRow
 
 This is a single object that represents an instance of a row from the database. Entities can be saved or deleted and hold
