@@ -27,7 +27,7 @@ by other classes (e.g., editable, executable). KBehaviorMixin is fairly simple a
 hasBehavior, addBehavior and getBehaviors**. That's all we need to give an object the ability to handle and encapsulate
 different behavioral strategies.
 
-Similarly, [KMixinCommand](http://api.nooku.org/package-Koowa.Library.Command.Mixin.html) has more methods, but if you hadn’t guessed,
+Similarly, [KCommandMixin](http://api.nooku.org/package-Koowa.Library.Command.Mixin.html) has more methods, but if you hadn’t guessed,
 they provide a KControllerAbstract based object with the ability to implement a command chain (or [Chain of Responsibility design pattern](http://en.wikipedia.org/wiki/Chain-of-responsibility_pattern)),
 but also lets it do so at runtime.
 
