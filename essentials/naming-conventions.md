@@ -100,6 +100,14 @@ This is what allows your component to have different format representations.
 > Plural views refer to multiple items, and may be filtered by states defined in the model.
 > We'll talk more about Model States in later sections of the Guide.
 
+####Special Case: Underscores in File Names
+
+You can use underscores in the file name as well. In this context, Nooku treats them exactly the same as a lowercase letter.
+
+An example mapping could look like
+
+site/components/com_foo/model/baz_bars.php -> ComFoo + Model + Baz_bars -> ComFooModelBaz_bars
+
 ###Databases
 
 The Database table naming conventions are also a central piece to making Magic with Nooku. Using them properly frees you from the need
@@ -116,6 +124,7 @@ Following our Foo component example:
 	#__foo_bars
 	#__foo_documents
 	#__foo_cars
+	#__foo_baz_bars
 
 There is a related convention for the primary keys for your tables as well:
 
@@ -127,19 +136,12 @@ tables get the following primary keys:
 	foo_bar_id
 	foo_document_id
 	foo_car_id
+	foo_baz_bar_id
 
 > Note: Nooku will automatically translate the primary key into a property of the name ‘id’. So from your code point of
 view, you can just refer to it as $object->id;
 
 When data is requested by the model from the database, data will be returned as an entity object.
-
-####Special Case: Underscores in File Names
-
-You can use underscores in the file name as well. In this context, Nooku treats them exactly the same as a lowercase letter.
-
-An example mapping could look like
-
-site/components/com_foo/model/baz_bars.php -> ComFoo + Model + Baz_bars -> ComFooModelBaz_bars
 
 ####KModelEntityRow
 
