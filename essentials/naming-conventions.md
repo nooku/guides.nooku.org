@@ -53,7 +53,6 @@ and the same in reverse.
 	ComFooControllerBar -> site/components/com_foo/controller/bar.php
 	ComFooModelBars -> site/components/com_foo/model/bars.php
 
-
 #### Controllers
 
 Controllers are always singular, this is due in part to the fact that the [BREAD](BREAD.md) actions (more on that later) refer to a
@@ -70,7 +69,7 @@ Your Model classes go in the `./model` folder of your component's directory.
 For the Magic to work Models names are always plural. The rationale being that they map to an associated database table by default, and that database table always has more than one
 row.
 
-       com_foo/model/bars.php -> ComFoo + Model + Bars ->  ComFooModelBars
+	com_foo/model/bars.php -> ComFoo + Model + Bars ->  ComFooModelBars
 
 #### Views
 
@@ -101,6 +100,14 @@ This is what allows your component to have different format representations.
 > Plural views refer to multiple items, and may be filtered by states defined in the model.
 > We'll talk more about Model States in later sections of the Guide.
 
+####Special Case: Underscores in File Names
+
+You can use underscores in the file name as well. In this context, Nooku treats them exactly the same as a lowercase letter.
+
+An example mapping could look like
+
+site/components/com_foo/model/baz_bars.php -> ComFoo + Model + Baz_bars -> ComFooModelBaz_bars
+
 ###Databases
 
 The Database table naming conventions are also a central piece to making Magic with Nooku. Using them properly frees you from the need
@@ -117,6 +124,7 @@ Following our Foo component example:
 	#__foo_bars
 	#__foo_documents
 	#__foo_cars
+	#__foo_baz_bars
 
 There is a related convention for the primary keys for your tables as well:
 
@@ -128,6 +136,7 @@ tables get the following primary keys:
 	foo_bar_id
 	foo_document_id
 	foo_car_id
+	foo_baz_bar_id
 
 > Note: Nooku will automatically translate the primary key into a property of the name ‘id’. So from your code point of
 view, you can just refer to it as $object->id;
