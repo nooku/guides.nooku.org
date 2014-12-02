@@ -117,7 +117,7 @@ The table name convention is quite simple:
 
 `#__` + `component name` + `_` + `plural entity name`
 
-where `#__` is replaced with your already defined ````php JConfig::$dbprefix```, and the `component name` is without the `com_` prefix.
+where `#__` is replaced with your already defined ```JConfig::$dbprefix```, and the `component name` is without the `com_` prefix.
 
 Following our Foo component example:
 
