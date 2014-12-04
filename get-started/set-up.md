@@ -13,7 +13,7 @@ When inside the box, use the `joomla` command line tool to create a new Joomla s
 
 After that, make sure Nooku is installed with the following line
 
-    $ composer require nooku/nooku-framework:2.*
+    $ composer require --working-dir=/var/www/todo nooku/nooku-framework:2.*
 
 That's it! Those two commands have installed Joomla and the Framework, and your tutorial sandbox
 should be available at [http://joomla.dev/todo/](http://joomla.dev/todo/).
