@@ -31,7 +31,7 @@
         * [Toolbar for Item Form](get-started/add-toolbar-to-item-view.md)
         * [Toolbar for List View](get-started/add-toolbar-to-list-view.md)
 * [Tutorials](tutorials.md)
-* [JSON API](json.md)
+* [JSON API](JSON.md)
     * [Document Structure](json-api/document-structure.md)
         * [Version](json-api/document-structure/version.md)
         * [Links](json-api/document-structure/links.md)
@@ -42,4 +42,3 @@
         * [Filtering](json-api/fetching-resources/filtering.md)
         * [Sorting](json-api/fetching-resources/sorting.md)
         * [Pagination](json-api/fetching-resources/pagination.md)
-
