@@ -10,7 +10,7 @@ We know that our component is going to be called `com_todo` so we can perform an
 
 For Joomla 2.5.x and 3.x
 ```mysql
-    INSERT INTO `sites_todo_tutorial`.`#__extensions`
+    INSERT INTO `sites_todo`.`#__extensions`
         (`extension_id`, `name`, `type`, `element`, `folder`, `client_id`,
          `enabled`, `access`, `protected`, `manifest_cache`, `params`,
          `custom_data`, `system_data`, `checked_out`, `checked_out_time`,
