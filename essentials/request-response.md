@@ -5,7 +5,7 @@ The entire request and response cycle in Nooku is pretty straightforward, but th
 Think about the request/response cycle within HTTP:
 
 1. HTTP request sent
-2. Web server recieves the request and routes the request to the corresponding file
+2. Web server receives the request and routes the request to the corresponding file
 3. File type handler is invoked (e.g. PHP) and file is executed/loaded
 4. Handler returns a response to the web server
 5. Web server returns a response to the browser
@@ -30,7 +30,7 @@ Nooku uses behaviors for all sorts of tasks, from automatic alias creation, to c
 
 ## How it works
 
-The initial request that is recieved by the web server is routed to a dispatcher within the application component. 
+The initial request that is received by the web server is routed to a dispatcher within the application component. 
 
 A dispatcher is responsible for: 
 
