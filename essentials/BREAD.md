@@ -28,7 +28,7 @@ Read is executed contextually based on the singularity of the view via an HTTP G
 
 The edit action modifies an existing record and returns either a 205 (Reset) HTTP status Content, if data was modified, or a 204 (No content) HTTP status if the data was not changed.
 
-Edit is executed contextually based on the uniqueness of the model state. If the model state is unique, then when issuing an HTTP POST request, an edit action will be performed. Edit is dispached via the POST action.
+Edit is executed contextually based on the uniqueness of the model state. If the model state is unique, then when issuing an HTTP POST request, an edit action will be performed. Edit is dispatched via the POST action.
 
 ### Add
 
@@ -38,7 +38,7 @@ Add is executed contextually based on the uniqueness of the model state. If the 
 
 ### Delete
 
-The delete action deletes a record or a set of records. A 204 (No content) HTTP status is returned if the record is deleted, an exception is thrown if not. Delete is dispated directly via the HTTP Delete method.
+The delete action deletes a record or a set of records. A 204 (No content) HTTP status is returned if the record is deleted, an exception is thrown if not. Delete is dispatched directly via the HTTP Delete method.
 
 ---
 
