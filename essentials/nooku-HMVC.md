@@ -1,6 +1,6 @@
 # Why HMVC?
 
-Nooku uses the HMVC design pattern to support its 'component' based architecture, but lets talk about "Why".
+Nooku uses the HMVC design pattern to support its 'component' based architecture, but let's talk about "Why".
 
 ###What's wrong with MVC?
 

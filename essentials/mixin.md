@@ -13,7 +13,7 @@ The object using the mixin seems to ‘inherit’ the mixed in object’s method
 Almost all objects in the Framework have this ability because they extend the base class [KObject](http://api.nooku.org/class-KObject.html)
 that defines the mixin() method.
 
-**Lets look at Nooku's Controller Architecture to see how this works**
+**Let's look at Nooku's Controller Architecture to see how this works**
 
 The major classes in Nooku’s controller architecture are also descended from [KObject](http://api.nooku.org/class-KObject.html).
 The abstract controller is the KControllerAbstract class and by inspection you can see that it takes advantage of the Mixing
