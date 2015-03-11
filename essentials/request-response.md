@@ -26,7 +26,7 @@ Now think about how in Apache you can load in modules. Modules allow you to exte
 
 Behaviors can be used to modify the input and output of the controller, model or the data layer without having to modify the underlying code. This becomes incredibly powerful, as one can affect the way a system operates just by wiring in some behaviors, behaviors that can be re-used amongst lots of different projects too.
 
-Nooku uses behaviors for all sorts of tasks, from automatic alias creation, to caching and activity moitoring.
+Nooku uses behaviors for all sorts of tasks, from automatic alias creation, to caching and activity monitoring.
 
 ## How it works
 
