@@ -67,7 +67,7 @@ We need to our dashboard controller to extend [`ComKoowaControllerView`](http://
 
 We create the file
 
-`/administrator/components/com_todo/controllers/dashboard.php`
+`/administrator/components/com_todo/controller/dashboard.php`
 
 And add the following code
 
