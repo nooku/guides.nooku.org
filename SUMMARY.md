@@ -12,6 +12,7 @@
         * [BREAD](essentials/BREAD.md)
         * [HMVC](essentials/hmvc.md)
         * [Why HMVC?](essentials/nooku-HMVC.md)
+    * [Behaviors](behaviors.md)
     * [Object Management](essentials/object-management.md)
     * [Naming Conventions](essentials/naming-conventions.md)
 * [Getting Started](getting-started.md)
