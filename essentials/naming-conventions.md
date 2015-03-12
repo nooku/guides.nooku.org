@@ -76,7 +76,7 @@ row.
 The View naming conventions are slightly different in how the Class names are constructed in relation and how the files are named and names
 of the views themselves.
 
-First though, lets summarize their major characteristics:
+First though, let's summarize their major characteristics:
 
 * singular or plural depending upon the view being requested.
 * generally map to a database table
