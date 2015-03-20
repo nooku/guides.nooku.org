@@ -31,7 +31,7 @@
         * [Toolbar for Item Form](get-started/add-toolbar-to-item-view.md)
         * [Toolbar for List View](get-started/add-toolbar-to-list-view.md)
 * [Tutorials](tutorials.md)
-* [JSON API](JSON.md)
+* [JSON API](json.md)
     * [Document Structure](json-api/document-structure.md)
         * [Version](json-api/document-structure/version.md)
         * [Links](json-api/document-structure/links.md)
