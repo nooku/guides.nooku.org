@@ -10,7 +10,7 @@ To summarize that principle:
 > sort of composite object, rather than relying on subclassing."
 
 This statement embodies Nooku's Component Architecture and development philosophy. Components aren’t the most important concept in the framework,
-but they are likely where you will spend most of your time developing. Understanding how they work, can help you leverage the work you do now againts other projects.
+but they are likely where you will spend most of your time developing. Understanding how they work, can help you leverage the work you do now against other projects.
 
 Components currently fall into two categories:
 

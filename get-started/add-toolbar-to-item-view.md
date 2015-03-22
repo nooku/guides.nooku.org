@@ -55,6 +55,7 @@ Just create the following file
 And add the following code
 
 ```php
+<?php
 class ComTodoDatabaseTableItems extends KDatabaseTableAbstract
 {
     protected function _initialize(KObjectConfig $config)

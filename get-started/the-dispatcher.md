@@ -30,7 +30,7 @@ in response to an HTTP request if we don't make our own dispatcher class.
 
 In our class, we're telling our component to load the "item" controller as the default. Which is the same as saying:
 
->When there is now view param in the request, we want to see items
+>When there is no view param in the request, we want to see items
 
 Now if we refresh our page
 
@@ -67,7 +67,7 @@ We need to our dashboard controller to extend [`ComKoowaControllerView`](http://
 
 We create the file
 
-`/administrator/components/com_todo/controllers/dashboard.php`
+`/administrator/components/com_todo/controller/dashboard.php`
 
 And add the following code
 

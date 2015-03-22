@@ -43,4 +43,3 @@
         * [Filtering](json-api/fetching-resources/filtering.md)
         * [Sorting](json-api/fetching-resources/sorting.md)
         * [Pagination](json-api/fetching-resources/pagination.md)
-
