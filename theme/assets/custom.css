@@ -1,18 +1,39 @@
 /* Restyling the book classes for our top menu */
 .book {
-  position: absolute;
-  top: 81px;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  height: auto;
-  z-index: 1;
+    position: absolute;
+    top: 81px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: auto;
+    z-index: 1;
 }
 
 /* extra classes for menu which can't be in header.css since we use a "sticky" menu here */
 .header {
-  max-height: none;
-  overflow: visible;
-  position: absolute;
-  z-index: 5 !important;
+    max-height: none;
+    overflow: visible;
+    position: absolute;
+    z-index: 5 !important;
 }
+
+/**/
+.book .book-body .page-wrapper .page-inner {
+    max-width: 90%
+}
+.book.font-family-1 {
+    font-family: Roboto, Helvetica, Arial, sans-serif;
+    /* font-size: 1.4em; */
+}
+.book.font-size-2 .book-body .page-inner section {
+    font-size: 0.9em;
+}
+.book .book-summary ul.summary { background-image: url("/theme/assets/images/summary_background_large.jpg"); }
+.book .book-summary ul.summary li a,.book .book-summary ul.summary li.done>a  { color: white}
+.book .book-summary ul.summary li > ul.articles { display: none}
+.book .book-summary ul.summary li.active { background-color: #ffffff}
+.book .book-summary ul.summary li.active ul.articles li.chapter a, .book .book-summary ul.summary li.active.done>a{ color: #000000}
+.book .book-summary ul.summary li.active ul.articles {display: block; background-color: white;}
+
+
+
