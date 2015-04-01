@@ -52,6 +52,11 @@
     border-bottom-color: #ddd;
 }
 
+.book .book-summary ul.summary > li a:hover,
+.book .book-summary ul.summary li.active > a {
+    color: #085DAD;
+}
+
 .color-theme-1 .book-summary ul.summary > li.active,
 .color-theme-1 .book-summary ul.summary > li.active-parent,
 .color-theme-2 .book-summary ul.summary > li.active,
