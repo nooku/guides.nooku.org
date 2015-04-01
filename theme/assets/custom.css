@@ -17,73 +17,66 @@
     z-index: 5 !important;
 }
 
-/**/
+/* styling page */
 .book .book-body .page-wrapper .page-inner {
     max-width: 90%
 }
-.book.font-size-2 .book-body .page-inner section {
-    font-size: 16px;
-}
-
-.book .book-summary {
-    border: none;
-}
-
-.expanded {
-    background: white;
-    color: #222;
-}
-
-
-
-.book .book-summary ul.summary {
-    background: #085DAD;
-}
-
+.book .book-body .page-inner section,
 .book .book-summary ul.summary li a {
     font-size: 16px;
 }
 
-.book .book-summary ul.summary li a,
-.book .book-summary ul.summary li.done > a {
-    color: white
-}
-
-.book .book-summary ul.summary li a:hover,
-.book .book-summary ul.summary li a:focus,
-.book .book-summary ul.summary li.done > a:hover,
-.book .book-summary ul.summary li.done > a:focus {
-    background: white;
-    color: #115FAB;
-}
-
-.book .book-summary ul.summary li li a:hover,
-.book .book-summary ul.summary li li a:focus {
-    text-decoration: underline;
+/* styling sidebar */
+.book .book-summary ul.summary li {
+    border-top: 1px solid transparent;
+    border-bottom: 1px solid transparent;
 }
 
 .book .book-summary ul.summary li > ul.articles {
     display: none;
 }
 
-.book .book-summary ul.summary li.active {
-    background-color: #ffffff
-}
-
-.book .book-summary ul.summary li.active ul.articles li.chapter a,
-.book .book-summary ul.summary li.active > a {
-    color: #000000
-}
-
-.book .book-summary ul.summary li.active ul.articles {
-    display: block;
-    background-color: white;
-}
-
-.book .book-summary ul.summary ul.expanded li.chapter > a {
-    color: #222;
-}
-
 .book .book-summary ul.summary li.active > a {
     font-weight: bold;
+}
+
+.book .book-summary ul.summary li > ul.expanded,
+.book .book-summary ul.summary li.active > ul {
+    display: block;
+}
+
+.book .book-summary ul.summary > li.active,
+.book .book-summary ul.summary > li.active-parent {
+    background: white;
+    border-top-color: #ddd;
+    border-bottom-color: #ddd;
+}
+
+.color-theme-1 .book-summary ul.summary > li.active,
+.color-theme-1 .book-summary ul.summary > li.active-parent,
+.color-theme-2 .book-summary ul.summary > li.active,
+.color-theme-2 .book-summary ul.summary > li.active-parent {
+    background: #222;
+    border-top-color: black;
+    border-bottom-color: black;
+}
+
+.book .book-summary ul.summary > li.active:first-child {
+    border-top-color: transparent;
+}
+
+/* accessible */
+.book .book-body .page-wrapper .page-inner section.normal a {
+    text-decoration: underline;
+    color: #085DAD;
+}
+
+.book .book-body .page-wrapper .page-inner section.normal a:hover,
+.book .book-body .page-wrapper .page-inner section.normal a:focus {
+    text-decoration: none;
+}
+
+/* credits */
+.book .book-summary ul.summary .gitbook-link {
+    font-size: 13px;
 }

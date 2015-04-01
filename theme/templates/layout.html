@@ -30,7 +30,7 @@
     <script>
         require(["gitbook", "jquery"], function(gitbook, $) {
             var load = function(){
-                $('ul.summary li.active').parents('ul.articles').show().addClass('expanded');
+                $('ul.summary li.active').parents('ul.articles').show().addClass('expanded').parent('li').addClass('active-parent');
             };
             $(document).ready(load)
 
