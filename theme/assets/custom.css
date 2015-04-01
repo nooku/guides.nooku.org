@@ -21,16 +21,27 @@
 .book .book-body .page-wrapper .page-inner {
     max-width: 90%
 }
-.book.font-family-1 {
-    font-family: Roboto, Helvetica, Arial, sans-serif;
-    /* font-size: 1.4em; */
-}
 .book.font-size-2 .book-body .page-inner section {
-    font-size: 1em;
+    font-size: 16px;
 }
 
+.book .book-summary {
+    border: none;
+}
+
+.expanded {
+    background: white;
+    color: #222;
+}
+
+
+
 .book .book-summary ul.summary {
-    background-image: url("/theme/assets/images/summary_background_large.jpg");
+    background: #085DAD;
+}
+
+.book .book-summary ul.summary li a {
+    font-size: 16px;
 }
 
 .book .book-summary ul.summary li a,
@@ -52,14 +63,15 @@
 }
 
 .book .book-summary ul.summary li > ul.articles {
-    display: none
+    display: none;
 }
 
 .book .book-summary ul.summary li.active {
     background-color: #ffffff
 }
 
-.book .book-summary ul.summary li.active ul.articles li.chapter a, .book .book-summary ul.summary li.active.done > a {
+.book .book-summary ul.summary li.active ul.articles li.chapter a,
+.book .book-summary ul.summary li.active > a {
     color: #000000
 }
 
@@ -68,5 +80,10 @@
     background-color: white;
 }
 
+.book .book-summary ul.summary ul.expanded li.chapter > a {
+    color: #222;
+}
 
-
+.book .book-summary ul.summary li.active > a {
+    font-weight: bold;
+}

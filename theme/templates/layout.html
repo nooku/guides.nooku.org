@@ -26,4 +26,15 @@
         {{ htmlSnippet("body:end")|default("") }}
     </body>
     {{ htmlSnippet("html:end")|default("") }}
+
+    <script>
+        require(["gitbook", "jquery"], function(gitbook, $) {
+            var load = function(){
+                $('ul.summary li.active').parents('ul.articles').show().addClass('expanded');
+            };
+            $(document).ready(load)
+
+            gitbook.events.bind("page.change", load);
+        });
+    </script>
 </html>
