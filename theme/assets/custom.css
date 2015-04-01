@@ -26,14 +26,47 @@
     /* font-size: 1.4em; */
 }
 .book.font-size-2 .book-body .page-inner section {
-    font-size: 0.9em;
+    font-size: 1em;
 }
-.book .book-summary ul.summary { background-image: url("/theme/assets/images/summary_background_large.jpg"); }
-.book .book-summary ul.summary li a,.book .book-summary ul.summary li.done>a  { color: white}
-.book .book-summary ul.summary li > ul.articles { display: none}
-.book .book-summary ul.summary li.active { background-color: #ffffff}
-.book .book-summary ul.summary li.active ul.articles li.chapter a, .book .book-summary ul.summary li.active.done>a{ color: #000000}
-.book .book-summary ul.summary li.active ul.articles {display: block; background-color: white;}
+
+.book .book-summary ul.summary {
+    background-image: url("/theme/assets/images/summary_background_large.jpg");
+}
+
+.book .book-summary ul.summary li a,
+.book .book-summary ul.summary li.done > a {
+    color: white
+}
+
+.book .book-summary ul.summary li a:hover,
+.book .book-summary ul.summary li a:focus,
+.book .book-summary ul.summary li.done > a:hover,
+.book .book-summary ul.summary li.done > a:focus {
+    background: white;
+    color: #115FAB;
+}
+
+.book .book-summary ul.summary li li a:hover,
+.book .book-summary ul.summary li li a:focus {
+    text-decoration: underline;
+}
+
+.book .book-summary ul.summary li > ul.articles {
+    display: none
+}
+
+.book .book-summary ul.summary li.active {
+    background-color: #ffffff
+}
+
+.book .book-summary ul.summary li.active ul.articles li.chapter a, .book .book-summary ul.summary li.active.done > a {
+    color: #000000
+}
+
+.book .book-summary ul.summary li.active ul.articles {
+    display: block;
+    background-color: white;
+}
 
 
 
