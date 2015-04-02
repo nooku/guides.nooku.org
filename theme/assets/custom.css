@@ -18,8 +18,24 @@
 }
 
 /* Setting a proper readable font-size */
-.book {
-    font-size: 16px;
+.book.font-size-0 .book-body .page-inner section {
+    font-size: 13px;
+}
+.book.font-size-1 .book-body .page-inner section {
+    font-size: 15px;
+}
+.book.font-size-2 .book-body .page-inner section {
+    font-size: 17px;
+}
+.book.font-size-3 .book-body .page-inner section {
+    font-size: 19px;
+}
+.book.font-size-4 .book-body .page-inner section {
+    font-size: 21px;
+}
+.book.font-family-1 {
+    font-family: "Roboto", Helvetica, Arial, sans-serif;
+    font-weight: 300;
 }
 
 /* Hide summary sections by default */
@@ -28,9 +44,18 @@
 }
 
 /* And show the sections when active */
-.summary li > .expanded,
-.summary .active > .articles {
+.summary li .expanded,
+.summary .active .articles,
+.summary .active-parent .articles {
     display: block;
+}
+
+/* setting font for sidebar */
+.summary {
+    font-family: "Roboto", Helvetica, Arial, sans-serif;
+    font-size: 15px;
+    line-height: 1.5em;
+    font-weight: 400;
 }
 
 /* A top and bottom border for sections */
