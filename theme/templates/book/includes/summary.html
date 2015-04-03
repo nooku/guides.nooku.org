@@ -5,23 +5,17 @@
             {% if item.path %}
                 {% if !externalLink %}
                     <a href="{{ basePath }}/{{ item.path|mdLink }}">
-                        <i class="fa fa-check"></i>
-                        {% if item.level !== "0" %}
-                            <b>{{ item.level }}.</b>
-                        {% endif %}
                          {{ item.title }}
                     </a>
                 {% else %}
                     <a target="_blank" href="{{ item.path }}">
-                        <i class="fa fa-check"></i>
-                        {% if item.level !== "0" %}
-                            <b>{{ item.level }}.</b>
-                        {% endif %}
                          {{ item.title }}
                     </a>
                 {% endif %}
             {% else %}
-            <span><b>{{ item.level }}.</b> {{ item.title }}</span>
+            <span>
+                {{ item.title }}
+            </span>
             {% endif %}
             {% if item.articles.length > 0 %}
             <ul class="articles">
