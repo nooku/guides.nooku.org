@@ -1,7 +1,25 @@
 
 ## Controller Behaviors
 
-The core Controller package does a great job with handling the standard Browse, Read, Edit, Add and Delete (BREAD) requests and the action of rendering of those requests. Each of those expose before and after command chains, and we use a number of behaviors out of the box to augment Controller functionality and interface.
+The Framework controller package does a great job with handling the standard `browse`, `read`, `edit`, `add` and `delete` (BREAD) requests and the action of rendering of results of those requests where there is one. Each of those actions are exposed to before and after command chains, and we use a number of behaviors out of the box to augment Controller functionality and interface.
+
+We are able to separate out specialized controller logic and compose them as needed.
+
+```php
+class ComAcmeControllerBar extends KControllerModel
+{
+
+    protected function _initialize(KObjectConfig $config)
+    {
+        $config->append(array(
+            'behaviors' => array('editable', 'persistable')
+        ));
+
+        parent::_initialize($config);
+    }
+
+}
+```
 
 + [Findable](https://github.com/nooku/nooku-framework/blob/master/code/libraries/koowa/components/com_koowa/controller/behavior/findable.php) - Special Joomla-centric behavior that handles updating the search index in Joomla when an entity is updated itself
 + [Cacheable](https://github.com/nooku/nooku-framework/blob/master/code/libraries/koowa/components/com_koowa/controller/behavior/cacheable.php) - Another Joomla-centric behavior to handle the caching of requests based on state and the invalidation of that cache when an entity changes.
