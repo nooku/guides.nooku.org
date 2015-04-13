@@ -3,17 +3,17 @@
 
 The Framework controller package does a great job with handling the standard `browse`, `read`, `edit`, `add` and `delete` (BREAD) requests and the action of rendering of results of those requests where there is one. Each of those actions are exposed to before and after command chains, and we use a number of behaviors out of the box to augment Controller functionality and interface.
 
-As with all behaviors we've discussed, they allow us to separate out standardized ontroller logic and compose those pieces of logic into a queue to be run in succession. Again, they can also add methods to our controller interface allowing us to expose new, more specific controller actions.
+As with all behaviors we've discussed, they allow us to separate out specialized controller logic and compose those pieces of logic into a queue to be run in succession. Again, they can also add methods to our controller interface allowing us to expose new, more specific controller actions.
 
 ## Example
 
 A good example of adding new actions to a controller can be seen by looking at the [`Editable`](https://github.com/nooku/nooku-framework/blob/master/code/libraries/koowa/libraries/controller/behavior/editable.php#L16) behavior. It defines three new actions that help dictate the user's flow through the act of editing a record in your component.
 
-When in use, an authorized user can `apply` changes to the record. This initiates a write request, but keeps them on the editing page. If they `save` a record, the same write request gets initiated, but they are redrected to the location they were just before they requested the editing page. Lastly, if they `cancel` they are just redirected to their previous location in the application.
+When in use, an authorized user can **apply** (`_actionApply($context)`) changes to the record. This initiates a write request, but keeps them on the editing page. If they **save** (`_actionSave($context)`) a record, the same write request gets initiated, but they are redirected to the location they were just before they requested the editing page. Lastly, if they **cancel** (`_actionCancel($context)`) they are just redirected to their previous location in the application.
 
 Imagine trying to fit this class into a set of controllers by inheritance, but include other pieces of functionality from other classes into that hierarchy.
 
-Adding a behavior to a controller is easy, simply add the `name` to the `behaviors` setting in the form of an array:
+Adding a behavior to a controller is easy, simply add the `name` to the `behaviors` property of the `$config` variable in the controller's `_initialize` method:
 
 ```php
 class ComAcmeControllerBar extends KControllerModel
@@ -36,7 +36,7 @@ If you wanted to write a new behavior for your component, simply place it in a n
 
 Also, make sure that it extends, directly or indirectly, from [`KControllerBehaviorAbstract`](https://github.com/nooku/nooku-framework/blob/master/code/libraries/koowa/libraries/controller/behavior/abstract.php#L16).
 
-## The Complete List of Controller Behaviors
+## The List
 
 There is a lot of work done for you out of the box, and you should take the time to play with each of these structures. Doing so will let you write (or not have to write) the controller layer of your application much more quickly.
 

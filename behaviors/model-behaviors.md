@@ -4,7 +4,7 @@ The ability to separate out strategies for building queries and models states he
 
 Like all Nooku behaviors, Model behaviors get fired before and after each major action that a model performs: `fetch`, `create`, `count` and `reset`.
 
-Getting to know what the core framework behaviors do is part of the learning curve of using the Framework. The content of the Model `$_state` is coupled to the contents of a request coming down the chain from the dispatcher to the controller. The principal work of the model to take those values which are relevant to it, building queries based on them and then return that result. The model needs to explicitly identify values are relevant to it by `inserting` them into its state. By encapsulating all that work into different behaviors a model definition can become very short:
+Getting to know what the core framework behaviors do is part of the learning curve of using the Framework. The content of the Model `$_state` is coupled to the contents of a request coming down the chain from the dispatcher to the controller. The principal work of the model to take those values which are relevant to it; build queries based on them; and then return that result. The model needs to explicitly identify values are relevant to it by `inserting` them into its state. By encapsulating all that work into different behaviors a model definition can become very short:
 
 
 ```php
@@ -32,7 +32,7 @@ The `Indexable` behavior takes care of finding out what unique indexes you have 
 
 This means that for every model that is `Indexable` in our application we don't have to worry about making sure that we've defined unique states in the model or even building queries based on those states, because it is automatic.
 
-## The Complete List of Model Behaviors
+## The List
 
 + [Indexable](https://github.com/nooku/nooku-framework/blob/master/code/libraries/koowa/libraries/model/behavior/indexable.php#L16) Gets the index information from the associated table's schema and populates the state with those columns, and automatically builds the where part of the query based on those states.
 + [Sortable](https://github.com/nooku/nooku-framework/blob/master/code/libraries/koowa/libraries/model/behavior/sortable.php#L16) Adds `sort` and `direction` to the model's state and then builds the `ORDER BY` part of the query object based on those values if they exist.

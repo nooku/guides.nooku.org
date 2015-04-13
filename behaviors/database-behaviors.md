@@ -1,26 +1,26 @@
 # Database Behaviors
 
-Utilizing database behaviors lets us create [Trigger](http://en.wikipedia.org/wiki/Database_trigger) like procedures in our applications, without having to store them with the database. They provide a means to contextually affect change both before and after `select`, `insert`, `update` and `delete` actions performed in the database layer, specifically in the KDatabaseTableAbstract.
+Utilizing database behaviors lets us create [Trigger](http://en.wikipedia.org/wiki/Database_trigger) like procedures in our applications, without having to store them with the database. They provide a means to contextually affect change both before and after `select`, `insert`, `update` and `delete` actions in [`KDatabaseTableAbstract`](https://github.com/nooku/nooku-framework/blob/master/code/libraries/koowa/libraries/database/table/abstract.php).
 
-Behaviors are strategies, and because they are separated out we can use them in many other table objects. Each one extends from `KDatabaseBehaviorAbstract` and thus, `KMixinAbstract`. Because they are [mixins](/essentials/mixin.md) they add methods and functionality to the row level objects (See getAuthor in the [Example](#example) below).
+Behaviors are strategies, and because they are separated out we can use them in many other table objects. Each one extends from `KDatabaseBehaviorAbstract` and thus, `KMixinAbstract`. Because they are [mixins](/essentials/mixin.md) they add methods and functionality to the row level objects (See `getAuthor` in the [Example](#example) below).
 
-You can build your own database behaviors in your own applications, or adjust the logic of currently ones to better match your needs by simply extending them.
+You can build your own database behaviors in your own applications, or adjust the logic of currently available ones to better match your needs by simply extending them.
 
-If you choose to build new behaviors, simply place them in the `/database/behavior/` folder of your component. To get some inspiration look at some of the [Example](#example) below.
+If you choose to build new behaviors, just place them in the `/database/behavior/` folder of your component. To get some inspiration we suggest you check out some of the already available behaviors that we list below.
 
 ## Example
 
-One of the easiest examples to understand is the [`KDatabaseBehaviorCreatable`](https://github.com/nooku/nooku-framework/blob/master/code/libraries/koowa/libraries/database/behavior/creatable.php) database behavior. Its purpose is to simply make sure that when we insert a record into a table, it adds the creation date (`created_on`), and the user id number (`created_by`) of the logged in user.
+One of the familiar use cases that is already available  is the [`KDatabaseBehaviorCreatable`](https://github.com/nooku/nooku-framework/blob/master/code/libraries/koowa/libraries/database/behavior/creatable.php) database behavior. Its purpose is to simply make sure that when we insert a record into a table, it adds the creation date (`created_on`), and the user id number (`created_by`) of the logged in user.
 
-Additionally, the behavior provides a `getAuthor` method to the row object and which grabs the `created_by` of the object and returns a system level user object, so you don't have to for example, get the user id and then create the user object yourself.
+For convenience, the behavior provides a `getAuthor` method to the row object. It grabs the `created_by` of the object and returns a system level user object. As a result, you don't have to for example, get the user id and then create the user object yourself.
 
 ### Benefits
 
 + We never have to re-write the code that makes sure that we record those values in another table.
-+ There is no question: "Where do we write that code?" In the controller, model or table classes? We are defining these actions at the table level and the logic is cleaner for each of those structures is cleaner.
++ There is no question: "Where do we write that code?" In the controller, model or table classes? We are defining these actions at the table level and the logic is cleaner for each of those structures.
 + It helps promote standardization of column names across tables for this information. In the `creatable` behavior user id is always saved as `created_by` and the date is always stored in `created_on`.
 
-### The Complete List of Database Behaviors
+### The List
 
 Let's list all of the framework level behaviors and give some background about each.
 
