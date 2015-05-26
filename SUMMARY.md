@@ -32,6 +32,7 @@
         * [Toolbar for List View](get-started/add-toolbar-to-list-view.md)
 * [Tutorials](tutorials.md)
 * [Templates](templates/template-system.md)
+        * [Overrides](templates/template-overrides.md)  
 * [JSON API](json.md)
     * [Document Structure](json-api/document-structure.md)
         * [Version](json-api/document-structure/version.md)
