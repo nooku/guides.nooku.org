@@ -34,8 +34,10 @@ Last, we are going to use [Composer](https://getcomposer.org/) to install a spec
 
 ```shell
 $ cd /var/www/todo
-$ composer require nooku/joomla-todo:dev-tutorials/backbone-start
+$ composer require nooku/joomla-todo:dev-tutorials/backbone#866bc29c60f599f5b5192e7f1e1a4ca44b960c0d 
 ```
+> The '318740f1221e4c3b1d7642ce1a1162a0460cc4e4' is the revision number of the tutorial starting point. We've included a similar *Composer command* at the end of each section so you can choose to follow do the coding yourself or just see the changes. If you just want to use the finished code simply remove the '#' and everything after.
+ 
 With all that done we can get to work powering the todo list with data from the Nooku back end.
 
 ## TodoMVC Backbone Example...Where?
@@ -72,6 +74,8 @@ If you now go to http://joomla.dev/todo/component/todo/backbone you should see a
 
 > Just in case you didn’t notice: we did not need to create a view class, and we barely needed to create the controller class.
 
+**Composer command:** `composer require nooku/joomla-todo:dev-tutorials/backbone#2251f54cee839856e8291f1316ac2e599bc853c5`
+
 ## Build the Single Page Application Markup
 
 To begin to show the application’s Todo list, we take the inner html of body tag from the existing `/media/com_todo/lib/backbone/index.html`:
@@ -95,6 +99,8 @@ Pointing your browser now to http://joomla.dev/component/todo/backbone should sh
 ![TodoMVC Backbone Example in Joomla Todo Component](/resources/images/backbone-tutorial/todomvc-backbone-in-com-todo-package.png)
 
 At this point everything looks nice and does store todo list items to ‘localstorage’ in your browser, because the TodoMVC example has that implemented out of the box. To implement our Nooku powered persistence we’ll need to tell Backbone where to go. If you are already a Backbone rockstar you can likely skip over the **Understanding Backbone** section.
+
+**Composer command:**` composer require nooku/joomla-todo:dev-tutorials/backbone#b507a4bf13604c5e4fd22173cd35111e34f0980d`
 
 ## Understanding Backbone
 
@@ -144,6 +150,8 @@ With all that new Backbone knowledge we see that we need only define the TodosCo
 You can open http://joomla.dev/todo/component/todo/tasks/?format=json in the browser to see the JSON response at any time.
 
 > Joomla URLs: If we wanted a ‘nicer’ url to use, we could specify a Menu item in Joomla with the route `/todo/todos` and the CMS would route the request accordingly.
+
+**Composer command:**` composer require nooku/joomla-todo:dev-tutorials/backbone#255a0d26bb3ce0a0036b85f82f38a8c811a4a477`
 
 ## Specialising the JSON output
 
@@ -220,6 +228,8 @@ Great! Now Backbone.js will get the response schema it’s looking for.  Refresh
 
 ![TodoMVC Getting Data from Nooku Backend](/resources/images/backbone-tutorial/todomvc-with-com-todo-tasks-loading.png)
 
+**Composer command:**` composer require nooku/joomla-todo:dev-tutorials/backbone#5d826b846da44770f93bf05655d555c265b07a68`
+
 ## Saving new Tasks: Handling CSRF tokens
 
 Nooku aims to do as much for you out of the box as it can, and so adds some security when it comes to saving data to the server. To make ‘not safe’ requests, i.e. POST, PUT or DELETE methods, a user must be logged in by default; and you must send a valid CSRF Token along with the request.
@@ -244,8 +254,12 @@ Backbone.$.ajaxSetup({
     },
     // set the csrf for the Backbone namespace
     complete: function(xhr, message) {
-        Backbone.csrf =  xhr.getResponseHeader('X-Csrf-Token');
+        // for successful requests
+        if (xhr.status == '200') {
+            Backbone.csrf = xhr.getResponseHeader('X-Csrf-Token');
+        }
     }
+    
 });
 ```
 With that code in place we add a script tag to our `default.html.php` layout, right after the loading of backbone.js:
@@ -256,6 +270,8 @@ With that code in place we add a script tag to our `default.html.php` layout, ri
 ```
 
 >If you are using the Vagrant setup mentioned above you can simply login with `admin/admin`.
+
+**Composer command:**` composer require nooku/joomla-todo:dev-tutorials/backbone#fbbedf2d1ec66e9a7187875f9a6a296e130d6653`
 
 ## Let’s Save a ‘task’ to our List
 
