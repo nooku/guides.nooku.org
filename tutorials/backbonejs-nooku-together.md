@@ -36,7 +36,7 @@ Last, we are going to use [Composer](https://getcomposer.org/) to install a spec
 $ cd /var/www/todo
 $ composer require nooku/joomla-todo:dev-tutorials/backbone#866bc29c60f599f5b5192e7f1e1a4ca44b960c0d 
 ```
-> The '318740f1221e4c3b1d7642ce1a1162a0460cc4e4' is the revision number of the tutorial starting point. We've included a similar *Composer command* at the end of each section so you can choose to follow do the coding yourself or just see the changes. If you just want to use the finished code simply remove the '#' and everything after.
+> The '318740f1221e4c3b1d7642ce1a1162a0460cc4e4' is the revision number of the tutorial starting point. We've included a similar **Composer command** at the end of each section so you can choose to follow do the coding yourself or just see the changes. If you just want to use the finished code simply remove the '#' and everything after.
  
 With all that done we can get to work powering the todo list with data from the Nooku back end.
 
