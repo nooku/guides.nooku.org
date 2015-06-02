@@ -36,14 +36,14 @@ Last, we are going to use [Composer](https://getcomposer.org/) to install a spec
 $ cd /var/www/todo
 $ composer require nooku/joomla-todo:dev-tutorials/backbone#866bc29c60f599f5b5192e7f1e1a4ca44b960c0d 
 ```
-> The '318740f1221e4c3b1d7642ce1a1162a0460cc4e4' is the revision number of the tutorial starting point. We've included a similar **Composer command** at the end of each section so you can choose to follow do the coding yourself or just see the changes. If you just want to use the finished code simply remove the '#' and everything after.
+> The '318740f1221e4c3b1d7642ce1a1162a0460cc4e4' is the revision number of the tutorial starting point. We've included a similar **Composer command** at the end of each section. You can choose to follow along and do the coding yourself, or just see the changes by running those commands. If you just want to use the finished code simply remove the '#' and everything after.
  
 With all that done we can get to work powering the todo list with data from the Nooku back end.
 
 ## TodoMVC Backbone Example...Where?
 
 We are going to use the TodoMVC CSS and Javascript to make things easy. You could write your own CSS to make things blend better, as this is merely a tutorial the default will do.
-To make things easy to manage we've placed the Backbone.js assets in the Joomla /media/com_todo/lib/backbone folder for you already.
+To help things along we've placed the Backbone.js assets in the Joomla `/media/com_todo/lib/backbone` folder for you already.
 
 ### Create the "Backbone" View and Controller
 
@@ -80,7 +80,7 @@ If you now go to http://joomla.dev/todo/component/todo/backbone you should see a
 
 To begin to show the application’s Todo list, we take the inner html of body tag from the existing `/media/com_todo/lib/backbone/index.html`:
 
-1. place the contents of the <body> tag  into our new file at `/components/com_todo/views/app/tmpl/default.html.php`
+1. place the contents of the `<body>` tag  into our new file at `/components/com_todo/views/app/tmpl/default.html.php`
 2. add `data-inline` to all of the `<script>` tags, including those of `type=”text/template”`.
 3. update all the `src` attributes of the scripts with the new locations of their respective resources, using the `media://` alias, e.g. `media://com_todo/lib/backbone/js/backbone.js`.
 > Note, you can remove the jquery.js reference, and be sure to be sure to note `backbone.localStorage.js` asset has been moved  to `/media/com_todo/lib/backbone/localstorage/`.
