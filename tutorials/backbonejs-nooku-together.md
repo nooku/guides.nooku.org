@@ -70,7 +70,7 @@ At this point, your new file structure should look something like :
 
 ![New Backbone View and Controller to support our single page application](/resources/images/backbone-tutorial/backbone-controller-view-added.png)
 
-If you now go to http://joomla.dev/todo/component/todo/backbone you should see an empty component area.
+If you now go to http://joomla.box/todo/component/todo/backbone you should see an empty component area.
 
 > Just in case you didn’t notice: we did not need to create a view class, and we barely needed to create the controller class.
 
@@ -94,7 +94,7 @@ To begin to show the application’s Todo list, we take the inner html of body t
 > We need to add `data-inline` to the script tags to ensure that the scripts stay in place and aren’t filtered and placed in the `<head>` tag of the page which would happen otherwise.
 
 
-Pointing your browser now to http://joomla.dev/component/todo/backbone should show you:
+Pointing your browser now to http://joomla.box/component/todo/backbone should show you:
 
 ![TodoMVC Backbone Example in Joomla Todo Component](/resources/images/backbone-tutorial/todomvc-backbone-in-com-todo-package.png)
 
@@ -147,7 +147,7 @@ With all that new Backbone knowledge we see that we need only define the TodosCo
 
 **Make sure to comment out the local storage setting.**
 
-You can open http://joomla.dev/todo/component/todo/tasks/?format=json in the browser to see the JSON response at any time.
+You can open http://joomla.box/todo/component/todo/tasks/?format=json in the browser to see the JSON response at any time.
 
 > Joomla URLs: If we wanted a ‘nicer’ url to use, we could specify a Menu item in Joomla with the route `/todo/todos` and the CMS would route the request accordingly.
 
