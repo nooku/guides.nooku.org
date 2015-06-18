@@ -14,7 +14,8 @@ Create a Backbone.js powered client-side app and use Nooku to provide the REST s
 >TodoMVC.com showcases and compares most of the major clientside frameworks by solving the same todo list example (name mention the devs here).
 
 The goal of this tutorial is to incorporate Backbone.js, Nooku and Joomla into one working component.
-Setup
+
+## Setup
 
 For this tutorial we will assume you have the Joomlatools Vagrant Box running locally.  Also, you should have completed the Nooku Getting started tutorial to make sure you have some of the core concepts covered.
 
