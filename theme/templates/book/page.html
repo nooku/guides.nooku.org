@@ -1,6 +1,9 @@
 {% extends "../layout.html" %}
 
 {% block head %}
+    <meta http-equiv="refresh" content="0; url=http://developer.joomlatools.com/framework.html">
+    <link rel="canonical" href="http://developer.joomlatools.com/framework.html" />
+
     {% parent %}
     {% if progress.current.next and progress.current.next.path %}
     <link rel="next" href="{{ basePath }}/{{ progress.current.next.path|mdLink }}" />
