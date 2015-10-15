@@ -1,0 +1,1075 @@
+<!DOCTYPE HTML>
+<html lang="en-US" >
+    
+    <head>
+        
+        <meta charset="UTF-8">
+        <title>Using Backbone.js | Nooku Guides</title>
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 1.5.0">
+        <meta name="HandheldFriendly" content="true"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black">
+        <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+        <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+        
+    <meta http-equiv="refresh" content="0; url=http://developer.joomlatools.com/framework.html">
+    <link rel="canonical" href="http://developer.joomlatools.com/framework.html" />
+
+    
+    
+    <link rel="next" href="../json.html" />
+    
+    
+    <link rel="prev" href="../tutorials.html" />
+    
+
+        
+    </head>
+    <body class="no-js">
+    <script type="text/javascript">function hasClass(e,t){return e.className.match(new RegExp("(\\s|^)"+t+"(\\s|$)"))}var el=document.body;var cl="no-js";if(hasClass(el,cl)){var reg=new RegExp("(\\s|^)"+cl+"(\\s|$)");el.className=el.className.replace(reg," js-enabled")}</script>
+        
+        
+<link href='http://fonts.googleapis.com/css?family=Roboto:400,300,300italic,700,400italic' rel='stylesheet' type='text/css'>
+<link rel="stylesheet" href="../gitbook/style.css">
+<link rel="stylesheet" href="../gitbook/custom.css">
+<link rel="stylesheet" href="http://www.nooku.org/css/header.css">
+
+
+        
+    <div class="header">
+        <div class="container">
+            <div class="group">
+                <div class="header__brand brand"><a href="http://www.nooku.org"><img src="http://www.nooku.org/images/layout/logo.png" alt="Nooku Logo"></a></div>
+                <div class="header__navigation">
+                    <div class="navigation_container" role="navigation">
+                        <ul class="navbar initiated">
+                            <li class="navbar__item" role="menuitem"><a href="http://www.nooku.org/features/">Features</a></li>
+                            <li class="navbar__item" role="menuitem"><a href="http://www.nooku.org/get-started/">Get Started</a></li>
+                            <li class="navbar__item" role="menuitem"><a href="http://www.nooku.org/services/">Services</a></li>
+                            <li class="navbar__item" role="menuitem"><a href="http://www.nooku.org/community/">Community</a></li>
+                            <li class="navbar__item active" role="menuitem"><a href="http://www.nooku.org/docs/">Docs</a></li>
+                            <li class="navbar__item" role="menuitem"><a href="http://www.nooku.org/blog/">Blog</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="book" data-level="5.1" data-basepath=".." data-revision="1444924670532">
+    
+
+<div class="book-summary">
+    <div class="book-search">
+        <input type="text" placeholder="Type to search" class="form-control" />
+    </div>
+    <ul class="summary">
+        
+    	
+    	
+    	
+
+        
+
+        
+    
+        
+        <li class="chapter " data-level="0" data-path="index.html">
+            
+                
+                    <a href="../index.html">
+                         Introduction
+                    </a>
+                
+            
+            
+        </li>
+    
+        
+        <li class="chapter " data-level="1" data-path="contribute.html">
+            
+                
+                    <a href="../contribute.html">
+                         Contribute
+                    </a>
+                
+            
+            
+            <ul class="articles">
+                
+    
+        
+        <li class="chapter " data-level="1.1" data-path="contribute/write-a-tutorial.html">
+            
+                
+                    <a href="../contribute/write-a-tutorial.html">
+                         Write a Tutorial
+                    </a>
+                
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        
+        <li class="chapter " data-level="2" data-path="overview.html">
+            
+                
+                    <a href="../overview.html">
+                         Overview
+                    </a>
+                
+            
+            
+        </li>
+    
+        
+        <li class="chapter " data-level="3" data-path="essentials.html">
+            
+                
+                    <a href="../essentials.html">
+                         Essentials
+                    </a>
+                
+            
+            
+            <ul class="articles">
+                
+    
+        
+        <li class="chapter " data-level="3.1" data-path="essentials/composition.html">
+            
+                
+                    <a href="../essentials/composition.html">
+                         Composition
+                    </a>
+                
+            
+            
+            <ul class="articles">
+                
+    
+        
+        <li class="chapter " data-level="3.1.1" data-path="essentials/mixin.html">
+            
+                
+                    <a href="../essentials/mixin.html">
+                         The Mixin
+                    </a>
+                
+            
+            
+        </li>
+    
+        
+        <li class="chapter " data-level="3.1.2" data-path="essentials/decorator.html">
+            
+                
+                    <a href="../essentials/decorator.html">
+                         The Decorator
+                    </a>
+                
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        
+        <li class="chapter " data-level="3.2" data-path="essentials/request-response.html">
+            
+                
+                    <a href="../essentials/request-response.html">
+                         Request and Response
+                    </a>
+                
+            
+            
+        </li>
+    
+        
+        <li class="chapter " data-level="3.3" data-path="essentials/component-architecture.html">
+            
+                
+                    <a href="../essentials/component-architecture.html">
+                         Component Architecture
+                    </a>
+                
+            
+            
+            <ul class="articles">
+                
+    
+        
+        <li class="chapter " data-level="3.3.1" data-path="essentials/BREAD.html">
+            
+                
+                    <a href="../essentials/BREAD.html">
+                         BREAD
+                    </a>
+                
+            
+            
+        </li>
+    
+        
+        <li class="chapter " data-level="3.3.2" data-path="essentials/hmvc.html">
+            
+                
+                    <a href="../essentials/hmvc.html">
+                         HMVC
+                    </a>
+                
+            
+            
+        </li>
+    
+        
+        <li class="chapter " data-level="3.3.3" data-path="essentials/nooku-HMVC.html">
+            
+                
+                    <a href="../essentials/nooku-HMVC.html">
+                         Why HMVC?
+                    </a>
+                
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        
+        <li class="chapter " data-level="3.4" data-path="essentials/object-management.html">
+            
+                
+                    <a href="../essentials/object-management.html">
+                         Object Management
+                    </a>
+                
+            
+            
+        </li>
+    
+        
+        <li class="chapter " data-level="3.5" data-path="essentials/naming-conventions.html">
+            
+                
+                    <a href="../essentials/naming-conventions.html">
+                         Naming Conventions
+                    </a>
+                
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        
+        <li class="chapter " data-level="4" data-path="getting-started.html">
+            
+                
+                    <a href="../getting-started.html">
+                         Getting Started
+                    </a>
+                
+            
+            
+            <ul class="articles">
+                
+    
+        
+        <li class="chapter " data-level="4.1" data-path="get-started/set-up.html">
+            
+                
+                    <a href="../get-started/set-up.html">
+                         Setup
+                    </a>
+                
+            
+            
+        </li>
+    
+        
+        <li class="chapter " data-level="4.2" data-path="get-started/com_todo-frontend.html">
+            
+                
+                    <a href="../get-started/com_todo-frontend.html">
+                         Frontend
+                    </a>
+                
+            
+            
+            <ul class="articles">
+                
+    
+        
+        <li class="chapter " data-level="4.2.1" data-path="get-started/register-the-component.html">
+            
+                
+                    <a href="../get-started/register-the-component.html">
+                         Register the Component
+                    </a>
+                
+            
+            
+        </li>
+    
+        
+        <li class="chapter " data-level="4.2.2" data-path="get-started/component-entry-point.html">
+            
+                
+                    <a href="../get-started/component-entry-point.html">
+                         Component Entry Point
+                    </a>
+                
+            
+            
+        </li>
+    
+        
+        <li class="chapter " data-level="4.2.3" data-path="get-started/hello-world-todos.html">
+            
+                
+                    <a href="../get-started/hello-world-todos.html">
+                         Hello World!
+                    </a>
+                
+            
+            
+        </li>
+    
+        
+        <li class="chapter " data-level="4.2.4" data-path="get-started/creating-the-database.html">
+            
+                
+                    <a href="../get-started/creating-the-database.html">
+                         The Database Table
+                    </a>
+                
+            
+            
+        </li>
+    
+        
+        <li class="chapter " data-level="4.2.5" data-path="get-started/your-first-todo-list-view.html">
+            
+                
+                    <a href="../get-started/your-first-todo-list-view.html">
+                         Your First Todo List View
+                    </a>
+                
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        
+        <li class="chapter " data-level="4.3" data-path="get-started/com_todo-backend.html">
+            
+                
+                    <a href="../get-started/com_todo-backend.html">
+                         Backend
+                    </a>
+                
+            
+            
+            <ul class="articles">
+                
+    
+        
+        <li class="chapter " data-level="4.3.1" data-path="get-started/backend-entry-point.html">
+            
+                
+                    <a href="../get-started/backend-entry-point.html">
+                         Component Entry Point
+                    </a>
+                
+            
+            
+        </li>
+    
+        
+        <li class="chapter " data-level="4.3.2" data-path="get-started/create-a-view.html">
+            
+                
+                    <a href="../get-started/create-a-view.html">
+                         Create a View
+                    </a>
+                
+            
+            
+        </li>
+    
+        
+        <li class="chapter " data-level="4.3.3" data-path="get-started/the-dispatcher.html">
+            
+                
+                    <a href="../get-started/the-dispatcher.html">
+                         The Dispatcher
+                    </a>
+                
+            
+            
+        </li>
+    
+        
+        <li class="chapter " data-level="4.3.4" data-path="get-started/the-controller-package.html">
+            
+                
+                    <a href="../get-started/the-controller-package.html">
+                         The Controller Package
+                    </a>
+                
+            
+            
+        </li>
+    
+        
+        <li class="chapter " data-level="4.3.5" data-path="get-started/load-a-form-to-edit-todo-items.html">
+            
+                
+                    <a href="../get-started/load-a-form-to-edit-todo-items.html">
+                         Load a Form to Edit Todos
+                    </a>
+                
+            
+            
+        </li>
+    
+        
+        <li class="chapter " data-level="4.3.6" data-path="get-started/add-toolbar-to-item-view.html">
+            
+                
+                    <a href="../get-started/add-toolbar-to-item-view.html">
+                         Toolbar for Item Form
+                    </a>
+                
+            
+            
+        </li>
+    
+        
+        <li class="chapter " data-level="4.3.7" data-path="get-started/add-toolbar-to-list-view.html">
+            
+                
+                    <a href="../get-started/add-toolbar-to-list-view.html">
+                         Toolbar for List View
+                    </a>
+                
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        
+        <li class="chapter " data-level="5" data-path="tutorials.html">
+            
+                
+                    <a href="../tutorials.html">
+                         Tutorials
+                    </a>
+                
+            
+            
+            <ul class="articles">
+                
+    
+        
+        <li class="chapter active" data-level="5.1" data-path="tutorials/backbonejs-nooku-together.html">
+            
+                
+                    <a href="../tutorials/backbonejs-nooku-together.html">
+                         Using Backbone.js
+                    </a>
+                
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        
+        <li class="chapter " data-level="6" data-path="json.html">
+            
+                
+                    <a href="../json.html">
+                         JSON API
+                    </a>
+                
+            
+            
+            <ul class="articles">
+                
+    
+        
+        <li class="chapter " data-level="6.1" data-path="json-api/document-structure.html">
+            
+                
+                    <a href="../json-api/document-structure.html">
+                         Document Structure
+                    </a>
+                
+            
+            
+            <ul class="articles">
+                
+    
+        
+        <li class="chapter " data-level="6.1.1" data-path="json-api/document-structure/version.html">
+            
+                
+                    <a href="../json-api/document-structure/version.html">
+                         Version
+                    </a>
+                
+            
+            
+        </li>
+    
+        
+        <li class="chapter " data-level="6.1.2" data-path="json-api/document-structure/links.html">
+            
+                
+                    <a href="../json-api/document-structure/links.html">
+                         Links
+                    </a>
+                
+            
+            
+        </li>
+    
+        
+        <li class="chapter " data-level="6.1.3" data-path="json-api/document-structure/entities.html">
+            
+                
+                    <a href="../json-api/document-structure/entities.html">
+                         Entities
+                    </a>
+                
+            
+            
+        </li>
+    
+        
+        <li class="chapter " data-level="6.1.4" data-path="json-api/document-structure/linked.html">
+            
+                
+                    <a href="../json-api/document-structure/linked.html">
+                         Linked
+                    </a>
+                
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        
+        <li class="chapter " data-level="6.2" data-path="json-api/fetching-resources.html">
+            
+                
+                    <a href="../json-api/fetching-resources.html">
+                         Fetching Resources
+                    </a>
+                
+            
+            
+            <ul class="articles">
+                
+    
+        
+        <li class="chapter " data-level="6.2.1" data-path="json-api/fetching-resources/sparse-fieldset.html">
+            
+                
+                    <a href="../json-api/fetching-resources/sparse-fieldset.html">
+                         Sparse fieldsets
+                    </a>
+                
+            
+            
+        </li>
+    
+        
+        <li class="chapter " data-level="6.2.2" data-path="json-api/fetching-resources/filtering.html">
+            
+                
+                    <a href="../json-api/fetching-resources/filtering.html">
+                         Filtering
+                    </a>
+                
+            
+            
+        </li>
+    
+        
+        <li class="chapter " data-level="6.2.3" data-path="json-api/fetching-resources/sorting.html">
+            
+                
+                    <a href="../json-api/fetching-resources/sorting.html">
+                         Sorting
+                    </a>
+                
+            
+            
+        </li>
+    
+        
+        <li class="chapter " data-level="6.2.4" data-path="json-api/fetching-resources/pagination.html">
+            
+                
+                    <a href="../json-api/fetching-resources/pagination.html">
+                         Pagination
+                    </a>
+                
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+
+        
+        <li class="divider"></li>
+        <li>
+            <a href="http://www.gitbook.io/" target="blank" class="gitbook-link">Published using GitBook</a>
+        </li>
+        
+    </ul>
+</div>
+
+    <div class="book-body">
+        <div class="body-inner">
+            <div class="book-header">
+    <!-- Actions Left -->
+    <a href="#" class="btn pull-left toggle-summary" aria-label="Toggle summary"><i class="fa fa-align-justify"></i></a>
+    <a href="#" class="btn pull-left toggle-search" aria-label="Toggle search"><i class="fa fa-search"></i></a>
+    
+    <div id="font-settings-wrapper" class="dropdown pull-left">
+        <a href="#" class="btn toggle-dropdown" aria-label="Toggle font settings"><i class="fa fa-font"></i>
+        </a>
+        <div class="dropdown-menu font-settings">
+    <div class="dropdown-caret">
+        <span class="caret-outer"></span>
+        <span class="caret-inner"></span>
+    </div>
+
+    <div class="buttons">
+        <button type="button" id="reduce-font-size" class="button size-2">A</button>
+        <button type="button" id="enlarge-font-size" class="button size-2">A</button>
+    </div>
+
+    <div class="buttons font-family-list">
+        <button type="button" data-font="0" class="button">Serif</button>
+        <button type="button" data-font="1" class="button">Sans</button>
+    </div>
+
+    <div class="buttons color-theme-list">
+        <button type="button" id="color-theme-preview-0" class="button size-3" data-theme="0">White</button>
+        <button type="button" id="color-theme-preview-1" class="button size-3" data-theme="1">Sepia</button>
+        <button type="button" id="color-theme-preview-2" class="button size-3" data-theme="2">Night</button>
+    </div>
+</div>
+
+    </div>
+
+    <!-- Actions Right -->
+    
+    <div class="dropdown pull-right">
+        <a href="#" class="btn toggle-dropdown" aria-label="Toggle share dropdown"><i class="fa fa-share-alt"></i>
+        </a>
+        <div class="dropdown-menu font-settings dropdown-left">
+            <div class="dropdown-caret">
+                <span class="caret-outer"></span>
+                <span class="caret-inner"></span>
+            </div>
+            <div class="buttons">
+                <button type="button" data-sharing="twitter" class="button">Twitter</button>
+                <button type="button" data-sharing="google-plus" class="button">Google</button>
+                <button type="button" data-sharing="facebook" class="button">Facebook</button>
+                <button type="button" data-sharing="weibo" class="button">Weibo</button>
+                <button type="button" data-sharing="instapaper" class="button">Instapaper</button>
+            </div>
+        </div>
+    </div>
+    
+
+    
+    <a href="#" target="_blank" class="btn pull-right google-plus-sharing-link sharing-link" data-sharing="google-plus" aria-label="Share on Google Plus"><i class="fa fa-google-plus"></i></a>
+    
+    
+    <a href="#" target="_blank" class="btn pull-right facebook-sharing-link sharing-link" data-sharing="facebook" aria-label="Share on Facebook"><i class="fa fa-facebook"></i></a>
+    
+    
+    <a href="#" target="_blank" class="btn pull-right twitter-sharing-link sharing-link" data-sharing="twitter" aria-label="Share on Twitter"><i class="fa fa-twitter"></i></a>
+    
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="../" >Nooku Guides</a>
+    </h1>
+</div>
+
+            <div class="page-wrapper" tabindex="-1">
+                <div class="page-inner">
+                
+                
+                    <section class="normal" id="section-gitbook_44">
+                    
+                        <h1 id="tutorial-using-backbonejs-with-nooku">Tutorial: Using Backbone.js with Nooku</h1>
+<!-- toc -->
+<ul>
+<li><a href="#skill-level">Skill Level</a></li>
+<li><a href="#relevant-sections-and-classes">Relevant Sections and Classes</a></li>
+<li><a href="#goal">Goal</a></li>
+<li><a href="#setup">Setup</a></li>
+<li><a href="#todomvc-backbone-examplewhere">TodoMVC Backbone Example...Where?</a><ul>
+<li><a href="#create-the-backbone-view-and-controller">Create the &quot;Backbone&quot; View and Controller</a></li>
+</ul>
+</li>
+<li><a href="#build-the-single-page-application-markup">Build the Single Page Application Markup</a></li>
+<li><a href="#understanding-backbone">Understanding Backbone</a><ul>
+<li><a href="#models">Models</a></li>
+<li><a href="#collections">Collections</a></li>
+<li><a href="#the-sync">The “Sync”</a></li>
+<li><a href="#the-url">The URL</a></li>
+</ul>
+</li>
+<li><a href="#setting-the-collection-url">Setting the Collection Url</a></li>
+<li><a href="#specialising-the-json-output">Specialising the JSON output</a></li>
+<li><a href="#saving-new-tasks-handling-csrf-tokens">Saving new Tasks: Handling CSRF tokens</a></li>
+<li><a href="#lets-save-a-task-to-our-list">Let’s Save a ‘task’ to our List</a></li>
+<li><a href="#wrapping-up">Wrapping up</a></li>
+</ul>
+<!-- toc stop -->
+<h2 id="skill-level">Skill Level</h2>
+<p>Intermediate</p>
+<h2 id="relevant-sections-and-classes">Relevant Sections and Classes</h2>
+<p>KContollerView, KViewJson, Joomla Todo Extension, Bootstrapper, TodoMVC.com, Joomlatools Vagrant Box, Object Manager</p>
+<h2 id="goal">Goal</h2>
+<p>Create a Backbone.js powered client-side app and use Nooku to provide the REST service backed. To get started quickly, we will use our existing example <a href="https://github.com/nooku/joomla-todo" target="_blank">Joomla Todo</a> extension and make use of the Backbone.js example that is part of <a href="http://todomvc.com/" target="_blank">TodoMVC</a>.</p>
+<blockquote>
+<p>TodoMVC.com showcases and compares most of the major clientside frameworks by solving the same todo list example (name mention the devs here).</p>
+</blockquote>
+<p>The goal of this tutorial is to incorporate Backbone.js, Nooku and Joomla into one working component.</p>
+<h2 id="setup">Setup</h2>
+<p>For this tutorial we will assume you have the Joomlatools Vagrant Box running locally.  Also, you should have completed the Nooku Getting started tutorial to make sure you have some of the core concepts covered.</p>
+<p>If not, make sure you have at least the Box running and know how to use the Joomla console. You can find detailed instructions on the Joomlatools developer site. Assuming that your box is up and running, simply start an SSH session with</p>
+<pre><code class="lang-shell">$ vagrant ssh
+</code></pre>
+<p>We are going to create a fresh Joomla install for this tutorial. Run the following Joomla Console command:</p>
+<p><code>$ joomla site:create todo # change the site name if you already have a ‘/var/www/todo/’ site.</code></p>
+<p>Last, we are going to use <a href="https://getcomposer.org/" target="_blank">Composer</a> to install a special branch of our Joomla Todo package. This one has the TodoMVC Backbone package already included and ready for use to make our changes.</p>
+<pre><code class="lang-shell">$ cd /var/www/todo
+$ composer require nooku/joomla-todo:dev-tutorials/backbone#866bc29c60f599f5b5192e7f1e1a4ca44b960c0d
+</code></pre>
+<blockquote>
+<p>The &#39;318740f1221e4c3b1d7642ce1a1162a0460cc4e4&#39; is the revision number of the tutorial starting point. We&#39;ve included a similar <strong>Composer command</strong> at the end of each section. You can choose to follow along and do the coding yourself, or just see the changes by running those commands. If you just want to use the finished code simply remove the &#39;#&#39; and everything after.</p>
+</blockquote>
+<p>With all that done we can get to work powering the todo list with data from the Nooku back end.</p>
+<h2 id="todomvc-backbone-examplewhere">TodoMVC Backbone Example...Where?</h2>
+<p>We are going to use the TodoMVC CSS and Javascript to make things easy. You could write your own CSS to make things blend better, as this is merely a tutorial the default will do.
+To help things along we&#39;ve placed the Backbone.js assets in the Joomla <code>/media/com_todo/lib/backbone</code> folder for you already.</p>
+<h3 id="create-the-backbone-view-and-controller">Create the &quot;Backbone&quot; View and Controller</h3>
+<p>There are a number of approaches that you can take to serve up your single page application. We are going use PHP to produce and serve the initial HTML markup and assets by adding a new ‘View’ to the <code>com_todo</code> component.</p>
+<blockquote>
+<p>An advantage to using PHP to render our page is the potential to send the initial payload of data along with the original page request, instead of having to do another round trip to the server.</p>
+</blockquote>
+<p><strong>Here are the steps:</strong></p>
+<ol>
+<li>Add a new folder to the <code>/site/components/com_todo/views/</code> directory view called <strong>backbone</strong></li>
+<li>Then add another <strong>tmpl</strong> to that directory;</li>
+<li>Finally, add a new file called <code>default.html.php</code>. This will hold all the markup for our single page application, loading all of the Javascript and styling we need.</li>
+<li>Place the following code in <code>/com_todo/controller/backbone.php</code></li>
+</ol>
+<pre><code class="lang-php"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">ComTodoControllerBackbone</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">KControllerView</span> </span>{}
+</code></pre>
+<p>Without this last step any call to get our new view will fail miserably. In order for a request to <code>view=backbone</code> to work we also need to create an <em>empty</em> controller that extends <a href="https://github.com/nooku/nooku-framework/blob/master/code/libraries/koowa/libraries/controller/view.php" target="_blank"><code>KControllerView</code></a>.</p>
+<blockquote>
+<p>Nooku’s default controller is <a href="https://github.com/nooku/nooku-framework/blob/master/code/libraries/koowa/libraries/controller/view.php" target="_blank"><code>KControllerModel</code></a>, and as such, expects to receive data from a database connected model.  We don’t have a table (#__todo_backbones) so we need to extend directly from KControllerView which doesn’t expect a model, only a view.</p>
+</blockquote>
+<p>At this point, your new file structure should look something like :</p>
+<p><img src="/resources/images/backbone-tutorial/backbone-controller-view-added.png" alt="New Backbone View and Controller to support our single page application"></p>
+<p>If you now go to <a href="http://joomla.box/todo/component/todo/backbone" target="_blank">http://joomla.box/todo/component/todo/backbone</a> you should see an empty component area.</p>
+<blockquote>
+<p>Just in case you didn’t notice: we did not need to create a view class, and we barely needed to create the controller class.</p>
+</blockquote>
+<p><strong>Composer command:</strong> <code>composer require nooku/joomla-todo:dev-tutorials/backbone#2251f54cee839856e8291f1316ac2e599bc853c5</code></p>
+<h2 id="build-the-single-page-application-markup">Build the Single Page Application Markup</h2>
+<p>To begin to show the application’s Todo list, we take the inner html of body tag from the existing <code>/media/com_todo/lib/backbone/index.html</code>:</p>
+<ol>
+<li>place the contents of the <code>&lt;body&gt;</code> tag  into our new file at <code>/components/com_todo/views/app/tmpl/default.html.php</code></li>
+<li>add <code>data-inline</code> to all of the <code>&lt;script&gt;</code> tags, including those of <code>type=”text/template”</code>.</li>
+<li><p>update all the <code>src</code> attributes of the scripts with the new locations of their respective resources, using the <code>media://</code> alias, e.g. <code>media://com_todo/lib/backbone/js/backbone.js</code>.</p>
+<blockquote>
+<p>Note, you can remove the jquery.js reference, and be sure to be sure to note <code>backbone.localStorage.js</code> asset has been moved  to <code>/media/com_todo/lib/backbone/localstorage/</code>.</p>
+</blockquote>
+</li>
+<li><p>Add these two <ktml:style> tags:</p>
+<pre><code class="lang-html"><span class="hljs-tag">&lt;<span class="hljs-title">ktml:style</span> <span class="hljs-attribute">src</span>=<span class="hljs-value">"media://com_todo/lib/backbone/todomvc-common/base.css"</span> /&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">ktml:style</span> <span class="hljs-attribute">src</span>=<span class="hljs-value">"media://com_todo/lib/backbone/todomvc-app-css/index.css"</span> /&gt;</span>
+</code></pre>
+</li>
+</ol>
+<blockquote>
+<p>We need to add <code>data-inline</code> to the script tags to ensure that the scripts stay in place and aren’t filtered and placed in the <code>&lt;head&gt;</code> tag of the page which would happen otherwise.</p>
+</blockquote>
+<p>Pointing your browser now to <a href="http://joomla.box/component/todo/backbone" target="_blank">http://joomla.box/component/todo/backbone</a> should show you:</p>
+<p><img src="/resources/images/backbone-tutorial/todomvc-backbone-in-com-todo-package.png" alt="TodoMVC Backbone Example in Joomla Todo Component"></p>
+<p>At this point everything looks nice and does store todo list items to ‘localstorage’ in your browser, because the TodoMVC example has that implemented out of the box. To implement our Nooku powered persistence we’ll need to tell Backbone where to go. If you are already a Backbone rockstar you can likely skip over the <strong>Understanding Backbone</strong> section.</p>
+<p><strong>Composer command:</strong><code>composer require nooku/joomla-todo:dev-tutorials/backbone#b507a4bf13604c5e4fd22173cd35111e34f0980d</code></p>
+<h2 id="understanding-backbone">Understanding Backbone</h2>
+<p>Let’s just go over quickly the important pieces we need to know about Backbone.js to better understand how everything works.</p>
+<h3 id="models">Models</h3>
+<p>Backbone Models represent one entity item, containing a representation your application data. You can think of it as one row object in your database. The Model holds processing logic for that data as well.</p>
+<blockquote>
+<p>Backbone Models are the basic data object in the framework — frequently representing a row in a table in a database on your server. A discrete chunk of data and a bunch of useful, related methods for performing computations and transformations on that data.
+<a href="http://backbonejs.org/docs/backbone.html#section-37" target="_blank">Annotated Backbone.js</a></p>
+</blockquote>
+<h3 id="collections">Collections</h3>
+<p>Backbone Collections are lists or sets of Models but they can and do hold more processing logic as it relates to these lists.</p>
+<blockquote>
+<p>If models tend to represent a single row of data, a Backbone Collection is more analogous to a table full of data … or a small slice or page of that table, or a collection of rows that belong together for a particular reason — all of the messages in this particular folder, all of the documents belonging to this particular author, and so on. Collections maintain indexes of their models, both in order, and for lookup by id.
+<a href="http://backbonejs.org/docs/backbone.html#section-39" target="_blank">Annotated Backbone.js</a></p>
+</blockquote>
+<h3 id="the-sync">The “Sync”</h3>
+<p>The <a href="http://backbonejs.org/docs/backbone.html#section-82" target="_blank">Backbone.sync</a> defines how the library deals with persisting data to the server. Both the Backbone.js Model and Collection objects have a <code>sync</code> method that proxy <code>Backbone.sync</code> by default.</p>
+<p>We have the ability to change the persistence strategy by overriding this method. For example, we would want to extract the <a href="http://guides.nooku.org/json-api/document-structure/entities.html" target="_blank"><code>entities</code> property</a> of Nooku’s default response and populate the model or collection <code>attributes</code> property. We may wish to store some of the other top level properties as similarly named properties in the model or collection.</p>
+<h3 id="the-url">The URL</h3>
+<p>The most relevant  piece of the server persistence strategy of Backbone are the respective <code>url</code> properties of the Collection and Model. The framework assumes that the Collection’s url will be the plural representation, and that a specific model can be requested by attaching the <code>id</code> to the end of that url. For example, if the endpoint for a list of todos was /todos/, then the first todo could be accessed through /todos/1.</p>
+<p>The <code>Backbone.sync</code> method uses <a href="http://underscorejs.org/docs/underscore.html#section-161" target="_blank">underscore’s nifty <code>result</code> method</a> to process the url property of both in the same way. <code>_.result(object, property, fallback)</code> figures out if that property is a function and executes it if so, otherwise it simply returns the value of the property. Because of this you can define more complex url strategies, which is exactly what the default <code>Backbone.Model.url</code> property does.</p>
+<p><code>Backbone.Model.url()</code> is in fact a function and uses <code>_.result</code> in succession to check if a <code>urlRoot</code> property is present in the Model, or whether the Collection that is associated with this Model has a <code>url</code> property defined; either of which must be true or an error will get registered in the console.</p>
+<h2 id="setting-the-collection-url">Setting the Collection Url</h2>
+<p>With all that new Backbone knowledge we see that we need only define the TodosCollection url property in /media/com_todo/backbone/js/collections/todos.js:</p>
+<pre><code class="lang-javascript">
+    <span class="hljs-keyword">var</span> Todos = Backbone.Collection.extend({
+        model: app.Todo,
+                 <span class="hljs-comment">// Save all of the todo items under the `"todos"` namespace.</span>
+        <span class="hljs-comment">//       localStorage: new Backbone.LocalStorage('todos-backbone'),</span>
+        url: <span class="hljs-string">'/todo/component/todo/tasks'</span>,
+</code></pre>
+<p><strong>Make sure to comment out the local storage setting.</strong></p>
+<p>You can open <a href="http://joomla.box/todo/component/todo/tasks/?format=json" target="_blank">http://joomla.box/todo/component/todo/tasks/?format=json</a> in the browser to see the JSON response at any time.</p>
+<blockquote>
+<p>Joomla URLs: If we wanted a ‘nicer’ url to use, we could specify a Menu item in Joomla with the route <code>/todo/todos</code> and the CMS would route the request accordingly.</p>
+</blockquote>
+<p><strong>Composer command:</strong><code>composer require nooku/joomla-todo:dev-tutorials/backbone#255a0d26bb3ce0a0036b85f82f38a8c811a4a477</code></p>
+<h2 id="specialising-the-json-output">Specialising the JSON output</h2>
+<p>The response that Nooku returns out of the box extends the <a href="http://guides.nooku.org/json.html" target="_blank">JSONAPI</a> standard and has more information than the Backbone needs or expects.  Backbone expects responses to GET requests for collections to be returned from the server as a JSON array of models (JSON objects).</p>
+<pre><code>[
+    {id: 1, title: &quot;take in dry cleaning&quot;},
+    {id: 2, title: &quot;pick up in dry cleaning&quot;}
+]
+</code></pre><p>It also expects a request for a singular item to be returned as a plain JSON object (without the JSON API spec meta, limits, etc).</p>
+<p>We&#39;ve already discussed one option above in changing <code>Backbone.sync</code>, but we can also override the schema of the JSON that our Todo package returns from the server. Since we are focusing here on how Nooku can fit into what the client side needs, we’ll do just that. We can adjust the JSON response by creating our own view classes in the Todo package for <code>tasks</code> and <code>task</code> for that format.</p>
+<p>Here’s an example for the singular <code>task</code> response that you should place at <code>/components/com_todo/view/task/json.php</code> :</p>
+<pre><code class="lang-php"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">ComTodoViewTaskJson</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">KViewJson</span>
+</span>{
+    <span class="hljs-comment">/**
+     * Simplified render action
+     *<span class="hljs-phpdoc"> @param</span> $context
+     *<span class="hljs-phpdoc"> @return</span> mixed
+     */</span>
+    <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">_actionRender</span><span class="hljs-params">(<span class="hljs-variable">$context</span>)</span>
+    </span>{
+        <span class="hljs-keyword">if</span>(!<span class="hljs-variable">$this</span>-&gt;_content)
+        {
+            <span class="hljs-comment">// set the content of the view.</span>
+            <span class="hljs-variable">$this</span>-&gt;_content = <span class="hljs-variable">$this</span>-&gt;_renderData();
+        }
+
+        <span class="hljs-keyword">return</span> <span class="hljs-keyword">parent</span>::_actionRender(<span class="hljs-variable">$context</span>);
+    }
+
+    <span class="hljs-comment">/**
+     *  Get the properties of the entity in an array.
+     *<span class="hljs-phpdoc"> @return</span> mixed
+     */</span>
+    <span class="hljs-keyword">protected</span> <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">_renderData</span><span class="hljs-params">()</span>
+    </span>{
+        <span class="hljs-comment">// get the data</span>
+        <span class="hljs-variable">$data</span> = <span class="hljs-variable">$this</span>-&gt;getModel()-&gt;fetch();
+
+        <span class="hljs-comment">// extract the properties of the entity object</span>
+        <span class="hljs-variable">$output</span> = <span class="hljs-variable">$data</span>-&gt;getProperties();
+        <span class="hljs-keyword">return</span> <span class="hljs-variable">$output</span>;
+    }
+}
+</code></pre>
+<p>We also need to create the plural form by extending <code>ComTodoViewTaskJson</code> so we get to use the same <code>_actionRender</code> method. Place the following code in a new file at <code>/components/com_todo/view/tasks/json.php</code> .</p>
+<pre><code class="lang-php"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">ComTodoViewTasksJson</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">ComTodoViewTaskJson</span>
+</span>{
+    <span class="hljs-comment">/**
+     * Get the entity list as an array
+     *<span class="hljs-phpdoc"> @return</span> array
+     */</span>
+    <span class="hljs-keyword">protected</span> <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">_renderData</span><span class="hljs-params">()</span>
+    </span>{
+
+        <span class="hljs-variable">$data</span> = <span class="hljs-variable">$this</span>-&gt;getModel()-&gt;fetch();
+
+        <span class="hljs-comment">// extract the properties of the entity object</span>
+        <span class="hljs-variable">$output</span> = array_values(<span class="hljs-variable">$data</span>-&gt;toArray());
+        <span class="hljs-keyword">return</span> <span class="hljs-variable">$output</span>;
+    }
+}
+</code></pre>
+<p>Great! Now Backbone.js will get the response schema it’s looking for.  Refresh your browser: all the tasks that came installed with com_todo should now show up in the list:</p>
+<p><img src="/resources/images/backbone-tutorial/todomvc-with-com-todo-tasks-loading.png" alt="TodoMVC Getting Data from Nooku Backend"></p>
+<p><strong>Composer command:</strong><code>composer require nooku/joomla-todo:dev-tutorials/backbone#5d826b846da44770f93bf05655d555c265b07a68</code></p>
+<h2 id="saving-new-tasks-handling-csrf-tokens">Saving new Tasks: Handling CSRF tokens</h2>
+<p>Nooku aims to do as much for you out of the box as it can, and so adds some security when it comes to saving data to the server. To make ‘not safe’ requests, i.e. POST, PUT or DELETE methods, a user must be logged in by default; and you must send a valid CSRF Token along with the request.</p>
+<blockquote>
+<p>The Nooku HTTP Dispatcher adds the the ‘X-CSRF-Token’ header and <code>csrf_token</code> cookie to each GET request, so its available for us to use.</p>
+</blockquote>
+<p>We handle that readily by getting and storing that csrf token from the response headers of the GET requests Backbone initiates; then we can add that same token to all ajax requests sent through jQuery Ajax object, i.e. Backbone.$.ajax.
+Let’s make a new Javascript file at <code>/media/com_todo/lib/backbone/csrf.js</code> and add these two Ajax event handlers.</p>
+<pre><code class="lang-javascript">
+Backbone.$.ajaxSetup({
+    <span class="hljs-comment">// make sure we send our csrf token</span>
+    beforeSend: <span class="hljs-function"><span class="hljs-keyword">function</span><span class="hljs-params">(xhr, settings)</span> </span>{
+        <span class="hljs-keyword">if</span>(settings.data != <span class="hljs-literal">undefined</span>) {
+            <span class="hljs-comment">// settings.data is a string, need the object</span>
+            <span class="hljs-keyword">var</span> data = Backbone.$.parseJSON(settings.data);
+            data.csrf_token = Backbone.csrf;
+            <span class="hljs-comment">// turn it back into a string.</span>
+            settings.data = <span class="hljs-built_in">JSON</span>.stringify(data);
+        }
+    },
+    <span class="hljs-comment">// set the csrf for the Backbone namespace</span>
+    complete: <span class="hljs-function"><span class="hljs-keyword">function</span><span class="hljs-params">(xhr, message)</span> </span>{
+        <span class="hljs-comment">// for successful requests</span>
+        <span class="hljs-keyword">if</span> (xhr.status == <span class="hljs-string">'200'</span>) {
+            Backbone.csrf = xhr.getResponseHeader(<span class="hljs-string">'X-Csrf-Token'</span>);
+        }
+    }
+
+});
+</code></pre>
+<p>With that code in place we add a script tag to our <code>default.html.php</code> layout, right after the loading of backbone.js:</p>
+<pre><code class="lang-html"><span class="hljs-tag">&lt;<span class="hljs-title">script</span> <span class="hljs-attribute">data-inline</span> <span class="hljs-attribute">src</span>=<span class="hljs-value">"media://com_todo/lib/backbone/js/backbone.js"</span>&gt;</span><span class="javascript"></span><span class="hljs-tag">&lt;/<span class="hljs-title">script</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">script</span> <span class="hljs-attribute">data-inline</span> <span class="hljs-attribute">src</span>=<span class="hljs-value">"media://com_todo/lib/backbone/js/csrf.js"</span>&gt;</span><span class="javascript"></span><span class="hljs-tag">&lt;/<span class="hljs-title">script</span>&gt;</span>
+</code></pre>
+<blockquote>
+<p>If you are using the Vagrant setup mentioned above you can simply login with <code>admin/admin</code>.</p>
+</blockquote>
+<p><strong>Composer command:</strong><code>composer require nooku/joomla-todo:dev-tutorials/backbone#fbbedf2d1ec66e9a7187875f9a6a296e130d6653</code></p>
+<h2 id="lets-save-a-task-to-our-list">Let’s Save a ‘task’ to our List</h2>
+<p>We are finally at the point where we can save a task to our list. Open your inspector, and look for the tab that shows you all of the page’s requests. Then try adding an item to your todo list. You should see a new request with <code>POST</code> as its method and if all goes well the server should respond with <code>201 Created</code> status message:</p>
+<p><img src="/resources/images/backbone-tutorial/first-todo-task-post.gif" alt="TodoMVC Backbone first post to Nooku backend"></p>
+<h2 id="wrapping-up">Wrapping up</h2>
+<p>That’s it in a nutshell! We have integrated the TodoMVC Backbone.js example with the Nooku Framework example Todo Extension.  The modifications are actually quite minimal. Most of the work was done in changing the schema of the JSON response with the new JSON View class to match the output expected by Backbone.
+Let’s recap the steps:</p>
+<ol>
+<li>We created a new App View layout and empty controller, because we need no database table.</li>
+<li>We changed the way com_todo formats the JSON output to match what Backbone.js expects.</li>
+<li>We changed the <code>url</code> property of the <code>TodoCollection</code> to our component’s todo collection view.</li>
+<li>We handled the need for CSRF authentication tokens by sending them with each request with some light Javascript.</li>
+</ol>
+
+                    
+                    </section>
+                
+                
+                </div>
+            </div>
+        </div>
+
+        
+        <a href="../tutorials.html" class="navigation navigation-prev " aria-label="Previous page: Tutorials"><i class="fa fa-angle-left"></i></a>
+        
+        
+        <a href="../json.html" class="navigation navigation-next " aria-label="Next page: JSON API"><i class="fa fa-angle-right"></i></a>
+        
+    </div>
+</div>
+
+        
+<script type="text/javascript" src="http://www.nooku.org/js/scripts.js"></script>
+<script>
+    responsivemenu.init({
+        wrapper: document.querySelector('.header'),
+        toggleclass: 'button--hamburger',
+        togglecontent: 'menu <span class="lines"></span>'
+    });
+</script>
+<script src="../gitbook/app.js"></script>
+
+    
+    <script src="../gitbook/plugins/gitbook-plugin-ga/plugin.js"></script>
+    
+
+    
+    <script src="https://cdn.mathjax.org/mathjax/2.4-latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+
+    
+    <script src="../gitbook/plugins/gitbook-plugin-mathjax/plugin.js"></script>
+    
+
+<script>
+require(["gitbook"], function(gitbook) {
+    var config = {"fontSettings":{"theme":null,"family":"sans","size":2},"ga":{"token":"UA-214238-5","configuration":"auto"}};
+    gitbook.start(config);
+});
+</script>
+
+        <script>(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)})(window,document,'script','//www.google-analytics.com/analytics.js','ga');ga('create', 'UA-214238-5', 'auto');ga('send', 'pageview');</script>
+    </body>
+    
+
+    <script>
+        require(["gitbook", "jquery"], function(gitbook, $) {
+            var load = function(){
+                $('ul.summary li.active').parents('ul.articles').show().addClass('expanded').parent('li').addClass('active-parent');
+            };
+            $(document).ready(load)
+
+            gitbook.events.bind("page.change", load);
+        });
+    </script>
+</html>

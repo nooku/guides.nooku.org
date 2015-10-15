@@ -1,0 +1,40 @@
+<!DOCTYPE HTML>
+<html lang="en-US" {% block htmlTag %}{% endblock %}>
+    {{ htmlSnippet("html:start")|default("") }}
+    <head>
+        {{ htmlSnippet("head:start")|default("") }}
+        <meta charset="UTF-8">
+        <title>{% block title %}{% endblock %}</title>
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="{% block description %}{% endblock %}">
+        <meta name="generator" content="GitBook {{ gitbook.version }}">
+        <meta name="HandheldFriendly" content="true"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black">
+        <link rel="apple-touch-icon-precomposed" sizes="152x152" href="{{ staticBase }}/images/apple-touch-icon-precomposed-152.png">
+        <link rel="shortcut icon" href="{{ staticBase }}/images/favicon.ico" type="image/x-icon">
+        {% block head %}{% endblock %}
+        {{ htmlSnippet("head:end")|default("") }}
+    </head>
+    <body class="no-js">
+    <script type="text/javascript">function hasClass(e,t){return e.className.match(new RegExp("(\\s|^)"+t+"(\\s|$)"))}var el=document.body;var cl="no-js";if(hasClass(el,cl)){var reg=new RegExp("(\\s|^)"+cl+"(\\s|$)");el.className=el.className.replace(reg," js-enabled")}</script>
+        {{ htmlSnippet("body:start")|default("") }}
+        {% block style %}{% endblock %}
+        {% block content %}{% endblock %}
+        {% block javascript %}{% endblock %}
+        {{ htmlSnippet("body:end")|default("") }}
+    </body>
+    {{ htmlSnippet("html:end")|default("") }}
+
+    <script>
+        require(["gitbook", "jquery"], function(gitbook, $) {
+            var load = function(){
+                $('ul.summary li.active').parents('ul.articles').show().addClass('expanded').parent('li').addClass('active-parent');
+            };
+            $(document).ready(load)
+
+            gitbook.events.bind("page.change", load);
+        });
+    </script>
+</html>

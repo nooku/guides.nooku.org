@@ -1,0 +1,13 @@
+{
+    "name": "guides.nooku.org",
+    "version": "0.0.1",
+    "description": "",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/nooku/nooku-guides.git"
+    },
+    "dependencies": {
+        "gitbook-plugin-toc": "*",
+        "gitbook-plugin-ga": "*"
+    }
+}

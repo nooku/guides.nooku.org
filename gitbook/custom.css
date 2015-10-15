@@ -1,0 +1,119 @@
+/* Restyling the book classes for our top menu */
+.book {
+    position: absolute;
+    top: 81px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: auto;
+    z-index: 1;
+}
+
+/* extra classes for menu which can't be in header.css since we use a "sticky" menu here */
+.header {
+    max-height: none;
+    overflow: visible;
+    position: absolute;
+    z-index: 5 !important;
+}
+
+/* Setting a proper readable font-size */
+.book.font-size-0 .book-body .page-inner section {
+    font-size: 13px;
+}
+.book.font-size-1 .book-body .page-inner section {
+    font-size: 15px;
+}
+.book.font-size-2 .book-body .page-inner section {
+    font-size: 17px;
+}
+.book.font-size-3 .book-body .page-inner section {
+    font-size: 19px;
+}
+.book.font-size-4 .book-body .page-inner section {
+    font-size: 21px;
+}
+.book.font-family-1 {
+    font-family: "Roboto", Helvetica, Arial, sans-serif;
+    font-weight: 300;
+}
+
+/* Hide summary sections by default */
+.summary li > .articles {
+    display: none;
+}
+
+/* And show the sections when active */
+.summary li .expanded,
+.summary .active .articles,
+.summary .active-parent .articles {
+    display: block;
+}
+
+/* setting font for sidebar */
+.summary {
+    font-family: "Roboto", Helvetica, Arial, sans-serif;
+    font-size: 15px;
+    line-height: 1.5em;
+    font-weight: 400;
+}
+
+/* A top and bottom border for sections */
+.chapter {
+    border-top: 1px solid transparent;
+    border-bottom: 1px solid transparent;
+}
+
+/* default border and background color */
+.summary > .active,
+.summary > .active-parent {
+    background: white;
+    border-top-color: #ddd;
+    border-bottom-color: #ddd;
+}
+
+/* The other default themes */
+.color-theme-1 .summary > .active,
+.color-theme-1 .summary > .active-parent,
+.color-theme-2 .summary > .active,
+.color-theme-2 .summary > .active-parent {
+    background: #222;
+    border-top-color: black;
+    border-bottom-color: black;
+}
+
+/* no top border fo the first item */
+.summary > .active:first-child {
+    border-top-color: transparent;
+}
+
+/* hide checkmarks */
+.book .book-summary ul.summary li.done > a i {
+    display: none;
+}
+
+/* active links should be bold */
+.book .book-summary ul.summary li.active > a {
+    font-weight: bold;
+}
+
+/* Proper Timble color for links */
+.book .book-summary ul.summary > li a:hover,
+.book .book-summary ul.summary li.active > a {
+    color: #085DAD;
+}
+
+/* Accessible links */
+.book .book-body .page-wrapper .page-inner section.normal a {
+    text-decoration: underline;
+    color: #085DAD;
+}
+.book .book-body .page-wrapper .page-inner section.normal a:hover,
+.book .book-body .page-wrapper .page-inner section.normal a:focus {
+    text-decoration: none;
+}
+
+/* Gitbook credits */
+.book .book-summary ul.summary .gitbook-link {
+    font-size: 13px;
+}
